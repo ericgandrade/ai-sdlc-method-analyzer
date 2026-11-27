@@ -7,7 +7,7 @@ position is shown per reading, against the 9 benchmark references only.
 import sys
 
 from . import stats
-from .common import CRITERIA, EXIT_GATE, EXIT_MISSING, EXIT_OK, LEVELS, PROFILES
+from .common import CRITERIA, EXIT_GATE, EXIT_MISSING, EXIT_OK, EXIT_USAGE, LEVELS, PROFILES
 from .jsonio import read_json
 
 CAPS = {"closed": (4, "A3"), "open-unread": (3, "A2")}     # §5.10 type caps (score, L3)
@@ -94,6 +94,9 @@ def run(args):
     from . import state
     from .consolidate import ConsolidateError, consolidate
     try:
+        if state.load(args.run)["mode"] != "docs":
+            print("ranges: only a documentation-only (docs) run has ranges", file=sys.stderr)
+            return EXIT_USAGE
         res = consolidate(args.run)
     except (RangesError, ConsolidateError, state.StateError) as e:
         print(f"ranges: {e}", file=sys.stderr)

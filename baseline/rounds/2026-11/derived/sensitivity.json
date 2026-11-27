@@ -1,0 +1,1558 @@
+{
+  "draws": 10000,
+  "loo": [
+    {
+      "c": "C1",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 7,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 58.7,
+        "agile-v": 67.4,
+        "ai-dlc": 70.4,
+        "bmad": 64.7,
+        "kiro": 42.1,
+        "mattpocock": 44.0,
+        "openspec": 37.4,
+        "spec-kit": 40.9,
+        "superpowers": 57.0
+      }
+    },
+    {
+      "c": "C2",
+      "first": [
+        "agile-v"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 1,
+        "ai-dlc": 2,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 4
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 69.3,
+        "ai-dlc": 67.6,
+        "bmad": 65.7,
+        "kiro": 44.8,
+        "mattpocock": 44.1,
+        "openspec": 35.2,
+        "spec-kit": 41.7,
+        "superpowers": 57.4
+      }
+    },
+    {
+      "c": "C3",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 4
+      },
+      "totals": {
+        "addyosmani": 53.4,
+        "agile-v": 67.7,
+        "ai-dlc": 69.5,
+        "bmad": 67.5,
+        "kiro": 44.8,
+        "mattpocock": 42.2,
+        "openspec": 36.7,
+        "spec-kit": 43.5,
+        "superpowers": 53.6
+      }
+    },
+    {
+      "c": "C4",
+      "first": [
+        "ai-dlc",
+        "bmad"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 1,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 63.7,
+        "ai-dlc": 65.5,
+        "bmad": 65.5,
+        "kiro": 44.8,
+        "mattpocock": 44.2,
+        "openspec": 38.7,
+        "spec-kit": 43.5,
+        "superpowers": 53.6
+      }
+    },
+    {
+      "c": "C5",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 6,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 65.9,
+        "ai-dlc": 67.6,
+        "bmad": 65.7,
+        "kiro": 44.8,
+        "mattpocock": 44.1,
+        "openspec": 38.7,
+        "spec-kit": 45.2,
+        "superpowers": 53.9
+      }
+    },
+    {
+      "c": "C6",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 58.9,
+        "agile-v": 66.0,
+        "ai-dlc": 67.7,
+        "bmad": 65.8,
+        "kiro": 44.7,
+        "mattpocock": 44.1,
+        "openspec": 38.7,
+        "spec-kit": 43.4,
+        "superpowers": 54.2
+      }
+    },
+    {
+      "c": "C7",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 7,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 58.3,
+        "agile-v": 67.3,
+        "ai-dlc": 69.0,
+        "bmad": 67.1,
+        "kiro": 43.8,
+        "mattpocock": 44.0,
+        "openspec": 38.8,
+        "spec-kit": 43.3,
+        "superpowers": 56.7
+      }
+    },
+    {
+      "c": "C8",
+      "first": [
+        "agile-v"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 1,
+        "ai-dlc": 2,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 58.7,
+        "agile-v": 68.7,
+        "ai-dlc": 67.9,
+        "bmad": 67.2,
+        "kiro": 44.7,
+        "mattpocock": 44.0,
+        "openspec": 41.3,
+        "spec-kit": 43.4,
+        "superpowers": 55.7
+      }
+    },
+    {
+      "c": "C9",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 58.5,
+        "agile-v": 67.4,
+        "ai-dlc": 69.1,
+        "bmad": 67.2,
+        "kiro": 44.6,
+        "mattpocock": 44.0,
+        "openspec": 39.8,
+        "spec-kit": 43.4,
+        "superpowers": 56.8
+      }
+    },
+    {
+      "c": "C10",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 58.7,
+        "agile-v": 66.2,
+        "ai-dlc": 69.1,
+        "bmad": 67.2,
+        "kiro": 44.7,
+        "mattpocock": 44.0,
+        "openspec": 38.7,
+        "spec-kit": 43.4,
+        "superpowers": 57.0
+      }
+    },
+    {
+      "c": "C11",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 7,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 4
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 67.4,
+        "ai-dlc": 70.4,
+        "bmad": 68.5,
+        "kiro": 44.7,
+        "mattpocock": 45.3,
+        "openspec": 40.0,
+        "spec-kit": 43.4,
+        "superpowers": 58.3
+      }
+    },
+    {
+      "c": "C12",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 4
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 68.7,
+        "ai-dlc": 69.1,
+        "bmad": 68.5,
+        "kiro": 46.0,
+        "mattpocock": 45.3,
+        "openspec": 40.0,
+        "spec-kit": 44.7,
+        "superpowers": 59.6
+      }
+    },
+    {
+      "c": "C13",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 54.9,
+        "agile-v": 66.2,
+        "ai-dlc": 66.6,
+        "bmad": 66.0,
+        "kiro": 43.4,
+        "mattpocock": 41.5,
+        "openspec": 38.7,
+        "spec-kit": 42.1,
+        "superpowers": 53.2
+      }
+    },
+    {
+      "c": "C14",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 6,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 66.2,
+        "ai-dlc": 69.1,
+        "bmad": 67.2,
+        "kiro": 43.4,
+        "mattpocock": 42.8,
+        "openspec": 38.7,
+        "spec-kit": 43.4,
+        "superpowers": 57.0
+      }
+    },
+    {
+      "c": "C15",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 56.7,
+        "agile-v": 65.6,
+        "ai-dlc": 69.8,
+        "bmad": 67.9,
+        "kiro": 44.6,
+        "mattpocock": 43.1,
+        "openspec": 38.8,
+        "spec-kit": 40.8,
+        "superpowers": 55.0
+      }
+    },
+    {
+      "c": "C16",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 6,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 60.0,
+        "agile-v": 68.1,
+        "ai-dlc": 69.0,
+        "bmad": 67.1,
+        "kiro": 44.6,
+        "mattpocock": 44.0,
+        "openspec": 40.4,
+        "spec-kit": 45.0,
+        "superpowers": 56.7
+      }
+    }
+  ],
+  "loo_rule": "x counts as first in a leave-one-out run only when its total is strictly above every other total",
+  "mean_rank": {
+    "centred": {
+      "addyosmani": 4.31,
+      "agile-v": 2.18,
+      "ai-dlc": 1.52,
+      "bmad": 2.32,
+      "kiro": 6.68,
+      "mattpocock": 7.07,
+      "openspec": 8.87,
+      "spec-kit": 7.39,
+      "superpowers": 4.67
+    },
+    "score_perturbation": {
+      "addyosmani": 4.24,
+      "agile-v": 2.23,
+      "ai-dlc": 1.52,
+      "bmad": 2.25,
+      "kiro": 6.7,
+      "mattpocock": 7.02,
+      "openspec": 8.96,
+      "spec-kit": 7.33,
+      "superpowers": 4.76
+    },
+    "uniform": {
+      "addyosmani": 4.35,
+      "agile-v": 1.97,
+      "ai-dlc": 1.89,
+      "bmad": 2.4,
+      "kiro": 6.61,
+      "mattpocock": 7.15,
+      "openspec": 8.82,
+      "spec-kit": 7.11,
+      "superpowers": 4.71
+    }
+  },
+  "p_first": {
+    "centred": {
+      "addyosmani": 0.001,
+      "agile-v": 0.251,
+      "ai-dlc": 0.591,
+      "bmad": 0.158,
+      "kiro": 0.0,
+      "mattpocock": 0.0,
+      "openspec": 0.0,
+      "spec-kit": 0.0,
+      "superpowers": 0.0
+    },
+    "score_perturbation": {
+      "addyosmani": 0.0,
+      "agile-v": 0.207,
+      "ai-dlc": 0.616,
+      "bmad": 0.177,
+      "kiro": 0.0,
+      "mattpocock": 0.0,
+      "openspec": 0.0,
+      "spec-kit": 0.0,
+      "superpowers": 0.0
+    },
+    "uniform": {
+      "addyosmani": 0.012,
+      "agile-v": 0.399,
+      "ai-dlc": 0.401,
+      "bmad": 0.189,
+      "kiro": 0.0,
+      "mattpocock": 0.0,
+      "openspec": 0.0,
+      "spec-kit": 0.0,
+      "superpowers": 0.0
+    }
+  },
+  "profiles": {
+    "autonomous": {
+      "addyosmani": {
+        "rank": 5,
+        "total": 57.2
+      },
+      "agile-v": {
+        "rank": 3,
+        "total": 67.4
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 72.0
+      },
+      "bmad": {
+        "rank": 2,
+        "total": 67.8
+      },
+      "kiro": {
+        "rank": 6,
+        "total": 45.2
+      },
+      "mattpocock": {
+        "rank": 7,
+        "total": 44.6
+      },
+      "openspec": {
+        "rank": 9,
+        "total": 36.8
+      },
+      "spec-kit": {
+        "rank": 8,
+        "total": 43.2
+      },
+      "superpowers": {
+        "rank": 4,
+        "total": 60.2
+      }
+    },
+    "baseline": {
+      "addyosmani": {
+        "rank": 4,
+        "total": 57.6
+      },
+      "agile-v": {
+        "rank": 2,
+        "total": 67.0
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 68.6
+      },
+      "bmad": {
+        "rank": 3,
+        "total": 66.8
+      },
+      "kiro": {
+        "rank": 6,
+        "total": 44.4
+      },
+      "mattpocock": {
+        "rank": 7,
+        "total": 43.8
+      },
+      "openspec": {
+        "rank": 9,
+        "total": 38.8
+      },
+      "spec-kit": {
+        "rank": 8,
+        "total": 43.2
+      },
+      "superpowers": {
+        "rank": 5,
+        "total": 56.0
+      }
+    },
+    "equal": {
+      "addyosmani": {
+        "rank": 4,
+        "total": 55.0
+      },
+      "agile-v": {
+        "rank": 1,
+        "total": 66.2
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 66.2
+      },
+      "bmad": {
+        "rank": 3,
+        "total": 65.0
+      },
+      "kiro": {
+        "rank": 6,
+        "total": 45.0
+      },
+      "mattpocock": {
+        "rank": 7,
+        "total": 43.8
+      },
+      "openspec": {
+        "rank": 9,
+        "total": 36.2
+      },
+      "spec-kit": {
+        "rank": 7,
+        "total": 43.8
+      },
+      "superpowers": {
+        "rank": 5,
+        "total": 53.8
+      }
+    },
+    "regulated": {
+      "addyosmani": {
+        "rank": 4,
+        "total": 54.6
+      },
+      "agile-v": {
+        "rank": 2,
+        "total": 65.6
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 68.4
+      },
+      "bmad": {
+        "rank": 3,
+        "total": 65.2
+      },
+      "kiro": {
+        "rank": 6,
+        "total": 41.6
+      },
+      "mattpocock": {
+        "rank": 7,
+        "total": 40.4
+      },
+      "openspec": {
+        "rank": 9,
+        "total": 37.2
+      },
+      "spec-kit": {
+        "rank": 8,
+        "total": 39.6
+      },
+      "superpowers": {
+        "rank": 5,
+        "total": 51.0
+      }
+    },
+    "startup": {
+      "addyosmani": {
+        "rank": 4,
+        "total": 60.2
+      },
+      "agile-v": {
+        "rank": 2,
+        "total": 68.0
+      },
+      "ai-dlc": {
+        "rank": 3,
+        "total": 67.4
+      },
+      "bmad": {
+        "rank": 1,
+        "total": 68.8
+      },
+      "kiro": {
+        "rank": 6,
+        "total": 48.2
+      },
+      "mattpocock": {
+        "rank": 8,
+        "total": 46.6
+      },
+      "openspec": {
+        "rank": 9,
+        "total": 40.6
+      },
+      "spec-kit": {
+        "rank": 6,
+        "total": 48.2
+      },
+      "superpowers": {
+        "rank": 5,
+        "total": 58.4
+      }
+    }
+  },
+  "samplers": {
+    "centred": "Dirichlet alpha_c = 0.5 w_c (sum 50), scores fixed",
+    "score_perturbation": "baseline weights; s + U(-u, u) per criterion with each method's u, clipped to [0, 5]",
+    "uniform": "Dirichlet alpha_c = 1, scores fixed"
+  },
+  "seed": 20261127,
+  "tornado": [
+    {
+      "c": "C1",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 1,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 7,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C1",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -2,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 1,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C2",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": -1,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 1,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C2",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C3",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C3",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 1,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 7,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C4",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C4",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C5",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C5",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C6",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C6",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C7",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C7",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C8",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C8",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C9",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C9",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C10",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C10",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C11",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C11",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C12",
+      "changes": {
+        "addyosmani": 1,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": -1
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 4
+      }
+    },
+    {
+      "c": "C12",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C13",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C13",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 6,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C14",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C14",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C15",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C15",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -2,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 6,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C16",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "kiro": 6,
+        "mattpocock": 8,
+        "openspec": 9,
+        "spec-kit": 7,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C16",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 4,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "kiro": 6,
+        "mattpocock": 7,
+        "openspec": 9,
+        "spec-kit": 8,
+        "superpowers": 5
+      }
+    }
+  ],
+  "verdict_set": {}
+}

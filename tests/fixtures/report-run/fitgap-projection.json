@@ -1,0 +1,12 @@
+{
+  "baseline_total_if_done": {
+    "30": 69.2,
+    "60-90": 70.0,
+    "now": 69.2
+  },
+  "cumulative": true,
+  "current": 68.0,
+  "hypothesis": true,
+  "items_without_to_level": [],
+  "label": "hypothesis: assumes each item lifts its criteria to the stated level; not a score"
+}

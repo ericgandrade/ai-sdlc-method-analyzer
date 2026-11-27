@@ -1,0 +1,41 @@
+{
+  "checked": {
+    "L2": 6,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 6,
+    "L3": 1,
+    "L4": 32
+  },
+  "log": [
+    {
+      "after": 1,
+      "before": 2,
+      "cell": "F8",
+      "evidence": "cache:superpowers/skills/brainstorming/SKILL.md:209-217,241-243; cache:superpowers/skills/writing-plans/SKILL.md:191-194; baseline/scorecards/superpowers/S-A.json:41 (C14 first unmet)",
+      "lens": null,
+      "reason": "Light and heavy paths exist (quick task, small change, project, spike; Native vs SDD execution) but 'a small change' and 'a project' have no stated criteria and the SDD/Native recommendation names factors without thresholds. Every audited F8=2 has explicit criteria (BMad lines/files, Addy <=2 files and <50 lines, AI-DLC 'Choose when', Agile V L0-L4) (R-F8); Spec Kit LE gives 1 for the same pattern. Consistent with C14=2 in both v1 scorecards ('routing criteria are not stated').",
+      "type": "a"
+    },
+    {
+      "after": 2,
+      "before": 1,
+      "cell": "F33",
+      "evidence": "cache:superpowers/skills/subagent-driven-development/implementer-prompt.md:130-149; cache:superpowers/skills/subagent-driven-development/SKILL.md:183-185,216-224; cache:superpowers/tests/skill-size/test-skill-size.sh:16-24",
+      "lens": null,
+      "reason": "LE cited only the skill-size test (not in CI) and the plan proportion check (no number). On R's default path the implementer must return to the controller under 15 lines, with the detail in a report file, because everything pasted stays resident in the controller context: a numeric context budget on the default-path hand-off. Same bar as ruling R-F33.",
+      "type": "g"
+    }
+  ],
+  "method": "superpowers",
+  "overrides": {
+    "L2": {},
+    "L4": {
+      "F33": 2,
+      "F8": 1
+    }
+  },
+  "round": "2026-11"
+}

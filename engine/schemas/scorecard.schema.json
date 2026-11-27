@@ -1,0 +1,955 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Scorecard machine-readable block (evaluator-agent section 4; plan 7.6).",
+  "properties": {
+    "method": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "type": "string"
+    },
+    "methodology_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "scorer": {
+      "type": "string"
+    },
+    "scores": {
+      "additionalProperties": false,
+      "properties": {
+        "C1": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C10": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C11": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C12": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C13": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C14": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C15": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C16": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C2": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C3": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C4": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C5": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C6": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C7": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C8": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        },
+        "C9": {
+          "properties": {
+            "D": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "ev": {
+              "enum": [
+                "I",
+                "D",
+                "S",
+                "P"
+              ],
+              "type": "string"
+            },
+            "first_unmet": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "ra": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "number"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "ev"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "implemented",
+        "design-only"
+      ],
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "method",
+    "scorer",
+    "methodology_sha256",
+    "scores"
+  ],
+  "title": "scorecard",
+  "type": "object"
+}

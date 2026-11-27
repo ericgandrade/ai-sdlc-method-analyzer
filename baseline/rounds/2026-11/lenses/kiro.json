@@ -1,0 +1,329 @@
+{
+  "L2": {
+    "ceiling": {
+      "C10": {
+        "cites": [
+          "https://kiro.dev/docs/workflows.md:21 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows.md:68 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/ide/chat/autopilot.md:27 (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "No path records approvals with who/when/version or names decision owners; L3 unmet.",
+        "path": "workflow plan approval card (opt-in) / Supervised mode",
+        "s": 2
+      },
+      "C11": {
+        "cites": [
+          "https://kiro.dev/docs/cli/headless.md:110 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/permissions.md:27 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/steering.md (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "No shipped path puts security in spec/design plus a review security lens plus secret and dependency-hygiene rules; L3 unmet.",
+        "path": "headless CI review job example, permissions/sandbox, security steering example",
+        "s": 2
+      },
+      "C16": {
+        "cites": [
+          "https://kiro.dev/docs/memory.md (accessed 2026-11-26)",
+          "https://kiro.dev/docs/steering.md:265 (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "No retrospective producing owned actions on any path; L3 unmet.",
+        "path": "Memory (opt-in) and Kiro Web learning from PR feedback",
+        "s": 2
+      },
+      "C2": {
+        "cites": [
+          "https://kiro.dev/docs/specs/analyze-requirements.md:9 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/specs/analyze-requirements.md:54 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/specs/feature-specs.md:105 (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "Opting into Analyze Requirements adds a clarification step that resolves ambiguities into requirements.md, but no documented requirements artifact carries explicit scope/non-goals, so L3 stays unmet on every path.",
+        "path": "Analyze Requirements (opt-in) / Quick Spec clarifying questions",
+        "s": 2
+      },
+      "C3": {
+        "cites": [
+          "https://kiro.dev/docs/specs/correctness.md:91 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/specs/feature-specs/requirements-first.md (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "Even with tests made required, no documented simplicity / minimal-change rule exists, and test-first is not shipped; L3 unmet on every path.",
+        "path": "required PBT/test tasks (user marks optional tasks required); TDD only via a user-written steering file",
+        "s": 2
+      },
+      "C4": {
+        "cites": [
+          "https://kiro.dev/docs/cli/chat/goal.md:9 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows/patterns.md:62 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows/patterns.md:72 (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "`/goal` marks complete only when its derived acceptance criteria pass, and feature-pipeline ends with a validation pass against the requirements, but no documented DoD separate from the acceptance criteria and no requirement that evidence is command output after the last change (the PASS/FAIL validate-gate is a user adaptation the docs say the bundled recipe leaves out). L3 unmet.",
+        "path": "`/goal` (CLI, opt-in) and bundled `feature-pipeline` workflow validate step",
+        "s": 2
+      },
+      "C5": {
+        "cites": [
+          "https://kiro.dev/docs/workflows.md:33 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows/patterns.md:61 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows/patterns.md:71 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows.md:11 (accessed 2026-11-26)"
+        ],
+        "conf": "M",
+        "note": "Independent fresh-session reviewers, parallel lenses with dedup and blocking verdict are documented, but no multi-axis checklist and no severity scale for the review are documented, so the L3 gate fails and L4 items cannot count. Contestable: if the aggregator's verdict is read as a severity scale, L4 (a)+(d) would give 4 (closed-product cap 4).",
+        "path": "bundled `feature-pipeline` workflow (two independent reviewers on different models + aggregator, loop until APPROVED)",
+        "s": 2
+      },
+      "C6": {
+        "audit_override": true,
+        "cites": [
+          "https://kiro.dev/docs/workflows/patterns.md:70 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows/patterns.md:71 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/workflows/patterns.md:216 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/cli/chat/goal.md:9 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/cli/chat/goal.md:69 (accessed 2026-11-26)"
+        ],
+        "conf": "L",
+        "note": "L3: two review-fix loop types with explicit exit criterion (verdict APPROVED) and numeric bound with action (abort), plus `/goal` verify-fix loop; escalation is to the person who launched the run (abort/report), read as the named target (contestable, hence Low). L4 unmet: no loopback routing by root cause or anti-thrash rule documented (PBT failure triage is a manual chat).",
+        "path": "bundled `feature-pipeline` workflow (design-loop and code-loop, maxIterations 3, onMaxIterations abort) and `/goal` (default 5 iterations, stops on repeated failure and reports)",
+        "s": 2
+      },
+      "C9": {
+        "cites": [
+          "https://kiro.dev/docs/specs/correctness.md:85 (accessed 2026-11-26)",
+          "https://kiro.dev/docs/specs/correctness.md:91 (accessed 2026-11-26)",
+          "cache:kiro/.kiro/specs/github-issue-automation/tasks.md:14",
+          "cache:kiro/.kiro/specs/github-issue-automation/design.md:364"
+        ],
+        "conf": "M",
+        "note": "Requirement numbers -> tasks (_Requirements: x.y_) -> properties (Validates: Requirements x.y) -> generated PBT tests -> code reference, in spec files. L4 unmet: no gap analysis and no release/PR links.",
+        "path": "Feature Spec with property-based tests enabled (PBTs optional by default)",
+        "s": 3
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "default": 2,
+        "reason_quote": "S-B: \"the clarification step is optional ('if needed'; Analyze Requirements skippable)\"; S-D: \"Analyze Requirements ... and property extraction exist but are optional\""
+      },
+      {
+        "c": "C3",
+        "default": 2,
+        "reason_quote": "S-B: \"the default task list does not require test-first or a per-task test obligation (tests optional, often last)\"; S-D: \"tests may be optional tasks\""
+      },
+      {
+        "c": "C4",
+        "default": 2,
+        "reason_quote": "S-B: \"verification mechanisms exist ... but are optional. First unmet: L3: no default-path rule\""
+      },
+      {
+        "c": "C5",
+        "default": 2,
+        "reason_quote": "S-B: \"review mechanisms exist ... but all are optional or user-configured. First unmet: L3: no default-path independent review\""
+      },
+      {
+        "c": "C6",
+        "default": 2,
+        "reason_quote": "S-B: \"bounded loops are opt-in (default-path rule caps at 2)\"; S-D: \"L2 (opt-in cap)\""
+      },
+      {
+        "c": "C9",
+        "default": 2,
+        "reason_quote": "S-B: \"linked requirement -> task, requirement -> property -> test, test -> generated code, in default-path spec files\" (S-D: property link IDE-only; PBTs optional by default)"
+      },
+      {
+        "c": "C10",
+        "default": 2,
+        "reason_quote": "S-B: \"defined phase checkpoints where the agent waits for confirmation in the standard Feature Spec\" (route chosen for R)"
+      },
+      {
+        "c": "C11",
+        "default": 2,
+        "reason_quote": "S-B: \"opt-in security mechanisms ... First unmet: L3: no default-path security lens in review\"; S-D: \"opt-in for the delivery workflow\""
+      },
+      {
+        "c": "C16",
+        "default": 2,
+        "reason_quote": "S-B: \"an optional lessons mechanism (Memory, off by default)\""
+      }
+    ]
+  },
+  "L3": {
+    "conf": "L",
+    "evidence": [
+      {
+        "cite": "https://kiro.dev/docs/specs/feature-specs/requirements-first.md:60 (accessed 2026-11-26) (design generated once you confirm the requirements; per-phase confirmation)",
+        "level": "A1"
+      },
+      {
+        "cite": "https://kiro.dev/docs/cli/chat/goal.md:9 (accessed 2026-11-26) (plans, implements, verifies against acceptance criteria, stops on criteria met, repeated failure or iteration cap); https://kiro.dev/docs/specs/best-practices.md:146 (accessed 2026-11-26) (Run all Tasks)",
+        "level": "A2"
+      },
+      {
+        "cite": "https://kiro.dev/docs/specs.md:93 (accessed 2026-11-26) (dependency graph, waves of concurrent tasks without per-task human); https://kiro.dev/docs/custom-agents/subagents.md:9 (accessed 2026-11-26) (sub-agents with isolated context)",
+        "level": "A3"
+      }
+    ],
+    "first_unmet": "A4 not creditable: workflows (each step in its own fresh session, background, pause/resume: workflows.md:11-13) and Kiro Web autonomous mode in a sandbox (web/autonomous-mode.md:27) describe multi-session execution, but closed-product documentation-only evidence caps L3 at A3 (rubrica-v2 §2).",
+    "level": "A3"
+  },
+  "L4": {
+    "F1": {
+      "cite": "https://kiro.dev/docs/specs.md (accessed 2026-11-26) (CLI: agent asks clarifying questions if needed); https://kiro.dev/docs/specs/analyze-requirements.md:54 (accessed 2026-11-26) (opt-in)",
+      "v": 1
+    },
+    "F10": {
+      "cite": "https://kiro.dev/docs/specs/bugfix-specs.md:9 (accessed 2026-11-26) (root cause analysis; separate Bugfix path)",
+      "v": 1
+    },
+    "F11": {
+      "cite": "https://kiro.dev/docs/custom-agents/subagents.md:125 (accessed 2026-11-26) (user-defined reviewer/tester agents); bundled workflow agents https://kiro.dev/docs/workflows/patterns.md:64 (accessed 2026-11-26)",
+      "v": 1
+    },
+    "F12": {
+      "cite": "https://kiro.dev/docs/custom-agents/subagents.md:9 (accessed 2026-11-26) (sub-agents with isolated context; spawned when beneficial)",
+      "v": 1
+    },
+    "F13": {
+      "cite": "https://kiro.dev/docs/cli/chat/goal.md:9 (accessed 2026-11-26) (opt-in verify-before-complete loop)",
+      "v": 1
+    },
+    "F14": {
+      "cite": "https://kiro.dev/docs/workflows.md:11 (accessed 2026-11-26) (reviewer step in fresh session; opt-in workflows)",
+      "v": 1
+    },
+    "F15": {
+      "cite": "https://kiro.dev/docs/workflows/patterns.md:61 (accessed 2026-11-26) (two reviewers in parallel, aggregator merges deduplicated findings; bundled feature-pipeline, opt-in)",
+      "v": 1
+    },
+    "F16": {
+      "cite": "https://kiro.dev/docs/cli/headless.md:110 (accessed 2026-11-26) (example CI job reviewing PR for security issues); https://kiro.dev/docs/mcp/security.md (accessed 2026-11-26)",
+      "v": 1
+    },
+    "F17": {
+      "cite": "https://kiro.dev/docs/workflows/patterns.md:70 (accessed 2026-11-26) (maxIterations 3, onMaxIterations abort); https://kiro.dev/docs/cli/chat/goal.md:9 (accessed 2026-11-26) (default 5 iterations)",
+      "v": 1
+    },
+    "F18": {
+      "cite": "https://kiro.dev/docs/workflows.md:11 (accessed 2026-11-26) (each step its own session, background run; opt-in)",
+      "v": 1
+    },
+    "F19": {
+      "cite": "https://kiro.dev/docs/web/autonomous-mode.md:27 (accessed 2026-11-26) (isolated sandbox, Web); https://kiro.dev/docs/sandbox.md (accessed 2026-11-26) (local command sandbox, opt-in)",
+      "v": 1
+    },
+    "F2": {
+      "cite": "https://kiro.dev/docs/specs/feature-specs.md:105 (accessed 2026-11-26) (requirements.md in EARS, structured testable requirements)",
+      "v": 2
+    },
+    "F20": {
+      "cite": "https://kiro.dev/docs/specs.md:82 (accessed 2026-11-26) (resume a spec, task status in tasks.md); https://kiro.dev/docs/workflows.md:13 (accessed 2026-11-26) (pause/resume)",
+      "v": 2
+    },
+    "F21": {
+      "cite": "https://kiro.dev/docs/permissions.md:27 (accessed 2026-11-26) (deny/ask/allow capability rules, deny > ask > allow at :28)",
+      "v": 2
+    },
+    "F22": {
+      "cite": "",
+      "v": 0
+    },
+    "F23": {
+      "cite": "cache:kiro/.kiro/specs/github-issue-automation/tasks.md:14 (_Requirements_ refs); https://kiro.dev/docs/specs/correctness.md:85 (accessed 2026-11-26) (property linked to requirement and task; PBTs optional at :91)",
+      "v": 1
+    },
+    "F24": {
+      "cite": "https://kiro.dev/docs/enterprise/monitor-and-track.md:17 (accessed 2026-11-26) (CloudTrail records Kiro MCP tool calls: who, which tool, when; enterprise admin setup)",
+      "v": 1
+    },
+    "F25": {
+      "cite": "",
+      "v": 0
+    },
+    "F26": {
+      "cite": "",
+      "v": 0
+    },
+    "F27": {
+      "cite": "https://kiro.dev/docs/steering.md:265 (accessed 2026-11-26) (Kiro Web learns patterns from PR feedback)",
+      "v": 1
+    },
+    "F28": {
+      "cite": "https://kiro.dev/docs/steering.md:62 (accessed 2026-11-26) (steering files included in every interaction once created); https://kiro.dev/docs/memory.md (accessed 2026-11-26) (opt-in)",
+      "v": 1
+    },
+    "F29": {
+      "cite": "",
+      "v": 0
+    },
+    "F3": {
+      "cite": "https://kiro.dev/docs/specs/analyze-requirements.md:9 (accessed 2026-11-26) (optional deep analysis, 'you can skip' at :58)",
+      "v": 1
+    },
+    "F30": {
+      "cite": "https://kiro.dev/docs/getting-started/installation.md (accessed 2026-11-26) (installers, upgrading section; CLI via dnf/RPM at :123)",
+      "v": 2
+    },
+    "F31": {
+      "cite": "",
+      "v": 0
+    },
+    "F32": {
+      "cite": "https://kiro.dev/docs/compaction.md:62 (accessed 2026-11-26) (context usage meter; no token/cost telemetry for the workflow)",
+      "v": 1
+    },
+    "F33": {
+      "audit_override": true,
+      "cite": "https://kiro.dev/docs/compaction.md:90 (accessed 2026-11-26) (autoCompactionThreshold 80); https://kiro.dev/docs/skills.md:184 (accessed 2026-11-26) (description max 1024 chars)",
+      "v": 1
+    },
+    "F34": {
+      "cite": "",
+      "v": 0
+    },
+    "F4": {
+      "cite": "https://kiro.dev/docs/specs/feature-specs/requirements-first.md:196 (accessed 2026-11-26) (change requirements after design: Kiro updates design and tasks; no versioning)",
+      "v": 1
+    },
+    "F5": {
+      "cite": "https://kiro.dev/docs/specs.md:95 (accessed 2026-11-26) (dependency graph of tasks.md, waves)",
+      "v": 2
+    },
+    "F6": {
+      "cite": "",
+      "v": 0
+    },
+    "F7": {
+      "cite": "https://kiro.dev/docs/steering.md:62 (accessed 2026-11-26) (foundation files from repository analysis, Generate Steering Docs optional at :71); https://kiro.dev/docs/tools/code-intelligence.md (accessed 2026-11-26)",
+      "v": 1
+    },
+    "F8": {
+      "cite": "https://kiro.dev/docs/specs/best-practices.md:152 (accessed 2026-11-26) (Quick Spec vs Feature Spec criteria; Bugfix vs quick fix; vibe)",
+      "v": 2
+    },
+    "F9": {
+      "audit_override": true,
+      "cite": "",
+      "v": 1
+    }
+  },
+  "L4_total": 33,
+  "L5": {
+    "T0_root": "cache:kiro",
+    "T1": [],
+    "T2": [],
+    "T3": [],
+    "notes": "Reference host = Kiro IDE (the product's own primary surface; README 'Choose your Kiro surface' lists IDE first). Closed product: the system prompts, spec-workflow prompts and steering-injection text that Kiro ships are not inspectable, so T1-T3 are empty. What is known from docs (D only, not countable by the script): foundation steering files product.md/tech.md/structure.md are included in every interaction once generated (steering.md:62), skill descriptions are preloaded with name<=64/description<=1024 chars (skills.md:183-184), and the Feature Spec path writes .kiro/specs/<feature>/{requirements,design,tasks}.md (sample at cache:kiro/.kiro/specs/github-issue-automation/). Those are user-project files generated per project, not method text. T0_root points at the public repo, which holds issue-tracker docs and triage automation only, not the method corpus; Kiro T0 is NOT measurable: report T0-T3 for Kiro as not measurable rather than counting this folder."
+  },
+  "evidence_limit": "D (closed product)",
+  "host": "Kiro IDE",
+  "method": "kiro",
+  "name": "AWS Kiro",
+  "notes": "Evidence: official docs at kiro.dev/docs Markdown twins (llms.txt index), fetched 2026-11-26 into a scratch folder (35 pages); public repo kirodotdev/Kiro @ efac9e3 (.kiro/specs sample); secondary profile docs/research/methods/ai-native-methods.md §2.2 read (S evidence, consistent, not used for any value). All values D-evidence, closed-product cap 4 for L2 and A3 for L3. Route for R: standard Requirements-First Feature Spec in the IDE (both v1 cards). Main contestable reading: the bundled `feature-pipeline` workflow (workflows.md:33) is treated as a shipped opt-in path; docs call bundled recipes 'executable examples, not required methodology' (workflows.md:188). It was first read as raising C6 (2->3); the audit reverted C6 to 2 (loops on different routes, no escalation target). It supports C5/C4 elements that still fail at their L3 gates. C8 not selected (v1 cards evaluate it as offered without citing an opt-in cap).",
+  "pin": "efac9e3a1e15f48b347d83bf6e8d1488e6808520",
+  "round": "2026-11"
+}

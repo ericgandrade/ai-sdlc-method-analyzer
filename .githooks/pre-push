@@ -1,0 +1,22 @@
+#!/bin/sh
+# Pre-push leak scan (plan §7.14). Installed by `python -m engine hooks install`.
+# Scans every commit being pushed that is not on any remote. Never bypass it.
+set -u
+top=$(git rev-parse --show-toplevel) || exit 1
+cd "$top" || exit 1
+
+py="${AMA_PYTHON:-}"
+if [ -z "$py" ]; then
+  for c in .venv/bin/python .venv/Scripts/python.exe python3 python; do
+    if [ -x "$c" ] || command -v "$c" >/dev/null 2>&1; then py="$c"; break; fi
+  done
+fi
+if [ -z "$py" ]; then
+  echo "pre-push: no Python interpreter found; refusing the push" >&2
+  exit 1
+fi
+if ! "$py" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)'; then
+  echo "pre-push: Python >= 3.10 is required (found: $py); set AMA_PYTHON" >&2
+  exit 1
+fi
+exec "$py" -m engine hooks pre-push "$@"

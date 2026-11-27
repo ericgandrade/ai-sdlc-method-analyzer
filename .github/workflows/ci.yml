@@ -1,0 +1,75 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.10", "3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -r requirements-dev.txt
+      - run: python -m engine verify-freeze
+      - run: python -m pytest -q
+        env:
+          LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
+
+  tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt -r requirements-tokens.txt
+      - run: echo "AMA_HOME=$RUNNER_TEMP/ama-home" >> "$GITHUB_ENV"
+      - run: python -m engine fetch --tokenizer
+      - run: python -m pytest -q -k tokens
+
+  leakcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Data directory outside the checkout
+        run: echo "AMA_HOME=$RUNNER_TEMP/ama-home" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the CC BY-SA corpus (Agile V) at its registry pin
+        run: python -m engine fetch --slug agile-v
+      - name: Fork pull request notice
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork
+        run: echo "::notice::Fork pull request - the denylist scan is skipped (no secrets). Built-in patterns and CC BY-SA still run. The maintainer runs the denylist scan before merging."
+      - name: Write the owner denylist from the secret
+        if: github.event_name == 'push' || !github.event.pull_request.head.repo.fork
+        env:
+          LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
+        run: |
+          if [ -z "$LEAK_DENYLIST" ]; then
+            if [ "$GITHUB_EVENT_NAME" = "push" ] && [ "$GITHUB_REF" = "refs/heads/main" ]; then
+              echo "::error::LEAK_DENYLIST secret is absent on a push to the default branch"; exit 1
+            fi
+            echo "::notice::LEAK_DENYLIST secret absent; denylist scan skipped"; exit 0
+          fi
+          printf '%s\n' "$LEAK_DENYLIST" > .leakcheck/denylist.txt
+      - name: Leak gate
+        run: |
+          if [ -f .leakcheck/denylist.txt ]; then
+            python -m engine leakcheck --path . --ccbysa --ci --denylist .leakcheck/denylist.txt
+          else
+            python -m engine leakcheck --path . --ccbysa --ci
+          fi

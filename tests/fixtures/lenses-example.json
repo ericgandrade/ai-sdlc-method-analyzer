@@ -1,0 +1,240 @@
+{
+  "L2": {
+    "ceiling": {
+      "C5": {
+        "cites": [
+          "cache:tiny/skills/review/SKILL.md:4"
+        ],
+        "conf": "M",
+        "path": "opt-in review skill",
+        "s": 3
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C5",
+        "default": 2,
+        "reason_quote": "review is optional"
+      }
+    ]
+  },
+  "L3": {
+    "conf": "M",
+    "evidence": [
+      {
+        "cite": "cache:tiny/skills/plan/SKILL.md:3",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:tiny/skills/build/SKILL.md:9",
+        "level": "A2"
+      }
+    ],
+    "first_unmet": "A3: no fresh-context dispatch",
+    "level": "A2"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:1",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F10": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:10",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F11": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:11",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F12": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F13": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:13",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F14": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:14",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F15": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F16": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:16",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F17": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:17",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F18": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F19": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:19",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F2": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:2",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F20": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:20",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F21": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F22": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:22",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F23": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:23",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F24": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F25": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:25",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F26": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:26",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F27": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F28": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:28",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F29": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:29",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F3": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F30": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F31": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:31",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F32": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:32",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F33": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F34": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:34",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F4": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:4",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F5": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:5",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F6": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    },
+    "F7": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:7",
+      "v": 2,
+      "why": "synthetic fixture value"
+    },
+    "F8": {
+      "cite": "cache:tiny/skills/plan/SKILL.md:8",
+      "v": 1,
+      "why": "synthetic fixture value"
+    },
+    "F9": {
+      "cite": "",
+      "v": 0,
+      "why": "synthetic fixture value"
+    }
+  },
+  "L5": {
+    "T0_root": "cache:tiny",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:tiny/skills/plan/SKILL.md",
+        "why": "preloaded skill description"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:tiny/README.md",
+        "why": "entry point"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:tiny/skills/build/SKILL.md",
+        "why": "route for R"
+      }
+    ],
+    "notes": "synthetic"
+  },
+  "basis": "implemented",
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "tiny",
+  "name": "Tiny Method",
+  "notes": "synthetic example of the lens contract; no real method",
+  "pin": "0000000000000000000000000000000000000000"
+}

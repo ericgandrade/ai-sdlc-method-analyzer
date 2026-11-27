@@ -1,0 +1,343 @@
+{
+  "L2": {
+    "ceiling": {
+      "C12": {
+        "cites": [
+          "cache:openspec/schemas/spec-driven/schema.yaml:182",
+          "cache:openspec/schemas/spec-driven/schema.yaml:174"
+        ],
+        "conf": "L",
+        "note": "Both v1 traces already put design.md on R's route, so the Migration Plan heading is not behind an opt-in; raising it would re-calibrate v1, not remove a cap. Lower value kept. Sensitivity: 2 if the heading is read as deployment guidance.",
+        "path": "design.md Migration Plan section (conditional artifact, used when design applies)",
+        "s": 1
+      },
+      "C13": {
+        "cites": [
+          "cache:openspec/skills/openspec-propose/SKILL.md:62",
+          "cache:openspec/schemas/spec-driven/schema.yaml:23"
+        ],
+        "conf": "M",
+        "note": "No core or expanded workflow dispatches subagents with briefs; L3 unmet on every path.",
+        "path": "none raises it",
+        "s": 2
+      },
+      "C2": {
+        "cites": [
+          "cache:openspec/src/core/validation/constants.ts",
+          "cache:openspec/skills/openspec-archive-change/SKILL.md:220"
+        ],
+        "conf": "M",
+        "note": "Running the validator earlier adds structural checks (SHALL/MUST, scenarios present) but no vague-term flagging or IDs, ACs are not executable, and no path re-opens approval after a change (docs: nothing is locked). L5 unmet on every path.",
+        "path": "`openspec validate --strict` (CLI, opt-in before approval)",
+        "s": 4
+      },
+      "C4": {
+        "cites": [
+          "cache:openspec/skills/openspec-verify-change/SKILL.md:66",
+          "cache:openspec/skills/openspec-verify-change/SKILL.md:138"
+        ],
+        "conf": "M",
+        "note": "Verify checks completeness/correctness/coherence by reading code and tests (e.g. 'Check if tests exist covering the scenario'); it does not require command output run after the last change and does not block archive. L3 unmet on every path.",
+        "path": "expanded profile: openspec-verify-change",
+        "s": 2
+      },
+      "C5": {
+        "cites": [
+          "cache:openspec/skills/openspec-verify-change/SKILL.md:66",
+          "cache:openspec/docs/reviewing-changes.md"
+        ],
+        "conf": "M",
+        "note": "Verify runs in the authoring session (no subagent dispatch found) and its findings do not block. L3 needs an independent context; unmet on every path.",
+        "path": "expanded profile: openspec-verify-change",
+        "s": 2
+      },
+      "C6": {
+        "cites": [
+          "cache:openspec/skills/openspec-apply-change/SKILL.md:104",
+          "cache:openspec/skills/openspec-verify-change/SKILL.md"
+        ],
+        "conf": "M",
+        "note": "No shipped workflow (core or expanded) defines a numeric bound or breaker on any loop.",
+        "path": "none raises it",
+        "s": 2
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "default": 4,
+        "reason_quote": "S-B: \"the validator ... is not run on the default propose/apply path before approval\""
+      },
+      {
+        "c": "C4",
+        "default": 2,
+        "reason_quote": "S-B: \"verify (opt-in) checks completeness\"; S-D: \"openspec-verify-change (expanded profile only)\""
+      },
+      {
+        "c": "C5",
+        "default": 2,
+        "reason_quote": "S-B: \"it is in the expanded profile (opt-in) and runs in the authoring context. First unmet: L3: no default-path review by an independent context\""
+      },
+      {
+        "c": "C6",
+        "default": 2,
+        "reason_quote": "S-D: \"L3 unmet: no second feedback loop (verify-fix, review-fix) with exit criterion and numeric bound on the default path\""
+      },
+      {
+        "c": "C12",
+        "default": 1,
+        "reason_quote": "S-D: \"L1: deployment and rollback mentioned as an optional design heading\"; S-B: \"rollback is 'if applicable' in a conditional artifact\""
+      },
+      {
+        "c": "C13",
+        "default": 2,
+        "reason_quote": "S-B: \"First unmet: L3: no fresh subagent contexts with explicit briefs anywhere on the path\""
+      }
+    ]
+  },
+  "L3": {
+    "conf": "M",
+    "evidence": [
+      {
+        "cite": "cache:openspec/skills/openspec-propose/SKILL.md:14 (planning boundary: stop and wait for a new request before apply); cache:openspec/skills/openspec-apply-change/SKILL.md:104 (multi-step apply workflow)",
+        "level": "A1"
+      }
+    ],
+    "first_unmet": "A2: no single run plans, codes and tests; propose must stop after planning and wait for a new user request before apply (openspec-propose/SKILL.md:14), and apply's completion rests on checkboxes, with no test-run stop condition.",
+    "level": "A1"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:openspec/skills/openspec-propose/SKILL.md:54 (ask only on material ambiguity; no mandatory question set)",
+      "v": 1
+    },
+    "F10": {
+      "cite": "",
+      "v": 0
+    },
+    "F11": {
+      "cite": "",
+      "v": 0
+    },
+    "F12": {
+      "cite": "",
+      "v": 0
+    },
+    "F13": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:226 (each task MUST state how to verify; no fresh-evidence gate)",
+      "v": 1
+    },
+    "F14": {
+      "cite": "cache:openspec/skills/openspec-verify-change/SKILL.md:66 (expanded profile, authoring context); cache:openspec/docs/reviewing-changes.md (human review documented)",
+      "v": 1
+    },
+    "F15": {
+      "audit_override": true,
+      "cite": "cache:openspec/skills/openspec-verify-change/SKILL.md:66-68 (Completeness/Correctness/Coherence dimensions consolidated in one report; opt-in)",
+      "v": 0
+    },
+    "F16": {
+      "cite": "",
+      "v": 0
+    },
+    "F17": {
+      "cite": "",
+      "v": 0
+    },
+    "F18": {
+      "cite": "",
+      "v": 0
+    },
+    "F19": {
+      "audit_override": true,
+      "cite": "",
+      "v": 1
+    },
+    "F2": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:104; :105 (SHALL/MUST requirements, WHEN/THEN scenarios)",
+      "v": 2
+    },
+    "F20": {
+      "cite": "cache:openspec/skills/openspec-apply-change/SKILL.md:57 (progress from tasks.md via openspec instructions apply; resumes remaining tasks)",
+      "v": 2
+    },
+    "F21": {
+      "cite": "",
+      "v": 0
+    },
+    "F22": {
+      "cite": "",
+      "v": 0
+    },
+    "F23": {
+      "cite": "",
+      "v": 0
+    },
+    "F24": {
+      "cite": "",
+      "v": 0
+    },
+    "F25": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:182 (Migration Plan: rollback strategy 'if applicable', conditional design)",
+      "v": 1
+    },
+    "F26": {
+      "cite": "",
+      "v": 0
+    },
+    "F27": {
+      "cite": "",
+      "v": 0
+    },
+    "F28": {
+      "cite": "cache:openspec/docs/existing-projects.md:3; cache:openspec/skills/openspec-propose/SKILL.md:22 (living main specs under openspec/specs read by later changes); config.yaml context at cache:openspec/skills/openspec-propose/SKILL.md:62",
+      "v": 2
+    },
+    "F29": {
+      "cite": "cache:openspec/docs/supported-tools.md:65 (Tool Directory Reference, 30+ tools)",
+      "v": 2
+    },
+    "F3": {
+      "cite": "cache:openspec/docs/reviewing-changes.md:127 (human two-minute checklist, documented); validator structural only",
+      "v": 1
+    },
+    "F30": {
+      "cite": "cache:openspec/README.md:123 (versioned installer/npm/brew); cache:openspec/docs/installation.md:43 (version check and update); cache:openspec/docs/migration-guide.md",
+      "v": 2
+    },
+    "F31": {
+      "cite": "cache:openspec/.github/workflows/ci.yml:191 (skills docs-claims and schema/instruction parity tests in CI)",
+      "v": 2
+    },
+    "F32": {
+      "cite": "",
+      "v": 0
+    },
+    "F33": {
+      "audit_override": true,
+      "cite": "cache:openspec/skills/openspec-propose/SKILL.md:62 (project context field capped at 51,200 bytes); cache:openspec/schemas/spec-driven/schema.yaml:23 (--no-scenarios to avoid loading whole specs)",
+      "v": 2
+    },
+    "F34": {
+      "cite": "",
+      "v": 0
+    },
+    "F4": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:17 (ADDED/MODIFIED/REMOVED deltas; REMOVED needs Reason/Migration at :99); cache:openspec/skills/openspec-update-change/SKILL.md (core profile)",
+      "v": 2
+    },
+    "F5": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:220 ('Order tasks by dependency'; no dependency fields)",
+      "v": 1
+    },
+    "F6": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:180 (design.md Decisions with rationale and alternatives; design created for cross-cutting change, :173)",
+      "v": 2
+    },
+    "F7": {
+      "cite": "cache:openspec/skills/openspec-propose/SKILL.md:120 (inspect relevant code read-only); cache:openspec/docs/existing-projects.md:3 (no system map)",
+      "v": 1
+    },
+    "F8": {
+      "cite": "cache:openspec/schemas/spec-driven/schema.yaml:173 (design only if criteria apply); cache:openspec/schemas/spec-driven/schema.yaml:39 (skip_specs); no size/risk routing",
+      "v": 1
+    },
+    "F9": {
+      "cite": "",
+      "v": 0
+    }
+  },
+  "L4_total": 27,
+  "L5": {
+    "T0_root": "cache:openspec",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:openspec/skills/openspec-propose/SKILL.md",
+        "why": "cache:openspec/src/core/profiles.ts:14 (CORE_WORKFLOWS installed by default); delivery default 'skills' at cache:openspec/src/core/global-config.ts:53; cache:openspec/skills/README.md: same files openspec init writes"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:openspec/skills/openspec-explore/SKILL.md",
+        "why": "cache:openspec/src/core/profiles.ts:14 (CORE_WORKFLOWS installed by default); delivery default 'skills' at cache:openspec/src/core/global-config.ts:53; cache:openspec/skills/README.md: same files openspec init writes"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:openspec/skills/openspec-apply-change/SKILL.md",
+        "why": "cache:openspec/src/core/profiles.ts:14 (CORE_WORKFLOWS installed by default); delivery default 'skills' at cache:openspec/src/core/global-config.ts:53; cache:openspec/skills/README.md: same files openspec init writes"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:openspec/skills/openspec-update-change/SKILL.md",
+        "why": "cache:openspec/src/core/profiles.ts:14 (CORE_WORKFLOWS installed by default); delivery default 'skills' at cache:openspec/src/core/global-config.ts:53; cache:openspec/skills/README.md: same files openspec init writes"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:openspec/skills/openspec-sync-specs/SKILL.md",
+        "why": "cache:openspec/src/core/profiles.ts:14 (CORE_WORKFLOWS installed by default); delivery default 'skills' at cache:openspec/src/core/global-config.ts:53; cache:openspec/skills/README.md: same files openspec init writes"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:openspec/skills/openspec-archive-change/SKILL.md",
+        "why": "cache:openspec/src/core/profiles.ts:14 (CORE_WORKFLOWS installed by default); delivery default 'skills' at cache:openspec/src/core/global-config.ts:53; cache:openspec/skills/README.md: same files openspec init writes"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/skills/openspec-propose/SKILL.md",
+        "why": "cache:openspec/README.md:146 ('Already know what you want? Go straight to `/openspec-propose`')"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/schemas/spec-driven/schema.yaml",
+        "why": "cache:openspec/skills/openspec-propose/SKILL.md:109 (openspec instructions <artifact> --json serves each artifact's instruction from the schema; 'authoritative guidance' at :159)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/schemas/spec-driven/templates/proposal.md",
+        "why": "template returned by openspec instructions proposal (propose step 6)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/schemas/spec-driven/templates/spec.md",
+        "why": "template returned by openspec instructions specs"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/schemas/spec-driven/templates/design.md",
+        "why": "template returned by openspec instructions design (design applies: cross-cutting change, schema.yaml:173)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/schemas/spec-driven/templates/tasks.md",
+        "why": "template returned by openspec instructions tasks"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/skills/openspec-apply-change/SKILL.md",
+        "why": "cache:openspec/skills/openspec-propose/SKILL.md:14 (after planning, the next request starts the apply workflow)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/skills/openspec-archive-change/SKILL.md",
+        "why": "cache:openspec/docs/getting-started.md:38 (propose -> apply -> sync -> archive)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:openspec/skills/openspec-sync-specs/SKILL.md",
+        "why": "cache:openspec/skills/openspec-archive-change/SKILL.md:153 ('Sync now (recommended)' runs the openspec-sync-specs workflow inline when installed; core profile installs it)"
+      }
+    ],
+    "notes": "Host = Claude Code. README lists no platforms (only '30+ tools'); Claude Code is the first tool named in cache:openspec/docs/installation.md:34 and in the first row of cache:openspec/docs/supported-tools.md:32 (contestable; the Tool Directory Reference is alphabetical and starts with Amazon Q). OpenSpec 2.x writes no CLAUDE.md/AGENTS.md block (only legacy cleanup, cache:openspec/docs/installation.md:246), so T1 is only the six core skill descriptions; default delivery is skills-only, so no command files. Dynamic CLI output (openspec instructions/status JSON) is generated from schema.yaml + templates, which are listed as their sources; the user's own cache:openspec/openspec/config.yaml and the change's artifacts are project content, excluded. T0_root is the repository root; distributable method text lives in skills/ and schemas/ (docs/ is documentation)."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "openspec",
+  "name": "OpenSpec",
+  "notes": "Route for R: the single default `core` profile path, `/openspec-propose` (explore optional) -> human plan review -> `/openspec-apply-change` -> `/openspec-archive-change` with sync, design.md created because R is cross-cutting (as in both v1 cards). Expanded profile (verify, ff, new, continue, onboard, bulk-archive) is opt-in. Contestable: L3 A1 vs A2 (apply runs a whole task list in one session, but planning is forced into a separate turn and there is no test-based stop condition; lower value taken). L2: no cell changes; C12 kept at 1 (Migration Plan heading already on R's path; 2 only under a looser reading).",
+  "pin": "0c737dc1b543249b38b0f4716816fcf493d894dd",
+  "round": "2026-11"
+}

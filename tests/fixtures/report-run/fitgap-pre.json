@@ -1,0 +1,372 @@
+{
+  "against": [
+    "addyosmani",
+    "agile-v",
+    "ai-dlc",
+    "bmad",
+    "kiro",
+    "mattpocock",
+    "openspec",
+    "spec-kit",
+    "superpowers"
+  ],
+  "criteria": [
+    {
+      "best": 5,
+      "c": "C1",
+      "first_unmet": null,
+      "gap_points_baseline": 1.2,
+      "leaders": [
+        "bmad"
+      ],
+      "median_refs": 3,
+      "target": 4
+    },
+    {
+      "best": 5,
+      "c": "C3",
+      "first_unmet": null,
+      "gap_points_baseline": 1.8,
+      "leaders": [
+        "addyosmani"
+      ],
+      "median_refs": 3,
+      "target": 4
+    },
+    {
+      "best": 5,
+      "c": "C4",
+      "first_unmet": null,
+      "gap_points_baseline": 1.8,
+      "leaders": [
+        "agile-v",
+        "ai-dlc"
+      ],
+      "median_refs": 3,
+      "target": 4
+    },
+    {
+      "best": 4,
+      "c": "C6",
+      "first_unmet": null,
+      "gap_points_baseline": 1.4,
+      "leaders": [
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "superpowers"
+      ],
+      "median_refs": 2,
+      "target": 3
+    },
+    {
+      "best": 4,
+      "c": "C8",
+      "first_unmet": null,
+      "gap_points_baseline": 1.2,
+      "leaders": [
+        "ai-dlc"
+      ],
+      "median_refs": 2,
+      "target": 3
+    },
+    {
+      "best": 4,
+      "c": "C10",
+      "first_unmet": null,
+      "gap_points_baseline": 1.2,
+      "leaders": [
+        "agile-v"
+      ],
+      "median_refs": 2,
+      "target": 3
+    },
+    {
+      "best": 3,
+      "c": "C12",
+      "first_unmet": null,
+      "gap_points_baseline": 1.2,
+      "leaders": [
+        "addyosmani",
+        "ai-dlc"
+      ],
+      "median_refs": 1,
+      "target": 2
+    },
+    {
+      "best": 5,
+      "c": "C13",
+      "first_unmet": null,
+      "gap_points_baseline": 1.2,
+      "leaders": [
+        "addyosmani",
+        "ai-dlc",
+        "superpowers"
+      ],
+      "median_refs": 4,
+      "target": 4
+    },
+    {
+      "best": 4,
+      "c": "C14",
+      "first_unmet": null,
+      "gap_points_baseline": 1.2,
+      "leaders": [
+        "agile-v"
+      ],
+      "median_refs": 3,
+      "target": 3
+    },
+    {
+      "best": 5,
+      "c": "C15",
+      "first_unmet": null,
+      "gap_points_baseline": 0.8,
+      "leaders": [
+        "agile-v",
+        "spec-kit"
+      ],
+      "median_refs": 3,
+      "target": 4
+    },
+    {
+      "best": 3,
+      "c": "C16",
+      "first_unmet": null,
+      "gap_points_baseline": 0.8,
+      "leaders": [
+        "ai-dlc",
+        "bmad"
+      ],
+      "median_refs": 2,
+      "target": 2
+    }
+  ],
+  "features": [
+    {
+      "f": "F2",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "kiro",
+        "openspec",
+        "spec-kit"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F3",
+      "refs_at_2": [
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "superpowers"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F5",
+      "refs_at_2": [
+        "addyosmani",
+        "ai-dlc",
+        "bmad",
+        "kiro",
+        "mattpocock",
+        "spec-kit",
+        "superpowers"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F6",
+      "refs_at_2": [
+        "addyosmani",
+        "bmad",
+        "mattpocock",
+        "openspec",
+        "spec-kit",
+        "superpowers"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F8",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "kiro",
+        "mattpocock"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F9",
+      "refs_at_2": [
+        "addyosmani",
+        "mattpocock",
+        "superpowers"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F11",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "mattpocock",
+        "superpowers"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F12",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "mattpocock",
+        "superpowers"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F14",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "mattpocock",
+        "superpowers"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F15",
+      "refs_at_2": [
+        "addyosmani",
+        "bmad"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F17",
+      "refs_at_2": [
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "spec-kit",
+        "superpowers"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F18",
+      "refs_at_2": [],
+      "target": 0
+    },
+    {
+      "f": "F20",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "kiro",
+        "openspec",
+        "superpowers"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F21",
+      "refs_at_2": [
+        "ai-dlc",
+        "kiro"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F23",
+      "refs_at_2": [
+        "agile-v"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F24",
+      "refs_at_2": [
+        "ai-dlc"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F26",
+      "refs_at_2": [],
+      "target": 1
+    },
+    {
+      "f": "F27",
+      "refs_at_2": [
+        "ai-dlc",
+        "bmad"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F29",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "mattpocock",
+        "openspec",
+        "spec-kit",
+        "superpowers"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F30",
+      "refs_at_2": [
+        "addyosmani",
+        "ai-dlc",
+        "bmad",
+        "kiro",
+        "mattpocock",
+        "openspec",
+        "spec-kit",
+        "superpowers"
+      ],
+      "target": 0
+    },
+    {
+      "f": "F32",
+      "refs_at_2": [
+        "ai-dlc"
+      ],
+      "target": 1
+    },
+    {
+      "f": "F33",
+      "refs_at_2": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "mattpocock",
+        "openspec",
+        "superpowers"
+      ],
+      "target": 0
+    }
+  ],
+  "total_gap_points_baseline": 13.8
+}

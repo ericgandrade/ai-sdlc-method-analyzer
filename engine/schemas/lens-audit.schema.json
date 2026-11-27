@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Lens audit at 100% (plan 5.8).",
+  "properties": {
+    "L1_observations": {
+      "type": "array"
+    },
+    "L5_corrections": {
+      "additionalProperties": false,
+      "properties": {
+        "T1_add": {
+          "items": {
+            "pattern": "^(cache|target):",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "T1_remove": {
+          "items": {
+            "pattern": "^(cache|target):",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "T2_add": {
+          "items": {
+            "pattern": "^(cache|target):",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "T2_remove": {
+          "items": {
+            "pattern": "^(cache|target):",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "T3_add": {
+          "items": {
+            "pattern": "^(cache|target):",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "T3_remove": {
+          "items": {
+            "pattern": "^(cache|target):",
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "checked": {
+      "properties": {
+        "L2": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "L3": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "L4": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "L5": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "L4"
+      ],
+      "type": "object"
+    },
+    "kept": {
+      "properties": {
+        "L2": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "L3": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "L4": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "L5": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "log": {
+      "type": "array"
+    },
+    "overrides": {
+      "additionalProperties": false,
+      "properties": {
+        "L2": {
+          "additionalProperties": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "L3": {
+          "pattern": "^A[0-5]$",
+          "type": "string"
+        },
+        "L4": {
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "enum": [
+                  0,
+                  1,
+                  2
+                ],
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "NA"
+                ],
+                "type": "string"
+              }
+            ]
+          },
+          "type": "object"
+        }
+      },
+      "required": [],
+      "type": "object"
+    }
+  },
+  "required": [
+    "checked",
+    "kept",
+    "overrides"
+  ],
+  "title": "lens-audit",
+  "type": "object"
+}

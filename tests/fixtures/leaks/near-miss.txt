@@ -1,0 +1,3 @@
+Placeholders such as https://user:token@… and ~/Library/Application Support are not leaks.
+A git remote like ssh://git@github.com/org/repo.git is not a leak either.
+The words food and Foodstuff hold no whole-word match, and the pattern text [^/\s] is not a path.

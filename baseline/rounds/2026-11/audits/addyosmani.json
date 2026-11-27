@@ -1,0 +1,31 @@
+{
+  "checked": {
+    "L2": 5,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 5,
+    "L3": 1,
+    "L4": 33
+  },
+  "log": [
+    {
+      "after": 1,
+      "before": 0,
+      "cell": "F18",
+      "evidence": "cache:addyosmani/docs/getting-started.md:190-194; cache:addyosmani/skills/context-engineering/SKILL.md:123-137; cache:addyosmani/.claude/commands/build.md:42",
+      "lens": null,
+      "reason": "LE cited nothing. The docs describe multi-session execution: an external shell loop may exit and resume at each recorded task boundary, re-reading the artifacts and git status, never treating a process exit as a pass and never bypassing an approval gate; context-engineering defines the hand-off contract for that loop. The loop is not shipped ('harness behavior, not a separate skill workflow', getting-started.md:194) and `/build` auto runs in one session, so it is documented-only = 1. Same bar as BMad F18=1 (orchestration only documented).",
+      "type": "g"
+    }
+  ],
+  "method": "addyosmani",
+  "overrides": {
+    "L2": {},
+    "L4": {
+      "F18": 1
+    }
+  },
+  "round": "2026-11"
+}

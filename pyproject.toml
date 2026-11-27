@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-sdlc-method-analyzer"
+version = "0.1.0"
+description = "Assess AI-assisted software development methods against a frozen methodology and a public reference baseline."
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools]
+packages = ["engine"]
+
+[tool.setuptools.package-data]
+engine = ["schemas/*.schema.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+  "needs_cache: reads the real reference cache in $AMA_HOME (skips when absent)",
+  "network_local: serves files from a localhost http.server inside the test",
+]

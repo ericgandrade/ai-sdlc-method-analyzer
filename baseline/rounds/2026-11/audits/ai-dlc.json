@@ -1,0 +1,61 @@
+{
+  "checked": {
+    "L2": 12,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 12,
+    "L3": 1,
+    "L4": 30
+  },
+  "log": [
+    {
+      "after": 2,
+      "before": 1,
+      "cell": "F4",
+      "evidence": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-recovery.md:263-280; cache:ai-dlc/docs/guide/13-customization.md:388",
+      "lens": null,
+      "reason": "Default-path Change Handling has an impact analysis for major changes, an audit-logged Change Request and a dated archive before overwrite. Re-opening approval (strict only) is a C2 L5 / C10 L4 requirement, not F4.",
+      "type": "g"
+    },
+    {
+      "after": 1,
+      "before": 0,
+      "cell": "F15",
+      "evidence": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-collaborators.md:11-14; cache:ai-dlc/core/aidlc-common/stages/inception/user-stories.md:6-11; cache:ai-dlc/docs/guide/13-customization.md:233-235",
+      "lens": null,
+      "reason": "Opt-in collaborators mob mode runs three mutually blind parallel agents on the draft with lead integration and triage (two rounds). Partial: spec only, not the diff. Contestable, low confidence (authoring review, not diff review).",
+      "type": "g"
+    },
+    {
+      "after": 1,
+      "before": 2,
+      "cell": "F22",
+      "evidence": "cache:ai-dlc/docs/guide/07-interaction-modes.md:162-168; cache:ai-dlc/core/hooks/aidlc-record-human-turn.ts:8-9",
+      "lens": null,
+      "reason": "Source states the human-turn record captures what the prompt seam received, not who typed it; 'who' unmet as identity, lower value on doubt. LE cite SKILL.md:48 does not concern approval binding.",
+      "type": "a"
+    },
+    {
+      "after": 1,
+      "before": 2,
+      "cell": "F23",
+      "evidence": "cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md:600-610; cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:300-311; cache:ai-dlc/plugins/test-pro/README.md:13-14",
+      "lens": null,
+      "reason": "Core trace is requirement/AC -> Unit -> code target file; the requirement->test link exists only in the optional test-pro plugin. Same bar as ruling R-F23.",
+      "type": "a"
+    }
+  ],
+  "method": "ai-dlc",
+  "overrides": {
+    "L2": {},
+    "L4": {
+      "F15": 1,
+      "F22": 1,
+      "F23": 1,
+      "F4": 2
+    }
+  },
+  "round": "2026-11"
+}

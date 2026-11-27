@@ -1,0 +1,968 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Reconciler output (plan 5.5).",
+  "properties": {
+    "cells": {
+      "additionalProperties": false,
+      "properties": {
+        "C1": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C10": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C11": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C12": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C13": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C14": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C15": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C16": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C2": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C3": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C4": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C5": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C6": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C7": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C8": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        },
+        "C9": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "conf": {
+              "enum": [
+                "H",
+                "M",
+                "L"
+              ],
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "r": {
+              "maximum": 1.0,
+              "minimum": 0.6,
+              "type": "number"
+            },
+            "r_rule": {
+              "enum": [
+                "lower",
+                "higher-evidenced",
+                "n/a"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "enum": [
+                "equal",
+                "lower",
+                "higher-missed-evidence",
+                "written",
+                "median-down"
+              ],
+              "type": "string"
+            },
+            "s": {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "s",
+            "conf",
+            "rule"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "type": "object"
+    },
+    "r": {
+      "items": {
+        "maximum": 1.0,
+        "minimum": 0.6,
+        "type": "number"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "ra": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "route": {
+      "properties": {
+        "agreed": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        },
+        "route": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "agreed"
+      ],
+      "type": "object"
+    },
+    "vector": {
+      "items": {
+        "maximum": 5,
+        "minimum": 0,
+        "type": "integer"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "type": "array"
+    }
+  },
+  "required": [
+    "vector",
+    "cells",
+    "route"
+  ],
+  "title": "reconciled",
+  "type": "object"
+}

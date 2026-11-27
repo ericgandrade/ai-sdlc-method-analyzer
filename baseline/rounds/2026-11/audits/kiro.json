@@ -1,0 +1,52 @@
+{
+  "checked": {
+    "L2": 9,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 8,
+    "L3": 1,
+    "L4": 32
+  },
+  "log": [
+    {
+      "after": 2,
+      "before": 3,
+      "cell": "C6",
+      "evidence": "docs:kiro/workflows_patterns.md@2026-11-26:70-71; docs:kiro/cli_chat_goal.md@2026-11-26:9,69; baseline/analyses/addyosmani.md §4 and §5 (C6)",
+      "lens": "L2",
+      "reason": "C6 L3 needs two loop types, each with exit criterion, bound and a named escalation target. The bundled feature-pipeline has only review-fix loops (design and code) and ends with 'abort', no target; the verify-fix loop is in a different feature (`/goal`, CLI command), with no route chaining both. Addy Osmani's ceiling 3 is not a precedent: there both loops are on the same route (`/build`) and both escalate explicitly to the user. When in doubt, the lower value. L2 46.8 -> 45.4. First L2 override in the set: confirm consolidar.py applies overrides.L2.",
+      "type": "a"
+    },
+    {
+      "after": 1,
+      "before": 0,
+      "cell": "F9",
+      "evidence": "docs:kiro/specs_bugfix-specs.md@2026-11-26:59-75; baseline/analyses/bmad.md §7 (F9)",
+      "lens": null,
+      "reason": "LE cited nothing. The Bugfix Spec defines properties showing the current implementation produces the incorrect behavior ('validates the bug exists') and generates PBT tasks that confirm the bug reproduces before confirming the fix: documented test-first off R's route. Same bar that gave BMad F9=1 (failing test on the defect, on the bug path, which is not R's route).",
+      "type": "g"
+    },
+    {
+      "after": 1,
+      "before": 2,
+      "cell": "F33",
+      "evidence": "docs:kiro/compaction.md@2026-11-26:19,60,86-90,104; docs:kiro/skills.md@2026-11-26:34,183-184; baseline/analyses/addyosmani.md §7 (F33)",
+      "lens": null,
+      "reason": "LE cited autoCompactionThreshold 80 and the 1024-char skill description cap. The first is a CLI V3 setting (the IDE reference host compacts automatically with no number in the current version) and is a compaction protocol, a separate C13 L4 item, not a size budget. The second applies to user-authored skills, off R's path, and is not tool-checked on method content. Audited F33=2 cells have a numeric budget on the method itself or on the default-path artifact (Addy 500-line skills with CI lint; Superpowers <15-line hand-off) (R-F33). No budget exists for requirements.md, design.md, tasks.md or task hand-offs. Contestable: the description cap limits what is preloaded every session.",
+      "type": "a"
+    }
+  ],
+  "method": "kiro",
+  "overrides": {
+    "L2": {
+      "C6": 2
+    },
+    "L4": {
+      "F33": 1,
+      "F9": 1
+    }
+  },
+  "round": "2026-11"
+}

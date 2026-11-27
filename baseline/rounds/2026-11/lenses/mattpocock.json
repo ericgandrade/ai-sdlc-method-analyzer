@@ -1,0 +1,391 @@
+{
+  "L2": {
+    "ceiling": {
+      "C2": {
+        "audit_override": true,
+        "cites": [
+          "cache:mattpocock/skills/engineering/to-spec/SKILL.md:21-75",
+          "cache:mattpocock/skills/engineering/to-tickets/SKILL.md:94-97"
+        ],
+        "conf": "H",
+        "path": "no shipped path requires testable acceptance criteria (to-spec, to-tickets, wayfinder, triage all lack the rule)",
+        "s": 3
+      },
+      "C3": {
+        "cites": [
+          "cache:mattpocock/skills/engineering/tdd/SKILL.md:36-38",
+          "cache:mattpocock/skills/engineering/diagnosing-bugs/SKILL.md:70"
+        ],
+        "conf": "M",
+        "path": "diagnosing-bugs adds 'watch it go red' (SKILL.md:70) but no shipped path adds rationalization counters or a refactor step (tdd/SKILL.md:38 moves refactoring to review); L4 still unmet",
+        "s": 3
+      },
+      "C5": {
+        "cites": [
+          "cache:mattpocock/skills/engineering/implement-spec/SKILL.md:38",
+          "cache:mattpocock/skills/engineering/code-review/SKILL.md:58-80"
+        ],
+        "conf": "M",
+        "path": "`/implement-spec:` code-review on the integration branch and 'Fix all issues raised' (implement-spec/SKILL.md:38) supplies a resolution rule, but no severity scale and no tests or security axes on any path, so L3 fails",
+        "s": 2
+      },
+      "C6": {
+        "cites": [
+          "cache:mattpocock/skills/engineering/diagnosing-bugs/SKILL.md:53-66",
+          "cache:mattpocock/skills/engineering/tdd/SKILL.md:34-38",
+          "cache:mattpocock/skills/engineering/implement-spec/SKILL.md:38"
+        ],
+        "conf": "M",
+        "path": "diagnosing-bugs gives one loop with exit criterion and breaker (SKILL.md:53-66) but no numeric bound; tdd loop has no breaker; implement-spec has a single fix pass without escalation target; fewer than two qualifying loops on any path",
+        "s": 2
+      },
+      "C7": {
+        "cites": [
+          "cache:mattpocock/skills/engineering/implement-spec/SKILL.md:13,29-36",
+          "cache:mattpocock/skills/engineering/improve-codebase-architecture/SKILL.md:39-41"
+        ],
+        "conf": "M",
+        "path": "`/implement-spec` uses E (frontier dispatch, merger) but no shipped path declares K: improve-codebase-architecture writes its map to the OS temp dir so nothing lands in the repo; no conflict rule",
+        "s": 2
+      },
+      "C9": {
+        "cites": [
+          "cache:mattpocock/skills/engineering/implement-spec/SKILL.md:27",
+          "cache:mattpocock/skills/engineering/to-tickets/SKILL.md:63,86-88",
+          "cache:mattpocock/skills/engineering/to-spec/SKILL.md:31-35"
+        ],
+        "conf": "L",
+        "path": "`/implement-spec` + real tracker links spec issue -> ticket sub-issues -> draft PR, but no per-requirement IDs (user stories are not cited by tickets or tests), so 'stable requirement IDs across three segments' is not met; lower reading taken",
+        "s": 2
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "default": 2,
+        "reason_quote": "S-A: \"clarification interview on the default path\"; S-D: \"spec template and clarification interview exist on the default path\""
+      },
+      {
+        "c": "C3",
+        "default": 3,
+        "reason_quote": "S-D: \"default build path requires red-before-green TDD\""
+      },
+      {
+        "c": "C5",
+        "default": 2,
+        "reason_quote": "S-A: \"review step on the default path\"; first unmet: \"no rule that blocking findings be resolved before merge on the `/implement` path\"; S-D: \"review step on the default path\""
+      },
+      {
+        "c": "C6",
+        "default": 2,
+        "reason_quote": "S-D: \"Diagnosis loop (breaker + escalation to user) is an on-ramp, not R's default path, and has no numeric bound\""
+      },
+      {
+        "c": "C7",
+        "default": 2,
+        "reason_quote": "S-D: \"no codebase/knowledge map artifact on the path (K not declared; ... architecture report is an occasional survey)\""
+      },
+      {
+        "c": "C9",
+        "default": 2,
+        "reason_quote": "S-A first unmet: \"a third linked segment is not kept on the default path ... the PR link exists only on the implement-spec + real-tracker route\"; S-D: \"PR->ticket link exists only on the implement-spec route and a real tracker\""
+      }
+    ]
+  },
+  "L3": {
+    "conf": "L",
+    "evidence": [
+      {
+        "cite": "cache:mattpocock/skills/productivity/grilling/SKILL.md:8,30 (wait for answers each round; do not act until the user confirms); cache:mattpocock/skills/engineering/to-tickets/SKILL.md:56 (iterate until the user approves); cache:mattpocock/skills/engineering/to-spec/SKILL.md:17",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:mattpocock/skills/engineering/implement/SKILL.md:7-17 (ticket implemented with tdd, typecheck, full suite, code-review, commit in one session) with stop-and-ask at :9 (ambiguous reference -> ask) and cache:mattpocock/skills/engineering/code-review/SKILL.md:23 (bad ref or empty diff fails early); implement-spec/SKILL.md:11,40 (end state: whole spec on one integration branch). Stop conditions are thin (no halt list), hence conf L",
+        "level": "A2"
+      },
+      {
+        "cite": "cache:mattpocock/skills/engineering/implement-spec/SKILL.md:15 (fresh context per subagent), :29-36 (fresh implementer subagent per ticket, merger subagent, new frontier kicked off without human)",
+        "level": "A3"
+      }
+    ],
+    "first_unmet": "A4: no shipped external loop that opens a new session per task with persisted state and resume; the `/implement` route needs a human to `/clear` and start each ticket (ask-matt/SKILL.md:26). in-progress/ loop and factory skills are excluded from the plugin (cache:mattpocock/CLAUDE.md:6) and not credited.",
+    "level": "A3"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:mattpocock/skills/productivity/grilling/SKILL.md:6-30 (rounds over the design-tree frontier, numbered questions, done when frontier is empty and the user confirms); grill-with-docs/SKILL.md:7",
+      "v": 2
+    },
+    "F10": {
+      "cite": "cache:mattpocock/skills/engineering/diagnosing-bugs/SKILL.md:3,18,53-66 (feedback-loop-first diagnosis with completion criterion) - on-ramp for bugs (ask-matt/SKILL.md:50), not on the R feature path",
+      "v": 1
+    },
+    "F11": {
+      "cite": "cache:mattpocock/skills/engineering/code-review/SKILL.md:58-72 (Standards and Spec reviewer sub-agents with role briefs), invoked by implement/SKILL.md:15; implement-spec/SKILL.md:25-34 (exploration, implementer, merger subagents)",
+      "v": 2
+    },
+    "F12": {
+      "cite": "cache:mattpocock/skills/engineering/code-review/SKILL.md:11 (fresh context window) and :62-72 (explicit prompt contents); cache:mattpocock/skills/engineering/implement-spec/SKILL.md:15-17 (fresh context, context pointers)",
+      "v": 2
+    },
+    "F13": {
+      "cite": "cache:mattpocock/skills/engineering/implement/SKILL.md:13 (full test suite once at the end) - no rule that a failing run blocks completion, and code-review fixes come after the run; pr/SKILL.md:19 (before/after evidence in PR body)",
+      "v": 1
+    },
+    "F14": {
+      "cite": "cache:mattpocock/skills/engineering/code-review/SKILL.md:11 (parallel sub-agents, each with a fresh context window), invoked on the default path by implement/SKILL.md:15",
+      "v": 2
+    },
+    "F15": {
+      "cite": "cache:mattpocock/skills/engineering/code-review/SKILL.md:58-60 (two lenses in parallel) and :76-80 (reports presented side by side; explicitly no merge or rerank)",
+      "v": 1
+    },
+    "F16": {
+      "cite": "",
+      "v": 0
+    },
+    "F17": {
+      "cite": "",
+      "v": 0
+    },
+    "F18": {
+      "audit_override": true,
+      "cite": "",
+      "v": 1
+    },
+    "F19": {
+      "cite": "cache:mattpocock/skills/engineering/implement-spec/SKILL.md:27-29 (integration branch; each implementer in its own worktree) - alternative route; default `/implement` commits to the current branch (implement/SKILL.md:17)",
+      "v": 1
+    },
+    "F2": {
+      "cite": "cache:mattpocock/skills/engineering/to-spec/SKILL.md:21-75 (spec template: user stories, implementation/testing decisions, out of scope); cache:mattpocock/skills/engineering/to-tickets/SKILL.md:79-80,94-97 (acceptance-criteria checkboxes) - criteria not required to be testable",
+      "v": 1
+    },
+    "F20": {
+      "cite": "cache:mattpocock/skills/engineering/to-tickets/SKILL.md:58-65 (tickets persisted on the tracker or .scratch/<feature>/issues/, worked by frontier); ask-matt/SKILL.md:26 (each ticket self-contained, context disposable) - no defined resume procedure",
+      "v": 1
+    },
+    "F21": {
+      "cite": "",
+      "v": 0
+    },
+    "F22": {
+      "cite": "",
+      "v": 0
+    },
+    "F23": {
+      "cite": "cache:mattpocock/skills/engineering/to-tickets/SKILL.md:63,86-88 (tickets as sub-issues of the spec issue, Parent reference); implement-spec/SKILL.md:27 (draft PR closing spec and tickets, alternative route) - no requirement or test IDs",
+      "v": 1
+    },
+    "F24": {
+      "cite": "",
+      "v": 0
+    },
+    "F25": {
+      "cite": "",
+      "v": 0
+    },
+    "F26": {
+      "cite": "",
+      "v": 0
+    },
+    "F27": {
+      "cite": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:34 (main flow step 4) and cache:mattpocock/skills/engineering/retro/SKILL.md:7,17-23 (candidates for environment changes: navigation pointers, automated checks, coding standards, cache:mattpocock/AGENTS.md) - partial: candidates are only presented to the user (retro/SKILL.md:25), not applied or recorded",
+      "v": 1
+    },
+    "F28": {
+      "cite": "cache:mattpocock/skills/engineering/domain-modeling/SKILL.md:60-62 (cache:mattpocock/GLOSSARY.md updated inline) and :66-74 (ADRs); read back by tdd/SKILL.md:10 and to-spec/SKILL.md:13",
+      "v": 2
+    },
+    "F29": {
+      "cite": "cache:mattpocock/README.md:32-95 (Claude Code, Codex, GitHub Copilot, Gemini CLI, plus npx skills for cursor, opencode, devin, windsurf, amp, pi)",
+      "v": 2
+    },
+    "F3": {
+      "cite": "",
+      "v": 0
+    },
+    "F30": {
+      "cite": "cache:mattpocock/.claude-plugin/plugin.json:3 (version 1.3.2); cache:mattpocock/README.md:35-39 (plugin install, updates itself); cache:mattpocock/.github/workflows/release.yml:29-30 (changesets version PR); cache:mattpocock/CHANGELOG.md:3 (1.3.2)",
+      "v": 2
+    },
+    "F31": {
+      "cite": "cache:mattpocock/CLAUDE.md:11 ('Run claude plugin validate . --strict after touching either manifest', manual) - CI workflows only release and triage (cache:mattpocock/.github/workflows/release.yml:1,29-30; triage-label.yml:19; needs-info.yml:1)",
+      "v": 1
+    },
+    "F32": {
+      "cite": "",
+      "v": 0
+    },
+    "F33": {
+      "cite": "cache:mattpocock/skills/engineering/code-review/SKILL.md:66,72 (sub-agent reports 'Under 400 words'); cache:mattpocock/skills/engineering/to-tickets/SKILL.md:33 (each slice sized to fit one fresh context window); ask-matt/SKILL.md:40 (~150k smart zone)",
+      "v": 2
+    },
+    "F34": {
+      "cite": "",
+      "v": 0
+    },
+    "F4": {
+      "cite": "",
+      "v": 0
+    },
+    "F5": {
+      "cite": "cache:mattpocock/skills/engineering/to-tickets/SKILL.md:38 (each ticket declares blocking edges), :62-65 (dependency order, work the frontier)",
+      "v": 2
+    },
+    "F6": {
+      "cite": "cache:mattpocock/skills/engineering/domain-modeling/SKILL.md:66-74 (offer an ADR when hard to reverse, surprising, real trade-off; ADR-FORMAT.md), run by grill-with-docs/SKILL.md:7",
+      "v": 2
+    },
+    "F7": {
+      "cite": "cache:mattpocock/skills/engineering/to-spec/SKILL.md:13 (explore the repo, use glossary, respect ADRs); to-tickets/SKILL.md:19-23 (explore, optional) - no code map artifact; improve-codebase-architecture writes a throwaway report to the temp dir (improve-codebase-architecture/SKILL.md:39)",
+      "v": 1
+    },
+    "F8": {
+      "cite": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:24-28 (multi-session build? yes -> spec+tickets; no -> implement inline) and :52 (wayfinder for efforts too big for one session)",
+      "v": 2
+    },
+    "F9": {
+      "cite": "cache:mattpocock/skills/engineering/tdd/SKILL.md:36 (red before green: write the failing test first); cache:mattpocock/skills/engineering/implement/SKILL.md:11",
+      "v": 2
+    }
+  },
+  "L4_total": 35,
+  "L5": {
+    "T0_root": "cache:mattpocock",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/diagnosing-bugs/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/tdd/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/prototype/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/research/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/domain-modeling/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/codebase-design/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/code-review/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/pr/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/engineering/wizard/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/productivity/grilling/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:mattpocock/skills/productivity/writing-for-agents/SKILL.md",
+        "why": "cache:mattpocock/.claude-plugin/plugin.json:21-49 (skills array shipped by the plugin); Claude Code preloads name+description"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/grill-with-docs/SKILL.md",
+        "why": "Entry for R: cache:mattpocock/skills/engineering/ask-matt/SKILL.md:19 (main flow step 1, start here in a working directory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/productivity/grilling/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/grill-with-docs/SKILL.md:7 (call the Skill tool for grilling)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/domain-modeling/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/grill-with-docs/SKILL.md:7 (call the Skill tool for domain-modeling)"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+        "why": "cache:mattpocock/skills/engineering/domain-modeling/SKILL.md:60-62 (update cache:mattpocock/GLOSSARY.md inline when a term is resolved, using this format)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/to-spec/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:24-25 (multi-session build: Yes -> `/to-spec`)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/to-tickets/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:25 (then `/to-tickets`)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/implement/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:26 (`/implement` per ticket, first-listed way to work the tickets)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/tdd/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/implement/SKILL.md:11 (call the Skill tool with tdd)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/code-review/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/implement/SKILL.md:15 (call the Skill tool with code-review)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/pr/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:32 (`/pr` shapes the body whenever the agent writes a PR; R requires review before merge)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/retro/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/ask-matt/SKILL.md:34 (main flow step 4: `/retro` closes the loop)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/productivity/writing-for-agents/SKILL.md",
+        "why": "cache:mattpocock/skills/engineering/retro/SKILL.md:11 (call the Skill tool with writing-for-agents)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:mattpocock/skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+        "why": "to-spec/SKILL.md:9,19, to-tickets/SKILL.md:11,58-63 and code-review/SKILL.md:13,29 require the issue-tracker doc 'provided to you' to publish the spec and tickets and to fetch the spec; that doc is docs/agents/issue-tracker.md, written by setup from this seed template (setup-matt-pocock-skills/SKILL.md:49,108-110), GitHub being the default (:42). Required read on R, absent from the lists. Pending recount"
+      }
+    ],
+    "notes": "Host = Claude Code (cache:mattpocock/README.md:32, first platform listed; plugin.json is the Claude Code manifest). No hooks and no plugin-injected instruction files; the repo-root CLAUDE.md/AGENTS.md are contributor files and are excluded. T1 lists the 11 of the 27 skills in cache:mattpocock/.claude-plugin/plugin.json that do not set disable-model-invocation: true; the 16 that set it are excluded (R-T1). misc/, in-progress/ and deprecated/ are not shipped (cache:mattpocock/CLAUDE.md:5-9) and are excluded. T3 lists unconditional happy-path reads only, once each, excluding T2 files. Excluded as conditional or soft: tdd/tests.md and tdd/mocking.md ('See ... for examples', tdd/SKILL.md:16), codebase-design/SKILL.md (only when the interface shape is in question, tdd/SKILL.md:26), domain-modeling/ADR-FORMAT.md (only when an ADR is warranted, :66-74), prototype/handoff detour (ask-matt/SKILL.md:20-23), ask-matt/SKILL.md and PHASE-BOUNDARIES.md (router consulted on demand, user-invoked), setup-matt-pocock-skills/SKILL.md (one-time per-repo precondition, ask-matt/SKILL.md:95-97; cache:mattpocock/README.md:99). Project artifacts written by setup (docs/agents/*), cache:mattpocock/GLOSSARY.md, ADRs, spec and tickets are not method files. T0: T0_root is the repo root; exclude skills/misc/, skills/in-progress/ and skills/deprecated/ from the corpus count because they are not shipped (cache:mattpocock/CLAUDE.md:5-9), matching T1."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "mattpocock",
+  "name": "Matt Pocock skills",
+  "notes": "Route chosen for R: grill-with-docs (grilling + domain-modeling) -> multi-session branch -> to-spec -> to-tickets -> `/implement` per ticket (tdd, code-review, commit) -> pr -> retro (ask-matt/SKILL.md:19-34). `/implement` is taken as the default because ask-matt lists it first and frames `/implement-spec` as the choice 'when you'd rather orchestrate the build' (:27); v1 traces list both. Features present only on `/implement-spec` are scored 1. L2 selection was literal; five of the six selected cells keep the default because no shipped path clears the next level's unmet requirement; the audit raised C2 to 3 (triage path). L3 is scored as offered across shipped paths (A3 via `/implement-spec`). Contestable: C9 ceiling could be 3 if a spec-level issue ID counts as a requirement ID on the implement-spec + real tracker route; F27 scored 1 (lower reading: retro suggests, does not apply); L3 A2/A3 rest on thin stop conditions (conf L).",
+  "pin": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+  "round": "2026-11"
+}

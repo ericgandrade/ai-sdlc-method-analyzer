@@ -1,0 +1,50 @@
+{
+  "checked": {
+    "L2": 6,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 6,
+    "L3": 1,
+    "L4": 31
+  },
+  "log": [
+    {
+      "after": 0,
+      "before": 1,
+      "cell": "F15",
+      "evidence": "cache:openspec/skills/openspec-verify-change/SKILL.md:62-70; baseline/analyses/spec-kit.md §7 F15; baseline/analyses/superpowers.md §7 F15",
+      "lens": "L4",
+      "reason": "verify is one agent writing one report with three dimensions in a single pass. Common rule (also applied to Superpowers and Spec Kit): a single multi-category pass is not multiple lenses (R-F15); no parallel lenses, no merge/dedup.",
+      "type": "a"
+    },
+    {
+      "after": 1,
+      "before": 0,
+      "cell": "F19",
+      "evidence": "cache:openspec/docs/team-workflow.md:7-9,17-28",
+      "lens": "L4",
+      "reason": "Team guide documents one branch and one PR per change, starting with git switch -c; OpenSpec itself never touches git. Documented-only = 1, same rule as Addy Osmani and Spec Kit.",
+      "type": "g"
+    },
+    {
+      "after": 2,
+      "before": 1,
+      "cell": "F33",
+      "evidence": "cache:openspec/schemas/spec-driven/schema.yaml:44,109; cache:openspec/src/core/validation/constants.ts:10-12,55; cache:openspec/src/core/validation/validator.ts:334-338,877-881; cache:openspec/skills/openspec-sync-specs/SKILL.md:179",
+      "lens": "L4",
+      "reason": "Numeric artifact budget on R's default path: proposal 'Keep it concise (1-2 pages)' in the proposal instruction served to propose (schema.yaml:44); requirement description <=500 characters in the specs instruction, checked by the validator on main specs during sync (openspec validate --specs); validator limits Why to 1000 characters and deltas per change to 10. Warning, not block, as accepted for BMad (R-F33).",
+      "type": "g"
+    }
+  ],
+  "method": "openspec",
+  "overrides": {
+    "L4": {
+      "F15": 0,
+      "F19": 1,
+      "F33": 2
+    }
+  },
+  "round": "2026-11"
+}

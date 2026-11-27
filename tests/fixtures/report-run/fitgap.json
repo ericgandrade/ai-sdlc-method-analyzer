@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "c": [
+        "C1"
+      ],
+      "effort": "S",
+      "f": [
+        "F1"
+      ],
+      "horizon": "now",
+      "id": "R1",
+      "impact_points": 1.2,
+      "learn_from": [
+        "bmad"
+      ],
+      "mechanism": "Add a guided first-run setup with one command",
+      "owner_role": "maintainer"
+    },
+    {
+      "c": [
+        "C16"
+      ],
+      "effort": "L",
+      "f": [
+        "F34"
+      ],
+      "horizon": "60-90",
+      "id": "R2",
+      "impact_points": 0.8,
+      "learn_from": [
+        "ai-dlc"
+      ],
+      "mechanism": "Ship evals that measure the method on fixed tasks",
+      "owner_role": "maintainer"
+    }
+  ]
+}

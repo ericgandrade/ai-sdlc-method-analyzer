@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Adjudication decisions (plan 5.16).",
+  "properties": {
+    "adjudicator": {
+      "pattern": "^(agent:.+|person)$",
+      "type": "string"
+    },
+    "decisions": {
+      "items": {
+        "properties": {
+          "after": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "after_r": {
+            "maximum": 1.0,
+            "minimum": 0.6,
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "boundary_verdict": {
+            "enum": [
+              "in",
+              "out",
+              null
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "c": {
+            "pattern": "^C([1-9]|1[0-6])$",
+            "type": "string"
+          },
+          "contest_id": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "decision": {
+            "enum": [
+              "upheld",
+              "rejected"
+            ],
+            "type": "string"
+          },
+          "evidence": {
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "score",
+              "r",
+              "boundary"
+            ],
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "c",
+          "contest_id",
+          "kind",
+          "decision",
+          "evidence"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "decisions",
+    "adjudicator"
+  ],
+  "title": "adjudication",
+  "type": "object"
+}

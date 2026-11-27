@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Calibration deltas (plan 7.7, protocol 2).",
+  "properties": {
+    "drift": {
+      "type": "boolean"
+    },
+    "refs": {
+      "additionalProperties": {
+        "properties": {
+          "drift": {
+            "type": "boolean"
+          },
+          "per_scorer": {
+            "additionalProperties": {
+              "properties": {
+                "agreement_exact_raw": {
+                  "type": "number"
+                },
+                "agreement_exact_reconciled": {
+                  "type": "number"
+                },
+                "delta_raw": {
+                  "type": "number"
+                },
+                "delta_reconciled": {
+                  "type": "number"
+                },
+                "drift": {
+                  "type": "boolean"
+                },
+                "model": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "total": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "total",
+                "delta_reconciled",
+                "delta_raw",
+                "agreement_exact_reconciled",
+                "agreement_exact_raw"
+              ],
+              "type": "object"
+            },
+            "type": "object"
+          },
+          "raw_totals": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "reconciled_total": {
+            "type": "number"
+          },
+          "threshold": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "reconciled_total",
+          "raw_totals",
+          "per_scorer",
+          "threshold",
+          "drift"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "refs",
+    "drift"
+  ],
+  "title": "calibration",
+  "type": "object"
+}

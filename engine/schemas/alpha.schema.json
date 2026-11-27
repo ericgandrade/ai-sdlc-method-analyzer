@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Reliability over pre-reconciliation ratings (plan 7.7, protocol 3).",
+  "properties": {
+    "alpha": {
+      "type": "number"
+    },
+    "ci90": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+    },
+    "coders": {
+      "minimum": 2,
+      "type": "integer"
+    },
+    "gate": {
+      "type": "boolean"
+    },
+    "instances": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "small_set": {
+      "type": "boolean"
+    },
+    "units": {
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "alpha",
+    "units",
+    "coders",
+    "ci90",
+    "small_set",
+    "gate"
+  ],
+  "title": "alpha",
+  "type": "object"
+}

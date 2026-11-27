@@ -1,0 +1,42 @@
+{
+  "checked": {
+    "L2": 6,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 5,
+    "L3": 1,
+    "L4": 33
+  },
+  "log": [
+    {
+      "after": 3,
+      "before": 2,
+      "cell": "C2",
+      "evidence": "cache:mattpocock/skills/engineering/triage/AGENT-BRIEF.md:3,28-37,41-68; cache:mattpocock/skills/engineering/triage/SKILL.md:29,70-80,92-108; cache:mattpocock/.claude-plugin/plugin.json:25",
+      "lens": null,
+      "reason": "LE ceiling says triage lacks the testable-criteria rule; AGENT-BRIEF.md:30 requires concrete, testable, independently verifiable acceptance criteria, explicit out-of-scope (:35-37) and the brief is the authoritative spec (:3), preceded by verification and grilling with open questions recorded (needs-info template). Meets C2 L3 on a shipped path without the default-path limit; L4 unmet (no independent critique, no change control). L2 43.8 -> 45.4",
+      "type": "g"
+    },
+    {
+      "after": 1,
+      "before": 0,
+      "cell": "F18",
+      "evidence": "cache:mattpocock/docs/engineering/implement-spec.md:62-64; cache:mattpocock/docs/engineering/triage.md:72,85; cache:mattpocock/skills/engineering/to-tickets/SKILL.md:63",
+      "lens": null,
+      "reason": "Docs describe the external AFK loop (deterministic runner, shell script or CI job) consuming ready-for-agent tickets; no runner is shipped. Brief F18 rule: documented-only external loop = 1. L4 34 -> 35",
+      "type": "g"
+    }
+  ],
+  "method": "mattpocock",
+  "overrides": {
+    "L2": {
+      "C2": 3
+    },
+    "L4": {
+      "F18": 1
+    }
+  },
+  "round": "2026-11"
+}

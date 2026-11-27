@@ -1,0 +1,30 @@
+{
+  "checked": {
+    "L2": 8,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 7,
+    "L3": 1,
+    "L4": 34
+  },
+  "log": [
+    {
+      "after": 3,
+      "before": 2,
+      "cell": "C4",
+      "evidence": "cache:spec-kit/extensions/bug/commands/speckit.bug.test.md:84,92-101,114,124,191-193; cache:spec-kit/extensions/bug/extension.yml:8; pyproject.toml:52",
+      "lens": "L2",
+      "reason": "First-party bundled bug extension meets C4 L3 on a shipped path: checks run after the fix (command must not modify code), command, exit status and output excerpt recorded, explicit not-run status, verdict verified/partial/failed with its own criterion that blocks closing. L4 unmet (same agent, no independent context). Same rule as the mattpocock triage ceiling for C2. L2 43.2 -> 45.0",
+      "type": "g"
+    }
+  ],
+  "method": "spec-kit",
+  "overrides": {
+    "L2": {
+      "C4": 3
+    }
+  },
+  "round": "2026-11"
+}

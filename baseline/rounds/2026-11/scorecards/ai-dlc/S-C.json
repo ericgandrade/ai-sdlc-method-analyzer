@@ -1,0 +1,88 @@
+{
+  "method": "ai-dlc",
+  "methodology_sha256": "a6e3953725b67db0189e188c1495ee9b54975e48f65c28baaa01f459b69cf9a4",
+  "scorer": "S-C",
+  "scores": {
+    "C1": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C10": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C11": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C12": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C13": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C14": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C15": {
+      "conf": "H",
+      "ev": "I",
+      "s": 5
+    },
+    "C16": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C2": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C3": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C4": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C5": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C6": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C7": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C8": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C9": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    }
+  },
+  "version": "1c557ea277817b72ed4e07d076c0f21740748e3a (awslabs/aidlc-workflows main, README v2.11.4, commit date 2026-11-20; cloned 2026-11-20 into scratchpad/refs-scoring/S-C/aidlc-workflows)"
+}

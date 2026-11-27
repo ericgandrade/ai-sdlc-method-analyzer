@@ -1,0 +1,15 @@
+# Owner denylist: syntax and placeholders only.
+# Copy to .leakcheck/denylist.txt (git-ignored) and write your real terms there.
+# Never commit the real file. In CI it comes from the LEAK_DENYLIST secret.
+#
+# Whole-line comments start with '#'. A trailing ' # ...' on an entry is a comment too.
+#
+# cs:<Term>          case-sensitive literal, word boundary (a private name that is also a common lowercase word)
+# ci:<term>          case-insensitive literal, word boundary
+# re:<python-regex>  regular expression, applied per line (a name followed by a version token)
+# <term>             no prefix = ci:
+#
+cs:ExampleCodename
+ci:example-private-project
+re:ExampleProduct\s+v?\d
+example-client-name

@@ -1,0 +1,1777 @@
+{
+  "draws": 200,
+  "loo": [
+    {
+      "c": "C1",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 3,
+        "kiro": 8,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 58.7,
+        "agile-v": 67.4,
+        "ai-dlc": 70.4,
+        "bmad": 64.7,
+        "fixture-method": 67.2,
+        "kiro": 42.1,
+        "mattpocock": 44.0,
+        "openspec": 37.4,
+        "spec-kit": 40.9,
+        "superpowers": 57.0
+      }
+    },
+    {
+      "c": "C2",
+      "first": [
+        "agile-v"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 1,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 3,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 69.3,
+        "ai-dlc": 67.6,
+        "bmad": 65.7,
+        "fixture-method": 67.0,
+        "kiro": 44.8,
+        "mattpocock": 44.1,
+        "openspec": 35.2,
+        "spec-kit": 41.7,
+        "superpowers": 57.4
+      }
+    },
+    {
+      "c": "C3",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 6,
+        "agile-v": 2,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 4,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 53.4,
+        "agile-v": 67.7,
+        "ai-dlc": 69.5,
+        "bmad": 67.5,
+        "fixture-method": 66.8,
+        "kiro": 44.8,
+        "mattpocock": 42.2,
+        "openspec": 36.7,
+        "spec-kit": 43.5,
+        "superpowers": 53.6
+      }
+    },
+    {
+      "c": "C4",
+      "first": [
+        "fixture-method"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 2,
+        "bmad": 2,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 63.7,
+        "ai-dlc": 65.5,
+        "bmad": 65.5,
+        "fixture-method": 66.8,
+        "kiro": 44.8,
+        "mattpocock": 44.2,
+        "openspec": 38.7,
+        "spec-kit": 43.5,
+        "superpowers": 53.6
+      }
+    },
+    {
+      "c": "C5",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 8,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 7,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 65.9,
+        "ai-dlc": 67.6,
+        "bmad": 65.7,
+        "fixture-method": 67.0,
+        "kiro": 44.8,
+        "mattpocock": 44.1,
+        "openspec": 38.7,
+        "spec-kit": 45.2,
+        "superpowers": 53.9
+      }
+    },
+    {
+      "c": "C6",
+      "first": [
+        "fixture-method"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 58.9,
+        "agile-v": 66.0,
+        "ai-dlc": 67.7,
+        "bmad": 65.8,
+        "fixture-method": 68.6,
+        "kiro": 44.7,
+        "mattpocock": 44.1,
+        "openspec": 38.7,
+        "spec-kit": 43.4,
+        "superpowers": 54.2
+      }
+    },
+    {
+      "c": "C7",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 8,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 58.3,
+        "agile-v": 67.3,
+        "ai-dlc": 69.0,
+        "bmad": 67.1,
+        "fixture-method": 68.3,
+        "kiro": 43.8,
+        "mattpocock": 44.0,
+        "openspec": 38.8,
+        "spec-kit": 43.3,
+        "superpowers": 56.7
+      }
+    },
+    {
+      "c": "C8",
+      "first": [
+        "agile-v"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 1,
+        "ai-dlc": 3,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 58.7,
+        "agile-v": 68.7,
+        "ai-dlc": 67.9,
+        "bmad": 67.2,
+        "fixture-method": 68.5,
+        "kiro": 44.7,
+        "mattpocock": 44.0,
+        "openspec": 41.3,
+        "spec-kit": 43.4,
+        "superpowers": 55.7
+      }
+    },
+    {
+      "c": "C9",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 58.5,
+        "agile-v": 67.4,
+        "ai-dlc": 69.1,
+        "bmad": 67.2,
+        "fixture-method": 68.4,
+        "kiro": 44.6,
+        "mattpocock": 44.0,
+        "openspec": 39.8,
+        "spec-kit": 43.4,
+        "superpowers": 56.8
+      }
+    },
+    {
+      "c": "C10",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 58.7,
+        "agile-v": 66.2,
+        "ai-dlc": 69.1,
+        "bmad": 67.2,
+        "fixture-method": 68.5,
+        "kiro": 44.7,
+        "mattpocock": 44.0,
+        "openspec": 38.7,
+        "spec-kit": 43.4,
+        "superpowers": 57.0
+      }
+    },
+    {
+      "c": "C11",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 6,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "fixture-method": 2,
+        "kiro": 8,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 67.4,
+        "ai-dlc": 70.4,
+        "bmad": 68.5,
+        "fixture-method": 68.5,
+        "kiro": 44.7,
+        "mattpocock": 45.3,
+        "openspec": 40.0,
+        "spec-kit": 43.4,
+        "superpowers": 58.3
+      }
+    },
+    {
+      "c": "C12",
+      "first": [
+        "fixture-method"
+      ],
+      "ranks": {
+        "addyosmani": 6,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 5
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 68.7,
+        "ai-dlc": 69.1,
+        "bmad": 68.5,
+        "fixture-method": 69.8,
+        "kiro": 46.0,
+        "mattpocock": 45.3,
+        "openspec": 40.0,
+        "spec-kit": 44.7,
+        "superpowers": 59.6
+      }
+    },
+    {
+      "c": "C13",
+      "first": [
+        "fixture-method"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 54.9,
+        "agile-v": 66.2,
+        "ai-dlc": 66.6,
+        "bmad": 66.0,
+        "fixture-method": 67.2,
+        "kiro": 43.4,
+        "mattpocock": 41.5,
+        "openspec": 38.7,
+        "spec-kit": 42.1,
+        "superpowers": 53.2
+      }
+    },
+    {
+      "c": "C14",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 7,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 57.4,
+        "agile-v": 66.2,
+        "ai-dlc": 69.1,
+        "bmad": 67.2,
+        "fixture-method": 68.5,
+        "kiro": 43.4,
+        "mattpocock": 42.8,
+        "openspec": 38.7,
+        "spec-kit": 43.4,
+        "superpowers": 57.0
+      }
+    },
+    {
+      "c": "C15",
+      "first": [
+        "ai-dlc"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 2,
+        "fixture-method": 3,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 56.7,
+        "agile-v": 65.6,
+        "ai-dlc": 69.8,
+        "bmad": 67.9,
+        "fixture-method": 67.5,
+        "kiro": 44.6,
+        "mattpocock": 43.1,
+        "openspec": 38.8,
+        "spec-kit": 40.8,
+        "superpowers": 55.0
+      }
+    },
+    {
+      "c": "C16",
+      "first": [
+        "fixture-method"
+      ],
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 8,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 7,
+        "superpowers": 6
+      },
+      "totals": {
+        "addyosmani": 60.0,
+        "agile-v": 68.1,
+        "ai-dlc": 69.0,
+        "bmad": 67.1,
+        "fixture-method": 69.2,
+        "kiro": 44.6,
+        "mattpocock": 44.0,
+        "openspec": 40.4,
+        "spec-kit": 45.0,
+        "superpowers": 56.7
+      }
+    }
+  ],
+  "loo_rule": "x counts as first in a leave-one-out run only when its total is strictly above every other total",
+  "mean_rank": {
+    "centred": {
+      "addyosmani": 5.34,
+      "agile-v": 2.83,
+      "ai-dlc": 1.9,
+      "bmad": 2.96,
+      "fixture-method": 2.32,
+      "kiro": 7.6,
+      "mattpocock": 8.12,
+      "openspec": 9.82,
+      "spec-kit": 8.45,
+      "superpowers": 5.65
+    },
+    "score_perturbation": {
+      "addyosmani": 5.25,
+      "agile-v": 2.95,
+      "ai-dlc": 2.04,
+      "bmad": 2.96,
+      "fixture-method": 2.05,
+      "kiro": 7.74,
+      "mattpocock": 7.96,
+      "openspec": 9.95,
+      "spec-kit": 8.35,
+      "superpowers": 5.75
+    },
+    "uniform": {
+      "addyosmani": 5.43,
+      "agile-v": 2.38,
+      "ai-dlc": 2.4,
+      "bmad": 3.0,
+      "fixture-method": 2.41,
+      "kiro": 7.57,
+      "mattpocock": 8.15,
+      "openspec": 9.86,
+      "spec-kit": 8.09,
+      "superpowers": 5.7
+    }
+  },
+  "p_first": {
+    "centred": {
+      "addyosmani": 0.0,
+      "agile-v": 0.175,
+      "ai-dlc": 0.485,
+      "bmad": 0.087,
+      "fixture-method": 0.253,
+      "kiro": 0.0,
+      "mattpocock": 0.0,
+      "openspec": 0.0,
+      "spec-kit": 0.0,
+      "superpowers": 0.0
+    },
+    "score_perturbation": {
+      "addyosmani": 0.0,
+      "agile-v": 0.122,
+      "ai-dlc": 0.432,
+      "bmad": 0.077,
+      "fixture-method": 0.367,
+      "kiro": 0.0,
+      "mattpocock": 0.0,
+      "openspec": 0.0,
+      "spec-kit": 0.0,
+      "superpowers": 0.0
+    },
+    "uniform": {
+      "addyosmani": 0.0,
+      "agile-v": 0.355,
+      "ai-dlc": 0.33,
+      "bmad": 0.163,
+      "fixture-method": 0.152,
+      "kiro": 0.0,
+      "mattpocock": 0.0,
+      "openspec": 0.0,
+      "spec-kit": 0.0,
+      "superpowers": 0.0
+    }
+  },
+  "profiles": {
+    "autonomous": {
+      "addyosmani": {
+        "rank": 6,
+        "total": 57.2
+      },
+      "agile-v": {
+        "rank": 4,
+        "total": 67.4
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 72.0
+      },
+      "bmad": {
+        "rank": 3,
+        "total": 67.8
+      },
+      "fixture-method": {
+        "rank": 2,
+        "total": 68.0
+      },
+      "kiro": {
+        "rank": 7,
+        "total": 45.2
+      },
+      "mattpocock": {
+        "rank": 8,
+        "total": 44.6
+      },
+      "openspec": {
+        "rank": 10,
+        "total": 36.8
+      },
+      "spec-kit": {
+        "rank": 9,
+        "total": 43.2
+      },
+      "superpowers": {
+        "rank": 5,
+        "total": 60.2
+      }
+    },
+    "baseline": {
+      "addyosmani": {
+        "rank": 5,
+        "total": 57.6
+      },
+      "agile-v": {
+        "rank": 3,
+        "total": 67.0
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 68.6
+      },
+      "bmad": {
+        "rank": 4,
+        "total": 66.8
+      },
+      "fixture-method": {
+        "rank": 2,
+        "total": 68.0
+      },
+      "kiro": {
+        "rank": 7,
+        "total": 44.4
+      },
+      "mattpocock": {
+        "rank": 8,
+        "total": 43.8
+      },
+      "openspec": {
+        "rank": 10,
+        "total": 38.8
+      },
+      "spec-kit": {
+        "rank": 9,
+        "total": 43.2
+      },
+      "superpowers": {
+        "rank": 6,
+        "total": 56.0
+      }
+    },
+    "equal": {
+      "addyosmani": {
+        "rank": 5,
+        "total": 55.0
+      },
+      "agile-v": {
+        "rank": 1,
+        "total": 66.2
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 66.2
+      },
+      "bmad": {
+        "rank": 4,
+        "total": 65.0
+      },
+      "fixture-method": {
+        "rank": 1,
+        "total": 66.2
+      },
+      "kiro": {
+        "rank": 7,
+        "total": 45.0
+      },
+      "mattpocock": {
+        "rank": 8,
+        "total": 43.8
+      },
+      "openspec": {
+        "rank": 10,
+        "total": 36.2
+      },
+      "spec-kit": {
+        "rank": 8,
+        "total": 43.8
+      },
+      "superpowers": {
+        "rank": 6,
+        "total": 53.8
+      }
+    },
+    "regulated": {
+      "addyosmani": {
+        "rank": 5,
+        "total": 54.6
+      },
+      "agile-v": {
+        "rank": 3,
+        "total": 65.6
+      },
+      "ai-dlc": {
+        "rank": 1,
+        "total": 68.4
+      },
+      "bmad": {
+        "rank": 4,
+        "total": 65.2
+      },
+      "fixture-method": {
+        "rank": 2,
+        "total": 66.4
+      },
+      "kiro": {
+        "rank": 7,
+        "total": 41.6
+      },
+      "mattpocock": {
+        "rank": 8,
+        "total": 40.4
+      },
+      "openspec": {
+        "rank": 10,
+        "total": 37.2
+      },
+      "spec-kit": {
+        "rank": 9,
+        "total": 39.6
+      },
+      "superpowers": {
+        "rank": 6,
+        "total": 51.0
+      }
+    },
+    "startup": {
+      "addyosmani": {
+        "rank": 5,
+        "total": 60.2
+      },
+      "agile-v": {
+        "rank": 3,
+        "total": 68.0
+      },
+      "ai-dlc": {
+        "rank": 4,
+        "total": 67.4
+      },
+      "bmad": {
+        "rank": 2,
+        "total": 68.8
+      },
+      "fixture-method": {
+        "rank": 1,
+        "total": 69.8
+      },
+      "kiro": {
+        "rank": 7,
+        "total": 48.2
+      },
+      "mattpocock": {
+        "rank": 9,
+        "total": 46.6
+      },
+      "openspec": {
+        "rank": 10,
+        "total": 40.6
+      },
+      "spec-kit": {
+        "rank": 7,
+        "total": 48.2
+      },
+      "superpowers": {
+        "rank": 6,
+        "total": 58.4
+      }
+    }
+  },
+  "samplers": {
+    "centred": "Dirichlet alpha_c = 0.5 w_c (sum 50), scores fixed",
+    "score_perturbation": "baseline weights; s + U(-u, u) per criterion with each method's u, clipped to [0, 5]",
+    "uniform": "Dirichlet alpha_c = 1, scores fixed"
+  },
+  "seed": 20260101,
+  "tornado": [
+    {
+      "c": "C1",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 1,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 8,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C1",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 1,
+        "bmad": -2,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 2,
+        "bmad": 2,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C2",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": -2,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 1,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 3,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C2",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C3",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C3",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 1,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 1,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 8,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C4",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 1,
+        "bmad": -1,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 2,
+        "bmad": 3,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C4",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C5",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C5",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C6",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 1,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C6",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C7",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C7",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C8",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C8",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C9",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C9",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C10",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C10",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C11",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C11",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C12",
+      "changes": {
+        "addyosmani": 1,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": -1
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 6,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 5
+      }
+    },
+    {
+      "c": "C12",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C13",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C13",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": -1,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 7,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C14",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C14",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C15",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C15",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 1,
+        "bmad": 0,
+        "fixture-method": -1,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -2,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 2,
+        "bmad": 4,
+        "fixture-method": 1,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 7,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C16",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 0,
+        "ai-dlc": 0,
+        "bmad": 0,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 1,
+        "openspec": 0,
+        "spec-kit": -1,
+        "superpowers": 0
+      },
+      "factor": 0.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 3,
+        "ai-dlc": 1,
+        "bmad": 4,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 9,
+        "openspec": 10,
+        "spec-kit": 8,
+        "superpowers": 6
+      }
+    },
+    {
+      "c": "C16",
+      "changes": {
+        "addyosmani": 0,
+        "agile-v": 1,
+        "ai-dlc": 0,
+        "bmad": -1,
+        "fixture-method": 0,
+        "kiro": 0,
+        "mattpocock": 0,
+        "openspec": 0,
+        "spec-kit": 0,
+        "superpowers": 0
+      },
+      "factor": 1.5,
+      "ranks": {
+        "addyosmani": 5,
+        "agile-v": 4,
+        "ai-dlc": 1,
+        "bmad": 3,
+        "fixture-method": 2,
+        "kiro": 7,
+        "mattpocock": 8,
+        "openspec": 10,
+        "spec-kit": 9,
+        "superpowers": 6
+      }
+    }
+  ],
+  "verdict_set": {
+    "fixture-method": {
+      "loo_first_count": 5,
+      "loo_rule": "x counts as first in a leave-one-out run only when its total is strictly above every other total",
+      "mean_rank": {
+        "centred": {
+          "addyosmani": 5.34,
+          "agile-v": 2.83,
+          "ai-dlc": 1.9,
+          "bmad": 2.96,
+          "fixture-method": 2.32,
+          "kiro": 7.6,
+          "mattpocock": 8.12,
+          "openspec": 9.82,
+          "spec-kit": 8.45,
+          "superpowers": 5.65
+        },
+        "score_perturbation": {
+          "addyosmani": 5.25,
+          "agile-v": 2.95,
+          "ai-dlc": 2.04,
+          "bmad": 2.96,
+          "fixture-method": 2.05,
+          "kiro": 7.74,
+          "mattpocock": 7.96,
+          "openspec": 9.95,
+          "spec-kit": 8.35,
+          "superpowers": 5.75
+        },
+        "uniform": {
+          "addyosmani": 5.43,
+          "agile-v": 2.38,
+          "ai-dlc": 2.4,
+          "bmad": 3.0,
+          "fixture-method": 2.41,
+          "kiro": 7.57,
+          "mattpocock": 8.15,
+          "openspec": 9.86,
+          "spec-kit": 8.09,
+          "superpowers": 5.7
+        }
+      },
+      "members": [
+        "addyosmani",
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "fixture-method",
+        "kiro",
+        "mattpocock",
+        "openspec",
+        "spec-kit",
+        "superpowers"
+      ],
+      "p_first": {
+        "centred": 0.253,
+        "score_perturbation": 0.367,
+        "uniform": 0.152
+      },
+      "p_first_all": {
+        "centred": {
+          "addyosmani": 0.0,
+          "agile-v": 0.175,
+          "ai-dlc": 0.485,
+          "bmad": 0.087,
+          "fixture-method": 0.253,
+          "kiro": 0.0,
+          "mattpocock": 0.0,
+          "openspec": 0.0,
+          "spec-kit": 0.0,
+          "superpowers": 0.0
+        },
+        "score_perturbation": {
+          "addyosmani": 0.0,
+          "agile-v": 0.122,
+          "ai-dlc": 0.432,
+          "bmad": 0.077,
+          "fixture-method": 0.367,
+          "kiro": 0.0,
+          "mattpocock": 0.0,
+          "openspec": 0.0,
+          "spec-kit": 0.0,
+          "superpowers": 0.0
+        },
+        "uniform": {
+          "addyosmani": 0.0,
+          "agile-v": 0.355,
+          "ai-dlc": 0.33,
+          "bmad": 0.163,
+          "fixture-method": 0.152,
+          "kiro": 0.0,
+          "mattpocock": 0.0,
+          "openspec": 0.0,
+          "spec-kit": 0.0,
+          "superpowers": 0.0
+        }
+      }
+    }
+  }
+}

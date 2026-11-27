@@ -1,3 +1,5 @@
 methodology/*.md -text
 baseline/** -text
 tests/fixtures/** text eol=lf
+tests/golden/** -text
+themes/** text eol=lf

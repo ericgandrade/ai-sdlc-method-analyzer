@@ -49,18 +49,23 @@ def _is_venv(d):
     return (pathlib.Path(d) / "pyvenv.cfg").exists()
 
 
-def walk(root, skip_build=False):
+def walk(root, skip_build=None):
     """Yield (relposix, Path, kind) under root, never following symlinks. kind: file | link.
-    skip_build excludes dist/ and build/ directories (used only with a declared shipped root)."""
+    skip_build is a declared shipped root (posix, relative to root): dist/ and build/ directories
+    outside it are excluded (§7.5). None or False excludes nothing by name."""
     root = pathlib.Path(root)
+    shipped = pathlib.PurePosixPath(skip_build.strip("/")) if isinstance(skip_build, str) and skip_build.strip("/") else None
     for dirpath, dirnames, filenames in os.walk(root, followlinks=False):
         dp = pathlib.Path(dirpath)
         keep = []
         for d in sorted(dirnames):
             full = dp / d
+            rel = pathlib.PurePosixPath(full.relative_to(root).as_posix())
             if full.is_symlink():
-                yield full.relative_to(root).as_posix(), full, "link"
-            elif d in SKIP_COPY or _is_venv(full) or (skip_build and d in ("dist", "build")):
+                yield rel.as_posix(), full, "link"
+            elif d in SKIP_COPY or _is_venv(full):
+                continue
+            elif skip_build and d in ("dist", "build") and not (shipped and (rel == shipped or shipped in rel.parents)):
                 continue
             else:
                 keep.append(d)
@@ -71,11 +76,9 @@ def walk(root, skip_build=False):
 
 
 def skip_build_for(shipped_root):
-    """dist/ and build/ are skipped for T0 and inventory only when a declared shipped root lies outside them."""
-    if not shipped_root:
-        return False
-    first = pathlib.PurePosixPath(shipped_root.rstrip("/")).parts[:1]
-    return not (first and first[0] in ("dist", "build"))
+    """The shipped root to pass to walk(): dist/ and build/ are skipped for T0 and inventory only
+    when a shipped root is declared, and only outside it."""
+    return shipped_root.strip("/") + "/" if shipped_root and shipped_root.strip("/") else None
 
 
 def file_sha(p):

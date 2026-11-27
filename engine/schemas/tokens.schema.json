@@ -11,6 +11,12 @@
               "null"
             ]
           },
+          "T0_root": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "T1": {
             "type": [
               "integer",
@@ -51,6 +57,12 @@
             "type": "object"
           },
           "host": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "lens_T0_root": {
             "type": [
               "string",
               "null"

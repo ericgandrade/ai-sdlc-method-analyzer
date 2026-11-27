@@ -32,6 +32,7 @@ IMPLEMENTED = {
     "adjudication": "adjudication",
     "scorecard": "scorecard",
     "apply-audit": "apply_audit",
+    "tokens": "tokens",
     "reconcile": ("reconcile", "configure_reconcile", "run_reconcile"),
     "calibration": ("reconcile", "configure_run", "run_calibration"),
     "alpha": ("reconcile", "configure_alpha", "run_alpha"),

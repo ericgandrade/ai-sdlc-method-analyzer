@@ -106,7 +106,7 @@ def scan_line(line, deny):
             break
     for idx, rx in deny:
         if rx.search(line):
-            yield f"deny#{idx}"
+            yield idx if isinstance(idx, str) else f"deny#{idx}"
 
 
 def scan_text(text, deny):
@@ -263,6 +263,48 @@ def iter_path_files(target):
             yield p.relative_to(target).as_posix(), p.read_bytes()
 
 
+RUN_INPUTS = ("target", "docs")        # the private snapshot itself is input, not output
+
+
+def iter_run_files(run_id):
+    """Yield (display, bytes) for a run's outputs (run:<rel>) and its report folder (report:<rel>).
+    The target snapshot (target/, docs/) is skipped: it is the private input, never shipped."""
+    from . import paths
+    rd, rp = paths.runs_dir() / run_id, paths.reports_dir() / run_id
+    for base, label in ((rd, "run:"), (rp, "report:")):
+        if not base.is_dir():
+            continue
+        for p in sorted(base.rglob("*")):
+            rel = p.relative_to(base)
+            if p.is_file() and not (label == "run:" and rel.parts[0] in RUN_INPUTS):
+                yield label + rel.as_posix(), p.read_bytes()
+
+
+def private_terms(exclude_run=None):
+    """--public: names and slugs of other runs' targets that are not public references, as
+    case-insensitive word-boundary entries with index-based ids (private#<n>)."""
+    from . import paths
+    from .registry import entries, load_registry
+    try:
+        public = {e["slug"] for e in entries(load_registry(paths.project_root()))}
+    except (OSError, ValueError):
+        public = set()
+    terms = set()
+    base = paths.runs_dir()
+    for sp in sorted(base.glob("*/state.json")) if base.is_dir() else []:
+        if sp.parent.name == exclude_run:
+            continue
+        try:
+            t = json.loads(sp.read_text(encoding="utf-8")).get("target") or {}
+        except (OSError, ValueError):
+            continue
+        if not t or t.get("slug") in public:
+            continue
+        terms |= {x.strip() for x in (t.get("slug"), t.get("name")) if x and len(x.strip()) >= 3}
+    return [(f"private#{n}", re.compile(r"(?<!\w)" + re.escape(term) + r"(?!\w)", re.IGNORECASE))
+            for n, term in enumerate(sorted(terms), 1)]
+
+
 def _blob_reader(repo):
     proc = subprocess.Popen(["git", "cat-file", "--batch"], cwd=repo, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
@@ -368,7 +410,8 @@ def scan_objects(objects, deny, corpus=None, quotes=False):
     return hits
 
 
-def report(hits, show=False, out=sys.stdout, err=sys.stderr):
+def report(hits, show=False, out=None, err=None):
+    out, err = out or sys.stdout, err or sys.stderr
     counts = {}
     for display, n, pid, text in hits:
         counts[pid] = counts.get(pid, 0) + 1
@@ -385,7 +428,7 @@ def report(hits, show=False, out=sys.stdout, err=sys.stderr):
 
 def configure(p):
     mode = p.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--run", help="scan a run (requires the run layer; not built yet)")
+    mode.add_argument("--run", help="scan a run's outputs and its report folder")
     mode.add_argument("--path", help="file or directory to scan")
     mode.add_argument("--staged-and-unpushed", action="store_true",
                       help="scan the index and every commit not on any remote")
@@ -399,12 +442,11 @@ def configure(p):
     p.add_argument("--rev", action="append", default=None, help="revisions for --staged-and-unpushed")
     p.add_argument("--ci", action="store_true", help="CI output mode (ids only)")
     p.add_argument("--show", action="store_true", help="show excerpts (interactive TTY only)")
+    p.add_argument("--public", action="store_true",
+                   help="also flag the names and slugs of other runs' private targets (ids private#<n>)")
 
 
 def run(args):
-    if args.run:
-        print("leakcheck --run: needs the run layer (Phase 2); not implemented", file=sys.stderr)
-        return EXIT_USAGE
     deny = []
     if args.denylist:
         if not pathlib.Path(args.denylist).exists():
@@ -429,7 +471,15 @@ def run(args):
         else:
             print("leakcheck: CC BY-SA corpus absent; fetch it or pass --ccbysa-corpus", file=sys.stderr)
             return EXIT_MISSING
-    if args.path:
+    if args.public:
+        deny += private_terms(exclude_run=args.run)
+    if args.run:
+        from . import paths
+        if not paths.RUN_ID.match(args.run) or not (paths.runs_dir() / args.run).is_dir():
+            print("leakcheck: run not found", file=sys.stderr)
+            return EXIT_MISSING
+        objects = iter_run_files(args.run)
+    elif args.path:
         if not pathlib.Path(args.path).exists():
             print("leakcheck: path not found", file=sys.stderr)
             return EXIT_MISSING

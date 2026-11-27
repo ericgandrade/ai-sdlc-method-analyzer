@@ -14,7 +14,7 @@ Open items recorded during the build. Each line says what is missing and why.
 
 - [ ] **Spike 0.3, live checks.** `docs/spikes/hooks.md` lists every row marked LIVE (hook input fields in main session and subagent, exit-2 blocking, `$CLAUDE_PROJECT_DIR`, plugin component paths, additional-directory reload, hostile nested instructions (a) and (b), session-model resume). They need an interactive Claude Code session and were not run in the unattended build. Blocks Task 4.2.
 - [x] **CI fetch of the CC BY-SA corpus.** The `leakcheck` CI job now runs `python -m engine fetch --slug agile-v` into `$AMA_HOME` (Task 2.5).
-- [ ] **`leakcheck --run` and `--public`.** The run layer (`engine/paths.py`, `engine/state.py`) now exists (Phase 2); wiring these two modes is still open.
+- [x] **`leakcheck --run` and `--public`.** Wired in Task 2.17: `--run` scans a run's outputs (`run:`) and its report folder (`report:`), skipping the private snapshot (`target/`, `docs/`); `--public` adds the slugs and names of other runs' non-reference targets as `private#<n>` ids. The report reviewer (Task 4.x) and the report stages (Phase 3) still have to call them.
 
 ## History on `main` (for the pre-release full-history scan, Task 7.6)
 

@@ -1,0 +1,361 @@
+# references/registry.yaml
+# Pins verified against GitHub on 2026-11-27. Schema: plan §3.1. Parsed by engine/miniyaml.py.
+schema: 1
+references:
+  - slug: "ai-dlc"
+    name: "AWS AI-DLC"
+    origin: "AWS (awslabs)"
+    url: "https://github.com/awslabs/aidlc-workflows"
+    licence: "MIT-0"
+    licence_api: "MIT-0"
+    pin: "1c557ea277817b72ed4e07d076c0f21740748e3a"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "AWS"
+    conflict: null
+  - slug: "agile-v"
+    name: "Agile V"
+    origin: "Agile V community (agile-v.org)"
+    url: "https://github.com/Agile-V/agile_v_skills"
+    licence: "CC-BY-SA-4.0"
+    licence_api: "CC-BY-SA-4.0"
+    pin: "4bcc9172f7e00fa3f04bd249584d537a7dbe5600"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "Agile V community"
+    conflict: null
+  - slug: "bmad"
+    name: "BMad Method v7"
+    origin: "BMad Code, LLC"
+    url: "https://github.com/bmad-code-org/BMAD-METHOD"
+    licence: "MIT"
+    licence_api: "NOASSERTION"
+    pin: "e435a22574fe55722841086e5566420178b98df3"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "BMad Code, LLC"
+    conflict: null
+  - slug: "addyosmani"
+    name: "Addy Osmani agent-skills"
+    origin: "Addy Osmani (personal project)"
+    url: "https://github.com/addyosmani/agent-skills"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "39b723ceebf81474d0557c1fecd01eddab585563"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "Addy Osmani"
+    conflict: null
+  - slug: "superpowers"
+    name: "Superpowers"
+    origin: "Jesse Vincent / Prime Radiant"
+    url: "https://github.com/obra/superpowers"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "22f0b463e7a5e579904dd6211a520321035526f7"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "Jesse Vincent"
+    conflict: null
+  - slug: "kiro"
+    name: "AWS Kiro"
+    origin: "AWS (closed product)"
+    url: "https://github.com/kirodotdev/Kiro"
+    licence: "none"
+    licence_api: null
+    pin: "efac9e3a1e15f48b347d83bf6e8d1488e6808520"
+    subpath: null
+    shipped_root: null
+    host: "Kiro IDE"
+    type: "closed"
+    docs:
+      # 36 pages of the 2026-11-26 snapshot; file a_b.md maps to https://kiro.dev/docs/a/b/.
+      # enterprise_monitor.md now lives at enterprise/monitor-and-track (verified 2026-11-27).
+      - url: "https://kiro.dev/docs/cli/chat/goal/"
+        snapshot_date: "2026-11-26"
+        file: "cli_chat_goal.md"
+      - url: "https://kiro.dev/docs/cli/headless/"
+        snapshot_date: "2026-11-26"
+        file: "cli_headless.md"
+      - url: "https://kiro.dev/docs/cloud-sessions/"
+        snapshot_date: "2026-11-26"
+        file: "cloud-sessions.md"
+      - url: "https://kiro.dev/docs/compaction/"
+        snapshot_date: "2026-11-26"
+        file: "compaction.md"
+      - url: "https://kiro.dev/docs/custom-agents/subagents/"
+        snapshot_date: "2026-11-26"
+        file: "custom-agents_subagents.md"
+      - url: "https://kiro.dev/docs/enterprise/governance/"
+        snapshot_date: "2026-11-26"
+        file: "enterprise_governance.md"
+      - url: "https://kiro.dev/docs/enterprise/monitor-and-track/"
+        snapshot_date: "2026-11-26"
+        file: "enterprise_monitor.md"
+      - url: "https://kiro.dev/docs/getting-started/first-project/"
+        snapshot_date: "2026-11-26"
+        file: "getting-started_first-project.md"
+      - url: "https://kiro.dev/docs/getting-started/installation/"
+        snapshot_date: "2026-11-26"
+        file: "getting-started_installation.md"
+      - url: "https://kiro.dev/docs/hooks/"
+        snapshot_date: "2026-11-26"
+        file: "hooks.md"
+      - url: "https://kiro.dev/docs/hooks/types/"
+        snapshot_date: "2026-11-26"
+        file: "hooks_types.md"
+      - url: "https://kiro.dev/docs/how-kiro-works/"
+        snapshot_date: "2026-11-26"
+        file: "how-kiro-works.md"
+      - url: "https://kiro.dev/docs/ide/chat/autopilot/"
+        snapshot_date: "2026-11-26"
+        file: "ide_chat_autopilot.md"
+      - url: "https://kiro.dev/docs/kiroignore/"
+        snapshot_date: "2026-11-26"
+        file: "kiroignore.md"
+      - url: "https://kiro.dev/llms.txt"
+        snapshot_date: "2026-11-26"
+        file: "llms.txt"
+      - url: "https://kiro.dev/docs/mcp/security/"
+        snapshot_date: "2026-11-26"
+        file: "mcp_security.md"
+      - url: "https://kiro.dev/docs/memory/"
+        snapshot_date: "2026-11-26"
+        file: "memory.md"
+      - url: "https://kiro.dev/docs/permissions/"
+        snapshot_date: "2026-11-26"
+        file: "permissions.md"
+      - url: "https://kiro.dev/docs/powers/"
+        snapshot_date: "2026-11-26"
+        file: "powers.md"
+      - url: "https://kiro.dev/docs/privacy-and-security/"
+        snapshot_date: "2026-11-26"
+        file: "privacy-and-security.md"
+      - url: "https://kiro.dev/docs/sandbox/"
+        snapshot_date: "2026-11-26"
+        file: "sandbox.md"
+      - url: "https://kiro.dev/docs/skills/"
+        snapshot_date: "2026-11-26"
+        file: "skills.md"
+      - url: "https://kiro.dev/docs/specs/"
+        snapshot_date: "2026-11-26"
+        file: "specs.md"
+      - url: "https://kiro.dev/docs/specs/analyze-requirements/"
+        snapshot_date: "2026-11-26"
+        file: "specs_analyze-requirements.md"
+      - url: "https://kiro.dev/docs/specs/best-practices/"
+        snapshot_date: "2026-11-26"
+        file: "specs_best-practices.md"
+      - url: "https://kiro.dev/docs/specs/bugfix-specs/"
+        snapshot_date: "2026-11-26"
+        file: "specs_bugfix-specs.md"
+      - url: "https://kiro.dev/docs/specs/correctness/"
+        snapshot_date: "2026-11-26"
+        file: "specs_correctness.md"
+      - url: "https://kiro.dev/docs/specs/feature-specs/"
+        snapshot_date: "2026-11-26"
+        file: "specs_feature-specs.md"
+      - url: "https://kiro.dev/docs/specs/feature-specs/requirements-first/"
+        snapshot_date: "2026-11-26"
+        file: "specs_feature-specs_requirements-first.md"
+      - url: "https://kiro.dev/docs/specs/plan/"
+        snapshot_date: "2026-11-26"
+        file: "specs_plan.md"
+      - url: "https://kiro.dev/docs/specs/quick-spec/"
+        snapshot_date: "2026-11-26"
+        file: "specs_quick-spec.md"
+      - url: "https://kiro.dev/docs/steering/"
+        snapshot_date: "2026-11-26"
+        file: "steering.md"
+      - url: "https://kiro.dev/docs/tools/code-intelligence/"
+        snapshot_date: "2026-11-26"
+        file: "tools_code-intelligence.md"
+      - url: "https://kiro.dev/docs/web/autonomous-mode/"
+        snapshot_date: "2026-11-26"
+        file: "web_autonomous-mode.md"
+      - url: "https://kiro.dev/docs/workflows/"
+        snapshot_date: "2026-11-26"
+        file: "workflows.md"
+      - url: "https://kiro.dev/docs/workflows/patterns/"
+        snapshot_date: "2026-11-26"
+        file: "workflows_patterns.md"
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "AWS"
+    conflict: null
+  - slug: "mattpocock"
+    name: "Matt Pocock skills"
+    origin: "Matt Pocock"
+    url: "https://github.com/mattpocock/skills"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "5863806dd4e15c63174bee4e7515a4256792ecfa"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "Matt Pocock"
+    conflict: null
+  - slug: "spec-kit"
+    name: "GitHub Spec Kit"
+    origin: "GitHub"
+    url: "https://github.com/github/spec-kit"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "a4d571229e164e440f8950cac034607bae7b7518"
+    subpath: null
+    shipped_root: null
+    host: "GitHub Copilot"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "GitHub"
+    conflict: null
+  - slug: "openspec"
+    name: "OpenSpec"
+    origin: "Fission AI"
+    url: "https://github.com/Fission-AI/OpenSpec"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "0c737dc1b543249b38b0f4716816fcf493d894dd"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "scored"
+    baseline: true
+    benchmark: true
+    publisher: "Fission AI"
+    conflict: null
+  - slug: "gsd"
+    name: "GSD Core (\"Get Shit Done\")"
+    origin: "Open GSD (originally TÂCHES)"
+    url: "https://github.com/open-gsd/gsd-core"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "e3dcca27e73c3b50d9063192f67fc159769c9f9a"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "to-score"
+    baseline: false
+    benchmark: false
+    publisher: "Open GSD"
+    conflict: null
+    notes: "tag v1.23.0, 2026-11-23; additional reference"
+  - slug: "ralph"
+    name: "Ralph (snarktank implementation of the Ralph loop)"
+    origin: "Ryan Carson (snarktank); technique by Geoffrey Huntley"
+    url: "https://github.com/snarktank/ralph"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "6c53cb0b831ebe8739c6a003e22af14902d8b0b5"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "to-score"
+    baseline: false
+    benchmark: false
+    publisher: "Ryan Carson"
+    conflict: null
+    notes: "main, 2026-02-02; additional reference"
+variants:
+  - slug: "gsd-legacy"
+    name: "GSD (legacy repository)"
+    origin: "GSD Build"
+    url: "https://github.com/gsd-build/get-shit-done"
+    licence: "MIT"
+    licence_api: "MIT"
+    pin: "7dfeb7ad8acbd6febd2c8c6cf7d3dcb7d1aeb7b9"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "candidate"
+    baseline: false
+    benchmark: false
+    publisher: "GSD Build"
+    conflict: null
+    variant_of: "gsd"
+    notes: "archived; README says GSD has moved to open-gsd/gsd-core; last tag v1.42.3; verification V-GSD pending (Task 6.4)"
+  - slug: "ralph-loop-plugin"
+    name: "Ralph loop plugin"
+    origin: "Anthropic"
+    url: "https://github.com/anthropics/claude-plugins-official"
+    licence: "Apache-2.0"
+    licence_api: "Apache-2.0"
+    pin: "0fbfda5a91f4adc311daca25acc99132f40f0b6e"
+    subpath: "plugins/ralph-loop"
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "unscored-conflict"
+    baseline: false
+    benchmark: false
+    publisher: "Anthropic"
+    conflict: "publisher is the vendor of the default scorer model (methodology 10.2); registered for lineage only, never scored"
+    variant_of: "ralph"
+    notes: "stop-hook loop plugin; last commit touching the subpath 30202c767cfa (2026-10-26)"
+  - slug: "ralph-playbook"
+    name: "How to Ralph Wiggum (playbook)"
+    origin: "Geoffrey Huntley"
+    url: "https://github.com/ghuntley/how-to-ralph-wiggum"
+    licence: "none"
+    licence_api: null
+    pin: "88d488a148af97e4a3f22b11b4c3598c79d6a577"
+    subpath: null
+    shipped_root: null
+    host: "Claude Code"
+    type: "open"
+    docs: []
+    status: "candidate"
+    baseline: false
+    benchmark: false
+    publisher: "Geoffrey Huntley"
+    conflict: null
+    variant_of: "ralph"
+    notes: "read-only context; no licence; never adapt or quote; not scored; technique described at https://ghuntley.com/ralph/"

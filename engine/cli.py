@@ -17,6 +17,7 @@ IMPLEMENTED = {
     "leakcheck": "leakcheck",
     "hooks": "hooks",
     "verify-freeze": "freeze",
+    "validate": "validate",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

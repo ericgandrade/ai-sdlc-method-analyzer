@@ -11,3 +11,4 @@ Open items recorded during the build. Each line says what is missing and why.
 ## History on `main` (for the pre-release full-history scan, Task 7.6)
 
 - The plan file as first committed on `main` contains one placeholder absolute path in a test example (`builtin:home-path`, an illustrative single-letter user, not a real path). It is fixed on `build/v0.1`. `leakcheck --git-history` will still report it on the old blob; decide at Task 7.6 whether to accept it or rewrite history.
+- [ ] **Registry: V-GSD check** (numbering reset or divergence between `gsd-legacy` and `gsd`) is recorded as pending in `notes:`; it runs in Task 6.4.

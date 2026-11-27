@@ -34,3 +34,7 @@ Shipped and gated (leakcheck with owner denylist, `--ccbysa`, portable-path and 
 - [x] **`derived/{results,ranking,sensitivity}.json`:** shipped and listed in `MANIFEST.json` (Tasks 2.10–2.12); sensitivity uses seed 20261127 and 10,000 draws per sampler.
 - [ ] **Human review of Pass B strings (100%).** The plan requires a person to review every string the owner's denylist flagged. In the unattended build, an agent rewrote 8 strings and translated 1; none was emptied. IDs: `ai-dlc|audit/log/3/reason`, `ai-dlc|lens/L5/T3/29/why`, `kiro|audit/log/2/evidence`, `kiro|audit/log/2/reason`, `openspec|audit/log/0/reason`, `openspec|audit/log/1/reason`, `openspec|audit/log/2/reason`, `superpowers|audit/log/0/reason`, `superpowers|audit/log/1/reason` (file `audits/<slug>.json` or `lenses/<slug>.json`, JSON path after the slash). The 20% spot check of unflagged strings is also pending.
 - [ ] **Divergences for ai-dlc:** C15's uniform reading is "not stated" in the source analysis; confirm or fill it during the A2 reproduction check.
+
+## Phase 4
+
+- [ ] **`engine setup`, live check.** The allow-rule syntax (`Read(//<abs>/runs/**)`, `Edit(…)`, `Write(…)`, `Bash(<python> -m engine *)`) and the Windows form of an absolute rule path are from the host documentation, not a live session. Confirm that a fresh session with the written `.claude/settings.local.json` reads and writes `$AMA_HOME` without prompts, and whether a reload is needed (spike row 9).

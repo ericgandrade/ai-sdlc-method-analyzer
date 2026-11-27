@@ -16,6 +16,7 @@ from .common import EXIT_USAGE
 IMPLEMENTED = {
     "leakcheck": "leakcheck",
     "hooks": "hooks",
+    "setup": "setup",
     "verify-freeze": "freeze",
     "validate": "validate",
     "baseline": "baseline",

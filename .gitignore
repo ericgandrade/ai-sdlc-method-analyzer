@@ -1,0 +1,9 @@
+runs/
+reports/
+.cache/
+.leakcheck/denylist.txt
+.claude/settings.local.json
+__pycache__/
+*.pyc
+dist/
+.DS_Store

@@ -245,3 +245,10 @@ def test_licence_files_excluded_from_corpus(tmp_path):
     corpus_dir.mkdir()
     (corpus_dir / "LICENSE").write_text(CORPUS_TEXT)
     assert leakcheck.build_corpus(corpus_dir) == set()
+
+
+def test_location_under_home_is_not_a_hit(tmp_path):
+    d = tmp_path / "Users" / "x"
+    d.mkdir(parents=True)
+    (d / "clean.md").write_text("clean\n")
+    assert leakcheck.scan_objects([(("C:\\" + "Users" + "\\x\\clean.md"), b"clean\n")], []) == []

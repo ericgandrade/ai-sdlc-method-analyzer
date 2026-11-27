@@ -332,8 +332,10 @@ def all_commits(repo):
 # ---------------------------------------------------------------- driver
 
 def _safe_display(display, deny):
-    """A location string that itself matches a pattern is replaced by a hash."""
-    if list(scan_line(display, deny)):
+    """A location whose name matches a denylist term is replaced by a hash. Built-in
+    patterns are not applied to locations: a scan root may legitimately sit under
+    the user's home (temporary directories on Windows do)."""
+    if any(rx.search(display) for _, rx in deny):
         return "path#" + hashlib.sha1(display.encode()).hexdigest()[:10]
     return display
 

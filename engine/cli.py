@@ -16,6 +16,7 @@ from .common import EXIT_USAGE
 IMPLEMENTED = {
     "leakcheck": "leakcheck",
     "hooks": "hooks",
+    "verify-freeze": "freeze",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

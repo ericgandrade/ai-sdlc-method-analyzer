@@ -44,7 +44,7 @@ references:
     licence_api: "NOASSERTION"
     pin: "e435a22574fe55722841086e5566420178b98df3"
     subpath: null
-    shipped_root: null
+    shipped_root: "skills/"
     host: "Claude Code"
     type: "open"
     docs: []

@@ -38,7 +38,8 @@
     "scorecards/spec-kit/S-B.json": "8ba81abfda1e3d3c29af5ddbf22f421a3daac48516b44fb1085698578cd8636b",
     "scorecards/spec-kit/S-C.json": "5204ba4ac61c34b3bfbe4b50966d54ea7c3d51baaa32fb9c8186f299bbdc45ea",
     "scorecards/superpowers/S-A.json": "214dc05af67391a6445ce4b8e84034f3fd8aa71d34b37afba493228c54212862",
-    "scorecards/superpowers/S-C.json": "ef8494514b69b0490d21107630a805266e136f38b111f3b10e927c7f3d10aff0"
+    "scorecards/superpowers/S-C.json": "ef8494514b69b0490d21107630a805266e136f38b111f3b10e927c7f3d10aff0",
+    "tokens.json": "94f589ccc950343a2ab672261d406444b5a7a38d85309c62fd2ec5eeb4206d50"
   },
   "notes": {
     "analyses": "pending: analyses/<slug>.md (D2) are a follow-up; see TODO.md",
@@ -47,8 +48,37 @@
     "pass_b": "9 strings neutralized or translated by an agent (Pass B); human review of these 9 pending; see TODO.md",
     "pass_c": "claim check (report-reviewer, MODE=baseline-analyses) over the shipped narrative: 141 lens, audit and divergence strings; 5 unsupported claims fixed (lens notes that described pre-audit readings); re-check verdict pass. The analyses are not shipped yet, so they were not checked",
     "scorecards_scope": "machine blocks only: method, version, scorer, methodology_sha256 and per criterion s, conf, ev",
-    "tokens": "pending: tokens.json is recomputed by `engine tokens --baseline` (Phase 2); see TODO.md",
-    "tree_diff": "pending: Pre-step A needs `engine fetch` (Phase 2); see TODO.md"
+    "tokens": "tokens.json is recomputed by `engine tokens --baseline` (tiktoken o200k_base) at the registry pins. 31 of the 32 open-slug values equal Appendix A.4 exactly. The one difference is mattpocock T0: 171,389 against 172,428 (-1,039). The reference round counted AGENTS.md, a symlink to CLAUDE.md, a second time (CLAUDE.md is exactly 1,039 tokens); this engine never follows symlinks (plan 7.5). Readings used to reproduce A.4: T0 walks the whole method root (cache:<slug>), not the lens T0_root, and skips dependency lockfiles; bmad declares shipped_root skills/ in the registry, so docs/build/ outside it is skipped. Kiro is not measurable (R-NM).",
+    "tree_diff": {
+      "citation_check": {
+        "cited_files": {
+          "addyosmani": 50,
+          "agile-v": 42,
+          "ai-dlc": 99,
+          "bmad": 85,
+          "kiro": 3,
+          "mattpocock": 32,
+          "openspec": 27,
+          "spec-kit": 40,
+          "superpowers": 34
+        },
+        "date": "2026-11-27",
+        "missing": {
+          "addyosmani": [],
+          "agile-v": [],
+          "ai-dlc": [],
+          "bmad": [],
+          "kiro": [],
+          "mattpocock": [],
+          "openspec": [],
+          "spec-kit": [],
+          "superpowers": []
+        },
+        "result": "pass for all 9 slugs: no cited file is missing at the pin; content changes against the prototype snapshot cannot be checked without it",
+        "rule": "every cache:<slug>/<path> cited in lenses/ and audits/ exists in the clone at the registry pin"
+      },
+      "status": "blocked: the prototype snapshot is not available to this build, so the added/removed/changed path lists against it could not be computed (see TODO.md)"
+    }
   },
   "pins": {
     "addyosmani": "39b723ceebf81474d0557c1fecd01eddab585563",

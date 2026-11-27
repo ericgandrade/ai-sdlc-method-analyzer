@@ -24,6 +24,8 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: pip install -r requirements-dev.txt
       - run: python -m pytest -q
+        env:
+          LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
 
   tokens:
     runs-on: ubuntu-latest
@@ -34,3 +36,39 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt -r requirements-tokens.txt
       - run: python -m pytest -q -k tokens
+
+  leakcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Temporary: raw git until `engine fetch --slug agile-v` exists (Phase 2).
+      - name: Fetch the CC BY-SA corpus (Agile V) at its pin
+        run: |
+          git clone -q --filter=blob:none --no-checkout https://github.com/Agile-V/agile_v_skills .cache/refs/agile-v
+          git -C .cache/refs/agile-v fetch -q origin 4bcc9172f7e00fa3f04bd249584d537a7dbe5600
+          git -C .cache/refs/agile-v -c advice.detachedHead=false checkout -q --detach 4bcc9172f7e00fa3f04bd249584d537a7dbe5600
+      - name: Fork pull request notice
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork
+        run: echo "::notice::Fork pull request - the denylist scan is skipped (no secrets). Built-in patterns and CC BY-SA still run. The maintainer runs the denylist scan before merging."
+      - name: Write the owner denylist from the secret
+        if: github.event_name == 'push' || !github.event.pull_request.head.repo.fork
+        env:
+          LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
+        run: |
+          if [ -z "$LEAK_DENYLIST" ]; then
+            if [ "$GITHUB_EVENT_NAME" = "push" ] && [ "$GITHUB_REF" = "refs/heads/main" ]; then
+              echo "::error::LEAK_DENYLIST secret is absent on a push to the default branch"; exit 1
+            fi
+            echo "::notice::LEAK_DENYLIST secret absent; denylist scan skipped"; exit 0
+          fi
+          printf '%s\n' "$LEAK_DENYLIST" > .leakcheck/denylist.txt
+      - name: Leak gate
+        run: |
+          if [ -f .leakcheck/denylist.txt ]; then
+            python -m engine leakcheck --path . --ccbysa --ci --denylist .leakcheck/denylist.txt
+          else
+            python -m engine leakcheck --path . --ccbysa --ci
+          fi

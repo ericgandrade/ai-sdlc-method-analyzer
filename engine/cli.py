@@ -14,6 +14,8 @@ from .common import EXIT_USAGE
 
 # command name -> module name (implemented commands)
 IMPLEMENTED = {
+    "leakcheck": "leakcheck",
+    "hooks": "hooks",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

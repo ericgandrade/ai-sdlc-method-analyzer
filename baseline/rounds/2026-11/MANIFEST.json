@@ -12,6 +12,7 @@
     "audits/superpowers.json": "68ce332a7540658195c814f926f6e113e0f531ca428488c1bdfb1fde29986d4e",
     "derived/ranking.json": "b86d6ed596a3ec8b40831632c442fa753f229532350466d7ad664355f64399af",
     "derived/results.json": "ef36e05375e396f6c59958e99e47f7a41aa41b0ef7d002e677d60a7e3869db90",
+    "derived/sensitivity.json": "8f5ebcb708028ab568dc623d19481d72f84f309410e91fcca0edaed9b8c617d6",
     "divergences.json": "abdaecf2389479e18b666fd6114bff83d62c419ecae71ccd392531208a57c695",
     "l1.json": "a66042cc2e6fa25f52ab6b0752efacad6521f639f1653e5668bb322b013dcdfd",
     "lenses/addyosmani.json": "f6f1504b098cb49b8cf935fdec6d12c321cf5f9d9d35ded662330e3e69b0b594",
@@ -46,7 +47,7 @@
   "notes": {
     "analyses": "pending: analyses/<slug>.md (D2) are a follow-up; see TODO.md",
     "audits_scope": "audit files keep checked, kept, overrides and log[]; auditor observation lists are not shipped",
-    "derived": "derived/results.json is written by `engine consolidate --all-refs --out baseline/rounds/2026-11/derived` and reproduces Appendix A.2 and A.3 exactly; derived/ranking.json by `engine rank --results derived/results.json --out derived` (A.2 order, median and best vectors). sensitivity.json follows (Task 2.12)",
+    "derived": "derived/results.json is written by `engine consolidate --all-refs --out baseline/rounds/2026-11/derived` and reproduces Appendix A.2 and A.3 exactly; derived/ranking.json by `engine rank --results derived/results.json --out derived` (A.2 order, median and best vectors); derived/sensitivity.json by `engine sensitivity --results derived/results.json --out derived --seed 20261127` (10,000 draws per sampler). P(first) follows methodology 5.4 over the nine references only (centred Dirichlet 0.5 w, uniform Dirichlet 1, score perturbation within each method's own u), not the prototype's 0.8 w, Gaussian noise and U/3 shortcut, so it differs from the prototype's values",
     "pass_b": "9 strings neutralized or translated by an agent (Pass B); human review of these 9 pending; see TODO.md",
     "pass_c": "claim check (report-reviewer, MODE=baseline-analyses) over the shipped narrative: 141 lens, audit and divergence strings; 5 unsupported claims fixed (lens notes that described pre-audit readings); re-check verdict pass. The analyses are not shipped yet, so they were not checked",
     "scorecards_scope": "machine blocks only: method, version, scorer, methodology_sha256 and per criterion s, conf, ev",

@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": {
+    "properties": {
+      "C8": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "L1": {
+        "properties": {
+          "autonomous": {
+            "type": "number"
+          },
+          "baseline": {
+            "type": "number"
+          },
+          "equal": {
+            "type": "number"
+          },
+          "regulated": {
+            "type": "number"
+          },
+          "startup": {
+            "type": "number"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "L1_scores": {
+        "items": {
+          "type": "number"
+        },
+        "maxItems": 16,
+        "minItems": 16,
+        "type": "array"
+      },
+      "L2": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "L2_scores": {
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "L3": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "L3_conf": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "L3_num": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "L4": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "L4_coverage": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "L4_groups": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "L4_points": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "L5": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "U": {
+        "properties": {
+          "autonomous": {
+            "type": "number"
+          },
+          "baseline": {
+            "type": "number"
+          },
+          "equal": {
+            "type": "number"
+          },
+          "regulated": {
+            "type": "number"
+          },
+          "startup": {
+            "type": "number"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "U_recorded": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "benchmark": {
+        "type": "boolean"
+      },
+      "comparison": {
+        "enum": [
+          "same-round",
+          "cross-round"
+        ],
+        "type": "string"
+      },
+      "design": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "excluded_dirs": {
+        "type": "array"
+      },
+      "host": {
+        "type": "string"
+      },
+      "models": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "origin": {
+        "type": "string"
+      },
+      "range": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "reliability": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "role": {
+        "enum": [
+          "reference",
+          "target"
+        ],
+        "type": "string"
+      },
+      "self_assessment": {
+        "type": "boolean"
+      },
+      "status": {
+        "enum": [
+          "implemented",
+          "design-only"
+        ],
+        "type": "string"
+      },
+      "type": {
+        "enum": [
+          "open",
+          "closed",
+          "docs"
+        ],
+        "type": "string"
+      },
+      "u": {
+        "items": {
+          "type": "number"
+        },
+        "maxItems": 16,
+        "minItems": 16,
+        "type": "array"
+      }
+    },
+    "required": [
+      "name",
+      "role",
+      "type",
+      "status",
+      "benchmark",
+      "L1_scores",
+      "u",
+      "L1",
+      "U"
+    ],
+    "type": "object"
+  },
+  "description": "Consolidated results, one object per method keyed by slug (plan 7.6).",
+  "title": "results",
+  "type": "object"
+}

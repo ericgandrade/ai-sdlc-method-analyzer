@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Cells the red team must contest (plan 7.7).",
+  "properties": {
+    "cells": {
+      "items": {
+        "pattern": "^C([1-9]|1[0-6])$",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "full": {
+      "type": "boolean"
+    },
+    "reasons": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "type": "object"
+    },
+    "sample": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "seed": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "cells",
+    "full",
+    "reasons",
+    "seed"
+  ],
+  "title": "audit-scope",
+  "type": "object"
+}

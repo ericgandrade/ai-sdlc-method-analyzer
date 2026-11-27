@@ -1,0 +1,1952 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Lens contract (rubric v2; plan 7.6). L2 is null before stage S08b.",
+  "properties": {
+    "L2": {
+      "properties": {
+        "ceiling": {
+          "additionalProperties": false,
+          "properties": {
+            "C1": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C10": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C11": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C12": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C13": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C14": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C15": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C16": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C2": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C3": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C4": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C5": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C6": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C7": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C8": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            },
+            "C9": {
+              "properties": {
+                "cites": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "conf": {
+                  "enum": [
+                    "H",
+                    "M",
+                    "L"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "s": {
+                  "maximum": 5,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "s"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [],
+          "type": "object"
+        },
+        "selected_cells": {
+          "items": {
+            "properties": {
+              "c": {
+                "pattern": "^C([1-9]|1[0-6])$",
+                "type": "string"
+              },
+              "default": {
+                "maximum": 5,
+                "minimum": 0,
+                "type": "integer"
+              },
+              "reason_quote": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "c",
+              "default"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "selected_cells",
+        "ceiling"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "L3": {
+      "properties": {
+        "conf": {
+          "enum": [
+            "H",
+            "M",
+            "L"
+          ],
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "properties": {
+              "cite": {
+                "type": "string"
+              },
+              "level": {
+                "pattern": "^A[0-5]$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "level"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "first_unmet": {
+          "type": "string"
+        },
+        "level": {
+          "pattern": "^A[0-5]$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "conf",
+        "evidence"
+      ],
+      "type": "object"
+    },
+    "L4": {
+      "additionalProperties": false,
+      "properties": {
+        "F1": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F10": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F11": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F12": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F13": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F14": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F15": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F16": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F17": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F18": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F19": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F2": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F20": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F21": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F22": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F23": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F24": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F25": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F26": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F27": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F28": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F29": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F3": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F30": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F31": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F32": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F33": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F34": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F4": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F5": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F6": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F7": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F8": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        },
+        "F9": {
+          "properties": {
+            "audit_override": {
+              "type": "boolean"
+            },
+            "cite": {
+              "type": "string"
+            },
+            "v": {
+              "oneOf": [
+                {
+                  "enum": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "type": "integer"
+                },
+                {
+                  "enum": [
+                    "NA"
+                  ],
+                  "type": "string"
+                }
+              ]
+            },
+            "why": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "v"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16",
+        "F17",
+        "F18",
+        "F19",
+        "F20",
+        "F21",
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F26",
+        "F27",
+        "F28",
+        "F29",
+        "F30",
+        "F31",
+        "F32",
+        "F33",
+        "F34"
+      ],
+      "type": "object"
+    },
+    "L4_total": {
+      "maximum": 68,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "L5": {
+      "properties": {
+        "T0_root": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "T1": {
+          "items": {
+            "properties": {
+              "frontmatter_only": {
+                "type": "boolean"
+              },
+              "path": {
+                "pattern": "^(cache|target):",
+                "type": "string"
+              },
+              "why": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "frontmatter_only"
+            ],
+            "type": "object"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "T2": {
+          "items": {
+            "properties": {
+              "frontmatter_only": {
+                "type": "boolean"
+              },
+              "path": {
+                "pattern": "^(cache|target):",
+                "type": "string"
+              },
+              "why": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "frontmatter_only"
+            ],
+            "type": "object"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "T3": {
+          "items": {
+            "properties": {
+              "frontmatter_only": {
+                "type": "boolean"
+              },
+              "path": {
+                "pattern": "^(cache|target):",
+                "type": "string"
+              },
+              "why": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "frontmatter_only"
+            ],
+            "type": "object"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "type": "object"
+    },
+    "basis": {
+      "enum": [
+        "implemented",
+        "design",
+        "docs"
+      ],
+      "type": "string"
+    },
+    "evidence_limit": {
+      "type": "string"
+    },
+    "host": {
+      "type": "string"
+    },
+    "method": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "object"
+      ]
+    },
+    "pin": {
+      "type": "string"
+    },
+    "round": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "method",
+    "name",
+    "pin",
+    "host",
+    "evidence_limit",
+    "L2",
+    "L3",
+    "L4",
+    "L5"
+  ],
+  "title": "lenses",
+  "type": "object"
+}

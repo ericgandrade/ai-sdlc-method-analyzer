@@ -13,6 +13,9 @@ dependencies = []
 [tool.setuptools]
 packages = ["engine"]
 
+[tool.setuptools.package-data]
+engine = ["schemas/*.schema.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]

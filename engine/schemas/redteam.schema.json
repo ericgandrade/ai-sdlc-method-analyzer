@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Red-team output (plan 5.6).",
+  "properties": {
+    "boundary": {
+      "items": {
+        "properties": {
+          "evidence": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "in",
+              "out"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "verdict"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "changes": {
+      "items": {
+        "properties": {
+          "after": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "before": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "c": {
+            "pattern": "^C([1-9]|1[0-6])$",
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "type": {
+            "pattern": "^[a-g]$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "c",
+          "before",
+          "after",
+          "evidence"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "contests": {
+      "items": {
+        "properties": {
+          "c": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "outcome": {
+            "enum": [
+              "upheld",
+              "rejected",
+              "to-adjudicator"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "c",
+          "outcome"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "final": {
+      "items": {
+        "maximum": 5,
+        "minimum": 0,
+        "type": "integer"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "type": "array"
+    },
+    "final_r": {
+      "items": {
+        "maximum": 1.0,
+        "minimum": 0.6,
+        "type": "number"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "r_independent": {
+      "items": {
+        "maximum": 1.0,
+        "minimum": 0.6,
+        "type": "number"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "type": [
+        "array",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "final",
+    "changes",
+    "contests",
+    "completed"
+  ],
+  "title": "redteam",
+  "type": "object"
+}

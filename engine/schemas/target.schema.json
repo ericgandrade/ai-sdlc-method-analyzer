@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Intake record (plan 7.5).",
+  "properties": {
+    "bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "dirty": {
+      "type": "boolean"
+    },
+    "docs": {
+      "items": {
+        "properties": {
+          "file": {
+            "type": "string"
+          },
+          "pages": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "sha256": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "files": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "git_head": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "folder",
+        "git",
+        "docs",
+        "reference"
+      ],
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "off_limits_candidates": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "pin": {
+      "pattern": "^([0-9a-f]{40}|tree:[0-9a-f]{64}|docs:[0-9a-f]{64})$",
+      "type": "string"
+    },
+    "private": {
+      "type": "boolean"
+    },
+    "root": {
+      "pattern": "^(target:|cache:[a-z0-9-]+|docs:)$",
+      "type": "string"
+    },
+    "rubric_ids": {
+      "properties": {
+        "criteria": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "features": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "files": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "revised_against_rubric": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "revised_against_rubric"
+      ],
+      "type": "object"
+    },
+    "slug": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "implemented",
+        "design-only"
+      ],
+      "type": "string"
+    },
+    "symlinks": {
+      "items": {
+        "properties": {
+          "kind": {
+            "enum": [
+              "internal",
+              "external",
+              "broken"
+            ],
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "kind"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "type": {
+      "enum": [
+        "open",
+        "closed",
+        "docs"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "slug",
+    "name",
+    "mode",
+    "type",
+    "status",
+    "root",
+    "pin",
+    "dirty",
+    "private"
+  ],
+  "title": "target",
+  "type": "object"
+}

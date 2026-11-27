@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Run state, managed only by `engine state` (plan 6.3).",
+  "properties": {
+    "audit_seed": {
+      "type": "integer"
+    },
+    "budget": {
+      "type": "object"
+    },
+    "cal_reason": {
+      "type": "string"
+    },
+    "cal_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "comparison": {
+      "enum": [
+        "same-round",
+        "cross-round"
+      ],
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "freeze": {
+      "additionalProperties": {
+        "pattern": "^[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "host": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instances": {
+      "type": "object"
+    },
+    "isolation": {
+      "enum": [
+        "subagent",
+        "fresh-session"
+      ],
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "folder",
+        "git",
+        "docs",
+        "reference",
+        "compare",
+        "fitgap"
+      ],
+      "type": "string"
+    },
+    "python": {
+      "type": "string"
+    },
+    "retries": {
+      "type": "object"
+    },
+    "roles": {
+      "type": "object"
+    },
+    "round_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "pattern": "^\\d{8}-\\d{6}-[a-z0-9-]+$",
+      "type": "string"
+    },
+    "scorer_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "self_assessment": {
+      "type": "boolean"
+    },
+    "sources": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "stages": {
+      "additionalProperties": {
+        "properties": {
+          "declared_outputs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "deps": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "finished": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "host": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "model": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "outputs": {
+            "items": {
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "retries": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "started": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "pending",
+              "running",
+              "done",
+              "failed",
+              "skipped"
+            ],
+            "type": "string"
+          },
+          "tokens_in": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "tokens_out": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "wall_minutes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "deps",
+          "declared_outputs",
+          "outputs"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "waiting-external",
+        "closed",
+        "failed"
+      ],
+      "type": "string"
+    },
+    "target": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "tool_version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "tool_version",
+    "created",
+    "mode",
+    "freeze",
+    "seed",
+    "status",
+    "stages",
+    "round_id"
+  ],
+  "title": "state",
+  "type": "object"
+}

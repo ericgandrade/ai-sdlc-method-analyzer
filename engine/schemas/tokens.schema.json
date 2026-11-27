@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Static token counts, L5 (plan 7.8).",
+  "properties": {
+    "methods": {
+      "additionalProperties": {
+        "properties": {
+          "T0": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "T1": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "T2": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "T3": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "comparable": {
+            "type": "boolean"
+          },
+          "files": {
+            "properties": {
+              "T0": {
+                "type": "integer"
+              },
+              "T1": {
+                "type": "integer"
+              },
+              "T2": {
+                "type": "integer"
+              },
+              "T3": {
+                "type": "integer"
+              }
+            },
+            "required": [],
+            "type": "object"
+          },
+          "host": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "measurable": {
+            "type": "boolean"
+          },
+          "missing": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "tokenizer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "T1",
+          "T2",
+          "T3",
+          "T0",
+          "tokenizer",
+          "comparable",
+          "missing"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "reading": {
+      "type": "string"
+    },
+    "tokenizer": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "methods",
+    "tokenizer"
+  ],
+  "title": "tokens",
+  "type": "object"
+}

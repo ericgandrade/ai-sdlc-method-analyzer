@@ -64,6 +64,27 @@ def project(scores, items):
             "label": "hypothesis: assumes each item lifts its criteria to the stated level; not a score"}
 
 
+def first_unmet_for(run_id, final):
+    """`first_unmet` per criterion: the reconciled cell when it carries one, else the scorecard of the
+    active scorer instance whose s equals the final score, else the lower-scoring instance's (§7.13)."""
+    from . import state
+    from .reconcile import _cards
+    rd = state.run_path(run_id)
+    cells = read_json(rd / "reconciled.json").get("cells", {}) if (rd / "reconciled.json").exists() else {}
+    cards = _cards(state.load(run_id), "target.md")
+    out = {}
+    for i, c in enumerate(CRITERIA):
+        if (cells.get(c) or {}).get("first_unmet"):
+            out[c] = cells[c]["first_unmet"]
+            continue
+        cand = [(card["scores"][c]["s"] != final[i], card["scores"][c]["s"], inst, card["scores"][c].get("first_unmet"))
+                for inst, card in sorted(cards.items()) if c in card.get("scores", {})]
+        cand = [x for x in cand if x[3]]
+        if cand:
+            out[c] = min(cand)[3]
+    return out
+
+
 def _source(st):
     from . import state
     rid = st["sources"][0] if st["mode"] == "fitgap" else st["run_id"]
@@ -109,8 +130,7 @@ def run(args):
             print(f"fitgap: not benchmark references: {sorted(set(want) - set(refs))}", file=sys.stderr)
             return EXIT_USAGE
         refs = {m: refs[m] for m in want}
-    cells = read_json(src / "reconciled.json").get("cells", {}) if (src / "reconciled.json").exists() else {}
-    out = fitgap_pre(target, refs, {c: v.get("first_unmet") for c, v in cells.items() if v.get("first_unmet")})
+    out = fitgap_pre(target, refs, first_unmet_for(src_id, target["L1_scores"]))
     out["source_run"] = src_id
     write_json(rd / "fitgap-pre.json", out)
     print(f"fitgap: {len(out['criteria'])} criteria below best, {len(out['features'])} features below 2")

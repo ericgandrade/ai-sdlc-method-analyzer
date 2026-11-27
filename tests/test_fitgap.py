@@ -85,3 +85,23 @@ def test_cli_on_a_fitgap_run(monkeypatch, results):
     write_json(state.run_path(fg) / "fitgap.json", {"items": [{"id": "R1", "horizon": "now", "to_level": {"C5": 4}}]})
     assert main(["fitgap", "--run", fg, "--project"]) == 0
     assert read_json(state.run_path(fg) / "fitgap-projection.json")["hypothesis"] is True
+
+
+def test_first_unmet_falls_back_to_the_matching_scorecard(monkeypatch):
+    import shutil
+    from engine.scorecard import extract
+    monkeypatch.chdir(ROOT)
+    rid = "20261127-101500-tiny"
+    state.init(rid, "folder", "tiny")
+    sealed = state.run_path(rid) / "sealed"
+    shutil.copytree(ROOT / "tests" / "fixtures" / "run-min" / "sealed", sealed)
+    p2 = sealed / "S2" / "target.md"
+    p2.write_bytes(p2.read_bytes().replace(b'"synthetic"', b'"synthetic-two"'))
+    s1 = extract(sealed / "S1" / "target.md")["scores"]
+    s2 = extract(p2)["scores"]
+    final = [s2[f"C{i}"]["s"] for i in range(1, 17)]
+    out = fitgap.first_unmet_for(rid, final)
+    assert out["C5"] == "synthetic-two"                       # S2's score is the final one
+    final[4] = 9                                              # matches neither: the lower scorer's text
+    lower = "synthetic" if s1["C5"]["s"] < s2["C5"]["s"] else "synthetic-two"
+    assert fitgap.first_unmet_for(rid, final)["C5"] == lower

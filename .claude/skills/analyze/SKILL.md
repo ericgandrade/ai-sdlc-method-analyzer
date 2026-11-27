@@ -71,7 +71,7 @@ Check budgets between dispatches only; a stage may overrun once, then pause and 
 |---|---|---|---|
 | S00 | `verify-freeze` | hashes in `state.json` | G0 |
 | S01 | agent `intake-pinner` (runs `intake`) | `target.json`, `boundary.md`, `off_limits.txt` | G1 |
-| S02 | `isolate --run {RUN}` | `sealed/S1/`, `sealed/S2/` | the user confirms the boundary |
+| S02 | `isolate --run {RUN}`; close it with `state done … --outputs off_limits.txt audit_seed`, because isolate rewrites `off_limits.txt` | `sealed/S1/`, `sealed/S2/` | the user confirms the boundary |
 | S03 | agent `path-tracer` | `trace.md` | — |
 | S04:S1, S04:S2 | agent `l1-scorer`, one dispatch per instance, in parallel | `sealed/<ID>/cal-<ref>.md`, `target.md` | G2: `calibration --run {RUN}` drift (warn; the user acknowledges) |
 | S05 | `scorecard check` on every `sealed/*/target.md` | — | schema |

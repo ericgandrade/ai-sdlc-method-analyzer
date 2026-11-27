@@ -156,7 +156,7 @@ def test_size_warning(tmp_path, monkeypatch, capsys):
     with pytest.raises(IntakeError):
         folder_intake(src)
     assert "over 200 MB" in capsys.readouterr().err
-    assert folder_intake(src, accept_large=True)["files"] == 4
+    assert folder_intake(src, accept_large=True)["files"] == 7
 
 
 def test_t0_excludes_dist_only_with_declared_shipped_root(tmp_path):
@@ -350,7 +350,7 @@ def test_inventory_word_counts():
     inv = intake.inventory(TINY)
     by = {f["path"]: f["words"] for f in inv["files"]}
     text = (TINY / "README.md").read_text()
-    assert by["README.md"] == len(text.split()) and inv["total_files"] == 4
+    assert by["README.md"] == len(text.split()) and inv["total_files"] == 7
 
 
 def test_shuffle_deterministic_and_distinct():

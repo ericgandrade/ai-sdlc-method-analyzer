@@ -27,17 +27,21 @@ def project_root(env=None, cwd=None):
 
 
 def default_data_dir(env=None, platform=None):
-    """Per-user OS data folder (§0.3)."""
+    """Per-user OS data folder (§0.3). For a platform other than the running one, a pure
+    path of that platform's flavour is returned, so the result never depends on the host OS."""
     env = os.environ if env is None else env
     platform = platform or sys.platform
+    win = platform.startswith("win")
+    native = win == sys.platform.startswith("win")
+    flavour = pathlib.Path if native else (pathlib.PureWindowsPath if win else pathlib.PurePosixPath)
     home = env.get("HOME") or env.get("USERPROFILE") or str(pathlib.Path.home())
-    if platform.startswith("win"):
-        base = env.get("LOCALAPPDATA") or os.path.join(home, "AppData", "Local")
-        return pathlib.PureWindowsPath(base) / APP if not sys.platform.startswith("win") else pathlib.Path(base) / APP
+    if win:
+        base = env.get("LOCALAPPDATA") or str(flavour(home) / "AppData" / "Local")
+        return flavour(base) / APP
     if platform == "darwin":
-        return pathlib.Path(home) / "Library" / "Application Support" / APP
-    xdg = env.get("XDG_DATA_HOME") or os.path.join(home, ".local", "share")
-    return pathlib.Path(xdg) / APP
+        return flavour(home) / "Library" / "Application Support" / APP
+    xdg = env.get("XDG_DATA_HOME") or str(flavour(home) / ".local" / "share")
+    return flavour(xdg) / APP
 
 
 def data_dir(env=None, platform=None):

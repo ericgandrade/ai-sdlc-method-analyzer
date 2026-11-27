@@ -127,7 +127,7 @@ def test_os_default_data_dirs():
     xdg = a.default_data_dir({"HOME": "/h", "XDG_DATA_HOME": "/x"}, "linux")
     assert pathlib.PurePosixPath(xdg) == pathlib.PurePosixPath("/x/ai-sdlc-method-analyzer")
     win = a.default_data_dir({"LOCALAPPDATA": "C:\\L"}, "win32")
-    assert str(win).replace("/", "\\") == "C:\\L\\ai-sdlc-method-analyzer"
+    assert pathlib.PureWindowsPath(win) == pathlib.PureWindowsPath("C:\\L\\ai-sdlc-method-analyzer")
 
 
 def test_ama_home_inside_project_refused():

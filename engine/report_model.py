@@ -155,7 +155,7 @@ class Model:
                        "Each total is the 0–100 weighted sum of the 16 criteria on scenario R, with baseline weights; "
                        "the denominator is the full 16-criterion scale, the same for every method. The band runs from "
                        "T − U to T + U with a tick at T. Two methods differ only when the gap exceeds the margin "
-                       "M = 1.645·√(U₁² + U₂²); a smaller gap is a technical tie. Role chips mark the 9 frozen "
+                       "M = max(5, 2·√(U₁² + U₂²)) (methodology §9); a smaller gap is a technical tie. Role chips mark the 9 frozen "
                        "benchmarks, additional references (outside verdicts) and targets."))
         tie = self.tie_group()
         key = (f"{self.name(lead)} leads under baseline weights; {len(tie)} method{'s' if len(tie) != 1 else ''} "

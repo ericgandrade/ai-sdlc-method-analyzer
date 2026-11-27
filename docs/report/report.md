@@ -32,7 +32,7 @@ Under baseline weights, AWS AI-DLC leads at 68.6 ± 3.1; Agile V, BMad Method v7
 | 8 | GitHub Spec Kit | benchmark | 43.2 | 2.6 | 43.2 ± 2.6 | below | -25.4 |
 | 9 | OpenSpec | benchmark | 38.8 | 2.6 | 38.8 ± 2.6 | below | -29.8 |
 
-> **How to read.** Each total is the 0–100 weighted sum of the 16 criteria on scenario R, with baseline weights; the denominator is the full 16-criterion scale, the same for every method. The band runs from T − U to T + U with a tick at T. Two methods differ only when the gap exceeds the margin M = 1.645·√(U₁² + U₂²); a smaller gap is a technical tie. Role chips mark the 9 frozen benchmarks, additional references (outside verdicts) and targets.
+> **How to read.** Each total is the 0–100 weighted sum of the 16 criteria on scenario R, with baseline weights; the denominator is the full 16-criterion scale, the same for every method. The band runs from T − U to T + U with a tick at T. Two methods differ only when the gap exceeds the margin M = max(5, 2·√(U₁² + U₂²)) (methodology §9); a smaller gap is a technical tie. Role chips mark the 9 frozen benchmarks, additional references (outside verdicts) and targets.
 
 ## How we assessed
 

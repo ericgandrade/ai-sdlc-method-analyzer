@@ -730,6 +730,31 @@ def retry(run_id, stage, gate):
     return st, opened
 
 
+ROLES = ("S1", "S2", "S3", "S1r", "S2r", "tracer", "reconciler", "redteam", "lens-evaluator", "lens-auditor",
+         "lineage", "analyst", "adjudicator")
+INDEPENDENT = ("reconciler", "redteam", "lens-auditor", "adjudicator")
+
+
+def set_role(run_id, role, agent_id):
+    """Record which agent ID played a role. An independent role (reconciler, red team, lens auditor,
+    adjudicator) may not reuse an ID of an earlier role in the run. This guards against labelling
+    mistakes only; independence itself comes from a fresh dispatch (#57)."""
+    st = load(run_id)
+    _check_open(st)
+    if role not in ROLES:
+        raise StateError(f"unknown role {role}; one of {', '.join(ROLES)}", EXIT_USAGE)
+    if not agent_id or not str(agent_id).strip():
+        raise StateError("--id is required", EXIT_USAGE)
+    roles = st.setdefault("roles", {})
+    others = {k: v for k, v in roles.items() if k != role and v}
+    if role in INDEPENDENT and agent_id in others.values():
+        used = sorted(k for k, v in others.items() if v == agent_id)
+        raise StateError(f"{role} must be independent: ID {agent_id} already played {', '.join(used)}", EXIT_GATE)
+    roles[role] = agent_id
+    save(st)
+    return st
+
+
 def active_instances(st):
     """Scorer instances whose cells feed reconciliation and alpha (#93)."""
     inst = st.get("instances") or {"S1": "S1", "S2": "S2", "extra": []}
@@ -759,6 +784,10 @@ def configure(p):
     i.add_argument("--second-assessor", action="store_true", help="docs mode: run D2")
     i.add_argument("--lineage", action="store_true", help="docs mode: run S13")
     i.add_argument("--host", default=None)
+    ro = sub.add_parser("role", help="record the agent ID of a role")
+    ro.add_argument("--run", required=True)
+    ro.add_argument("--role", required=True)
+    ro.add_argument("--id", dest="agent_id", required=True)
     for name in ("next", "list", "reset", "start", "done", "fail", "close", "resume", "retry"):
         q = sub.add_parser(name)
         if name != "list":
@@ -832,6 +861,8 @@ def _run(args):
         st, reset_names = resume(args.run)
         for r in reset_names:
             print(f"reset (output changed): {r}")
+    elif a == "role":
+        set_role(args.run, args.role, args.agent_id)
     elif a == "retry":
         st, opened = retry(args.run, args.stage, args.gate)
         print(f"state retry: opened {opened}")

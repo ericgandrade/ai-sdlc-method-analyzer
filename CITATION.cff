@@ -1,0 +1,16 @@
+cff-version: "1.2.0"
+message: "If you use this software, please cite it as below."
+title: "AI SDLC Method Analyzer"
+version: "0.1.0"
+date-released: "2026-11-27"
+license: "MIT"
+repository-code: "https://github.com/ericgandrade/ai-sdlc-method-analyzer"
+abstract: "Assesses AI-assisted software development methods against a frozen 16-criterion methodology (v1.0, SHA-256 prefix a6e39537) and rubric v2.0 (8d5b63ea), with a pinned public reference baseline (round 2026-11)."
+type: "software"
+authors:
+  - family-names: "Andrade"
+    given-names: "Eric"
+keywords:
+  - "ai-assisted software development"
+  - "coding agents"
+  - "method assessment"

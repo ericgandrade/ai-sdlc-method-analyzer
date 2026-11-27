@@ -2,6 +2,22 @@
 
 Open items recorded during the build. Each line says what is missing and why.
 
+## v0.2
+
+Deliberately left out of v0.1.0. The phase sections below keep the detail of each item.
+
+- [ ] **Live-session checks** in an interactive Claude Code session: spike 0.3 (every LIVE row of `docs/spikes/hooks.md`), the guard (exit 2 blocks, hook variables expand, also on Windows), `engine setup` (no prompts, reload rule), the plugin path (spike row 8: `/analyze` and the 14 agents from the marketplace), and exit gate P4 (a fresh clone shows the menu on `/analyze`).
+- [ ] **`AGENTS.md` walkthrough on a non-Claude host** (Task 5.1 manual check, exit gate P5): up to S06 on the tiny fixture, recorded.
+- [ ] **Task 5.3, CI offline job:** `fetch --all --docs --tokenizer`, then `AMA_OFFLINE=1 python -m pytest -q -m "not network_local"`. Not in `ci.yml` yet.
+- [ ] **Phase 6, real scoring runs (Tasks 6.1–6.8):** golden files on CI (A1), re-score one reference end to end within its ±U (A2, which also fills the "Reproduction (A2) for 0.1" line of `CHANGELOG.md`), a documentation-only sample (A3), score GSD (A4) and Ralph (A5) with the full pipeline, a comparative report with both plus a fit-gap (A6), CI, leak and claim review (A7), and a clean-machine run on another OS (A8).
+- [ ] **Slide deck (Phase 3b, Task 7.5):** `engine slides` (§8.8). Until it ships, compare and fit-gap runs stop at S16b and cannot close.
+- [ ] **Task 7.3:** promote GSD and Ralph into `baseline/` as additional references (`benchmark: false`).
+- [ ] **Task 7.4:** rebuild the shipped report `docs/report/index.html` with the promoted references.
+- [ ] **Task 7.6, release and visibility:** decide on `docs/plans/` (D12), run `leakcheck --git-history --ccbysa` over every ref, rewrite history if needed, then tag and write the release notes.
+- [ ] **Unbuilt engine subcommands:** `report --public` and `--copy-to`, `read`, `list`, `convert`, `git-log`, `git-show`, `git-ls`, `build-plugin`.
+- [ ] **Owner reviews** listed below (README and shipped report approval for exit gate P7, Pass B strings, tie-break key, `U_recorded` of a promoted reference, token readings, guard residual risks).
+- [ ] **GitHub private vulnerability reporting** is off on the repository; `SECURITY.md` points to it. The owner enables it in the repository settings.
+
 ## Phase 2
 
 - [x] **`hooks/amahome.py`** is the single project and data-directory resolver (#61), loaded by file path by `engine/paths.py` and `hooks/guard.py`; `tests/test_amahome_parity.py` covers it.

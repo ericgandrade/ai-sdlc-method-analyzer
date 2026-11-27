@@ -4,6 +4,10 @@ All notable changes to this project are recorded here. The version authority is 
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-27
+
+Reproduction (A2) for 0.1: pending. Verdicts are unavailable for version 0.1 until the reproduction check is run; all comparisons are cross-round.
+
 ### Added
 - Repository skeleton: plugin manifest, marketplace file, project settings, pinned development and tokenizer requirements.
 - Engine CLI skeleton, methodology constants and the CI matrix.
@@ -22,3 +26,9 @@ All notable changes to this project are recorded here. The version authority is 
 - Golden report files `tests/golden/report.html` and `report.md` generated from `tests/fixtures/report-run/` (`--date 2026-01-01`, neutral theme) and eye-checked at desktop width in light mode by the implementing agent; owner review pending (see `TODO.md`).
 - Sample baseline-only report in `docs/report/index.html` and `report.md` (round 2026-11, date-base 2026-11-27), kept in sync by `tests/test_report_sample.py`. Print CSS expands `<details>` and fits wide tables; the golden files were regenerated for it.
 - Phase 4 (v0.1): the eight `rules/`, the default-deny PreToolUse guard (`hooks/guard.py`, registered in `.claude/settings.json` and `hooks/hooks.json`, failing closed with exit 2), `engine setup [--check] [--remove]`, 14 agent briefs, the `/analyze` orchestrator skill with the start menu, the `count-tokens` skill, `templates/`, `engine state role`, plugin component paths reusing `.claude/`, and a guarded dry run on the tiny fixture method (`docs/reviews/dry-run.md`).
+- Phase 5 (v0.1): `AGENTS.md`, the fallback for non-Claude hosts (menu, stage table, a new session per role, prompt-only guard), with `tests/test_agents_md.py`; contributor rules completed in `CLAUDE.md`.
+- Phase 7 (v0.1): `README.md` rewritten for what v0.1 ships (`tests/test_readme.py`), `CITATION.cff`, `THIRD_PARTY_NOTICES.md` and `SECURITY.md` (`tests/test_release_files.py`).
+- Version 0.1.0 in `plugin.json`, `pyproject.toml` and this file; `tests/test_skeleton.py` checks the three agree.
+
+### Not in 0.1.0
+- The slide deck (`engine slides`), the first real end-to-end scoring runs (Phase 6), the promotion of GSD and Ralph, the release scan, and the live-session checks. They are listed under "v0.2" in `TODO.md`.

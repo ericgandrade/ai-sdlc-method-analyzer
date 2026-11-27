@@ -5,6 +5,9 @@ def test_versions_agree():
     plugin = json.loads((ROOT / ".claude-plugin/plugin.json").read_text())
     text = (ROOT / "pyproject.toml").read_text()
     assert f'version = "{plugin["version"]}"' in text
+    changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+    releases = [l for l in changelog.splitlines() if l.startswith("## [") and not l.startswith("## [Unreleased]")]
+    assert releases and releases[0].startswith(f'## [{plugin["version"]}] - ')
 
 def test_gitignore_private_dirs():
     gi = (ROOT / ".gitignore").read_text().split()

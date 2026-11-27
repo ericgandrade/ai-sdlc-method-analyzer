@@ -37,6 +37,8 @@ IMPLEMENTED = {
     "calibration": ("reconcile", "configure_run", "run_calibration"),
     "alpha": ("reconcile", "configure_alpha", "run_alpha"),
     "audit-scope": ("reconcile", "configure_run", "run_audit_scope"),
+    "consolidate": "consolidate",
+    "ranges": "ranges",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

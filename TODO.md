@@ -11,6 +11,16 @@ Open items recorded during the build. Each line says what is missing and why.
 
 - [ ] **Owner review: tie-break key under equal weights.** Plan §7.10 and §7.12 say the tied leader with the larger U gives the stricter margin, and the §7.12 code keys on `U[profile]` from results.json. The plan's golden text expects agile-v under `equal` "(larger U 3.6)", but 3.6 is agile-v's recorded U, which §7.6 applies to `U.baseline` only. Under the §7.6 U rule, `U.equal` is 4.0 for ai-dlc and 3.3 for agile-v, so `rank` and `superiority` pick **ai-dlc** as B(equal). The engine follows the code and the stricter-margin rule; the tests assert that. Confirm, or switch both modules to key on `U.baseline`.
 
+## Phase 3 (report engine, v0.1)
+
+- [ ] **Phase 3b, slide deck (`engine slides`, plan §8.8): deferred to v0.2.** Not built in v0.1; `slides` still exits 2 "not implemented".
+- [ ] **Owner visual review of the baseline-only report** (exit gate P3): desktop, phone width and print preview, recorded in `docs/reviews/report-v0.1.md`. The implementing agent only eye-checked it in headless Chrome (desktop light and dark, print to PDF); headless Chrome cannot go below 500 px, so phone width is unchecked.
+- [ ] **`engine report --public` and `--copy-to <dir>`** (§4.4 rule 5, #67) are not built; they belong with the Phase 4 guard work.
+- [ ] **Profiles: "one-line why from the analysis"** and strengths/weaknesses/who-it-is-for prose need `baseline/analyses/` (D2, still pending). Profiles show tables only; lens and audit free text is deliberately not rendered (CC BY-SA and leak safety).
+- [ ] **Robustness: the calibration-aligned reading** (§8.2 item 9, from `divergences.json`) is not rendered yet.
+- [ ] **Baseline-only narrative:** with no report-builder sections, the lead and key messages are fixed sentences built from the numbers. Review their wording with the owner.
+- [ ] **Theme validator location:** it lives in `engine/theme.py` (imported by `report_html.py`), not inside `report_html.py` as §8.4 says.
+
 ## Phase 0
 
 - [ ] **Spike 0.3, live checks.** `docs/spikes/hooks.md` lists every row marked LIVE (hook input fields in main session and subagent, exit-2 blocking, `$CLAUDE_PROJECT_DIR`, plugin component paths, additional-directory reload, hostile nested instructions (a) and (b), session-model resume). They need an interactive Claude Code session and were not run in the unattended build. Blocks Task 4.2.

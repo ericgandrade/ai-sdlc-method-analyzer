@@ -3,3 +3,4 @@ baseline/** -text
 tests/fixtures/** text eol=lf
 tests/golden/** -text
 themes/** text eol=lf
+docs/report/** -text

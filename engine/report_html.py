@@ -68,7 +68,7 @@ summary .chips{margin-inline-start:auto;display:flex;gap:.35rem}
 footer{border-block-start:1px solid var(--rule);color:var(--ink-soft);font-size:.8rem;padding-block-start:1rem;margin-block-start:3rem}
 footer p{margin-block:.3rem}
 @media (max-width:640px){h1{font-size:1.7rem}.kv{font-size:1.25rem}.band{max-width:30vw}}
-@media print{body{padding:1rem} section,tr{break-inside:avoid} h2{break-after:avoid} details{display:block} details>summary{list-style:none} .band .axis{stroke:#000} details:not([open])>*:not(summary){display:block}}
+@media print{body{padding:1rem} section,tr{break-inside:avoid} h2{break-after:avoid} details{display:block} details>summary{list-style:none} .band .axis{stroke:#000} details:not([open])>*:not(summary){display:block} details::details-content{content-visibility:visible;display:block} .tw{overflow:visible} table{font-size:.72rem} td,thead th{padding-inline:.3rem} .band{width:150px;max-width:none}}
 """
 
 

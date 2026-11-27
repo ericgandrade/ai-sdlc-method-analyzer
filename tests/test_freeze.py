@@ -44,3 +44,14 @@ def test_pathmap_covers_frozen_paths():
     for path in sorted(found):
         assert f"`{path}`" in table, path
     assert "I-inv unavailable" in pathmap
+
+
+def test_every_freeze_record_exists_and_matches():
+    from engine import freeze
+    recs = freeze.records(ROOT)
+    names = {r[0] for r in recs}
+    assert {"methodology-v1.0.md", "evaluator-agent-v1.0.md", "rubric-v2.0.pt.md", "rubric-v2.0.en.md",
+            "rulings-v1.md", "protocol-v1.md"} <= names
+    for name, sha, _, _ in recs:
+        assert (ROOT / "methodology" / name).exists(), name
+    assert freeze.verify(ROOT) == []

@@ -36,16 +36,15 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt -r requirements-tokens.txt
+      - run: echo "AMA_HOME=$RUNNER_TEMP/ama-home" >> "$GITHUB_ENV"
       - run: python -m engine fetch --tokenizer
-        env:
-          AMA_HOME: ${{ runner.temp }}/ama-home
       - run: python -m pytest -q -k tokens
 
   leakcheck:
     runs-on: ubuntu-latest
-    env:
-      AMA_HOME: ${{ runner.temp }}/ama-home
     steps:
+      - name: Data directory outside the checkout
+        run: echo "AMA_HOME=$RUNNER_TEMP/ama-home" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:

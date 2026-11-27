@@ -1,0 +1,88 @@
+{
+  "method": "kiro",
+  "methodology_sha256": "a6e3953725b67db0189e188c1495ee9b54975e48f65c28baaa01f459b69cf9a4",
+  "scorer": "S-D",
+  "scores": {
+    "C1": {
+      "conf": "M",
+      "ev": "D",
+      "s": 4
+    },
+    "C10": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C11": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C12": {
+      "conf": "M",
+      "ev": "D",
+      "s": 1
+    },
+    "C13": {
+      "conf": "M",
+      "ev": "D",
+      "s": 3
+    },
+    "C14": {
+      "conf": "M",
+      "ev": "D",
+      "s": 3
+    },
+    "C15": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C16": {
+      "conf": "L",
+      "ev": "D",
+      "s": 2
+    },
+    "C2": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C3": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C4": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C5": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C6": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C7": {
+      "conf": "M",
+      "ev": "D",
+      "s": 3
+    },
+    "C8": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    },
+    "C9": {
+      "conf": "M",
+      "ev": "D",
+      "s": 2
+    }
+  },
+  "version": "kiro.dev/docs accessed 2026-11-22 (IDE 1.4.x, CLI 3.x)"
+}

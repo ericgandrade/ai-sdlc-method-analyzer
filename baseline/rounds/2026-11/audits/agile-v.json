@@ -1,0 +1,31 @@
+{
+  "checked": {
+    "L2": 9,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 9,
+    "L3": 1,
+    "L4": 33
+  },
+  "log": [
+    {
+      "after": 1,
+      "before": 2,
+      "cell": "F1",
+      "evidence": "cache:agile-v/requirement-architect/SKILL.md:22,53-60,73-75; cache:agile-v/logic-gatekeeper/SKILL.md:24,28; cache:agile-v/discovery-analyst/SKILL.md:22,32; cache:agile-v/docs/INSTALL_PROFILES.md:12-13",
+      "lens": null,
+      "reason": "The mandatory questions cited by LE (:55-60) concern AI provenance, not feature content. The L2 blind precommit (:73-75) is an oversight control whose record format lives in the draft agile-v-human-oversight skill, outside the existing-repo profile. The default path extracts requirements from intent and halts on ambiguity (clarification, not structured elicitation); the interview-based discovery-analyst is outside the profile. LE flagged F1 borderline; lower value on doubt.",
+      "type": "a"
+    }
+  ],
+  "method": "agile-v",
+  "overrides": {
+    "L2": {},
+    "L4": {
+      "F1": 1
+    }
+  },
+  "round": "2026-11"
+}

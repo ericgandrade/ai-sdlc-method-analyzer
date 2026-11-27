@@ -1,0 +1,31 @@
+{
+  "checked": {
+    "L2": 8,
+    "L3": 1,
+    "L4": 34
+  },
+  "kept": {
+    "L2": 8,
+    "L3": 1,
+    "L4": 33
+  },
+  "log": [
+    {
+      "after": 1,
+      "before": 0,
+      "cell": "F10",
+      "evidence": "cache:bmad/skills/method/bmad-agent-po/assets/bug-template.md:24-45; cache:bmad/skills/method/bmad-agent-po/references/ticket.md:21; cache:bmad/skills/method/bmad-agent-po/customize.toml:107; cache:bmad/skills/method/bmad-build/step-04-review.md:77",
+      "lens": null,
+      "reason": "LE cited nothing. The bug path is a defined root-cause procedure: exact reproduction (environment, actual vs expected, verbatim logs), a cause hypothesis with no prescribed fix, run the reproduction when cheap, and ACs requiring a test that fails on the defect and passes on the fix (or proof no change is needed); Sofia must ask for missing steps and tighten vague ones. Off R (R is a feature, not a bug) and no debugging procedure inside the implementation loop, so 1, not 2. Same bar as Agile V F10=1 (opt-in 5-Whys).",
+      "type": "g"
+    }
+  ],
+  "method": "bmad",
+  "overrides": {
+    "L2": {},
+    "L4": {
+      "F10": 1
+    }
+  },
+  "round": "2026-11"
+}

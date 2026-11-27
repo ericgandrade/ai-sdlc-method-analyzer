@@ -1,0 +1,228 @@
+{
+  "round": "2026-11",
+  "rows": [
+    {
+      "criteria": [
+        "C10"
+      ],
+      "frozen": [
+        4
+      ],
+      "reason": "who, when and version are recorded only in an opt-in compliance skill (R-F22)",
+      "slug": "agile-v",
+      "uniform": [
+        "3"
+      ]
+    },
+    {
+      "criteria": [
+        "C4"
+      ],
+      "frozen": [
+        5
+      ],
+      "reason": "runtime contracts are referenced but not loaded on the default profile",
+      "slug": "agile-v",
+      "uniform": [
+        "4"
+      ]
+    },
+    {
+      "criteria": [
+        "C1"
+      ],
+      "frozen": [
+        5
+      ],
+      "reason": "the core reading load of 4,582 words exceeds the level-4 threshold of 4k",
+      "slug": "bmad",
+      "uniform": [
+        "3-4"
+      ]
+    },
+    {
+      "criteria": [
+        "C10"
+      ],
+      "frozen": [
+        3
+      ],
+      "reason": "the approver is not recorded (R-F22)",
+      "slug": "bmad",
+      "uniform": [
+        "2"
+      ]
+    },
+    {
+      "criteria": [
+        "C13"
+      ],
+      "frozen": [
+        5
+      ],
+      "reason": "the skill-budget validator runs neither in CI nor pre-commit",
+      "slug": "superpowers",
+      "total_range": [
+        54.8,
+        56.0
+      ],
+      "uniform": [
+        "4-5"
+      ]
+    },
+    {
+      "criteria": [
+        "C3",
+        "C8",
+        "C15"
+      ],
+      "frozen": [
+        3,
+        2,
+        3
+      ],
+      "reason": "uniform-ruler reading of three cells",
+      "slug": "mattpocock",
+      "total_range": [
+        40.8,
+        44.6
+      ],
+      "uniform": [
+        "2-3",
+        "1-2",
+        "3-4"
+      ]
+    },
+    {
+      "criteria": [
+        "C1",
+        "C2",
+        "C5",
+        "C9"
+      ],
+      "frozen": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "reason": "uniform-ruler reading of four cells",
+      "slug": "spec-kit",
+      "total_range": [
+        42.0,
+        48.6
+      ],
+      "uniform": [
+        "3-4",
+        "3-4",
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "criteria": [
+        "C2",
+        "C9",
+        "C12",
+        "C15"
+      ],
+      "frozen": [
+        4,
+        1,
+        1,
+        2
+      ],
+      "reason": "uniform-ruler reading of four cells",
+      "slug": "openspec",
+      "total_range": [
+        37.2,
+        42.6
+      ],
+      "uniform": [
+        "3-4",
+        "1-2",
+        "1-2",
+        "3-4"
+      ]
+    },
+    {
+      "criteria": [
+        "C10"
+      ],
+      "frozen": [
+        3
+      ],
+      "reason": "the human-turn record shows that a person acted, with time and attempt, but not who (cache:ai-dlc/docs/guide/07-interaction-modes.md:162-168; cache:ai-dlc/core/hooks/aidlc-record-human-turn.ts:8-9); a strict who+when+version reading gives 2 (R-F22). Low confidence",
+      "slug": "ai-dlc",
+      "uniform": [
+        "2-3"
+      ]
+    },
+    {
+      "criteria": [
+        "C12"
+      ],
+      "frozen": [
+        3
+      ],
+      "reason": "the operation stages are conditional and the deployment-pipeline stage runs only when a CD pipeline needs creation or significant change (cache:ai-dlc/core/aidlc-common/stages/operation/deployment-pipeline.md frontmatter); R already has CI and a production service, so a strict default-path reading gives 2",
+      "slug": "ai-dlc",
+      "uniform": [
+        "2-3"
+      ]
+    },
+    {
+      "criteria": [
+        "C7"
+      ],
+      "frozen": [
+        3
+      ],
+      "reason": "the evidence supports the reconciled 3 against one scorer's 5: on the feature route with units, the code knowledge base is used only in scopes without units, and the impact analysis reads imports and dependents (cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md:93-97; cache:ai-dlc/core/knowledge/aidlc-shared/brownfield.md:9,15-21)",
+      "slug": "ai-dlc",
+      "uniform": [
+        "3"
+      ]
+    },
+    {
+      "criteria": [
+        "C3"
+      ],
+      "frozen": [
+        3
+      ],
+      "reason": "level 3 holds through the explicit per-task test obligation, not through test-first, which is opt-in; the default posture is test-after",
+      "slug": "ai-dlc",
+      "uniform": [
+        "3"
+      ]
+    },
+    {
+      "criteria": [
+        "C14"
+      ],
+      "frozen": [
+        3
+      ],
+      "reason": "contestable upward: separate risk and size axes in the composer, recomposition during execution, and a test baseline before and after the change; the remaining gap is characterization or regression-selection tests",
+      "slug": "ai-dlc",
+      "uniform": [
+        "3-4"
+      ]
+    },
+    {
+      "criteria": [
+        "C15"
+      ],
+      "frozen": [
+        2
+      ],
+      "reason": "a calibration question across methods: the engine runs on every hook call, unlike methods whose CLI only installs; the strict runtime-clause reading is coherent, but the same ruler must apply to every method that ships its own runtime",
+      "slug": "ai-dlc",
+      "uniform": [
+        "not stated"
+      ]
+    }
+  ],
+  "use": "sensitivity only; these readings never change L1"
+}

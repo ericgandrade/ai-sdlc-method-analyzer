@@ -1,0 +1,480 @@
+{
+  "L2": {
+    "ceiling": {
+      "C11": {
+        "cites": [
+          "cache:agile-v/docs/INSTALL_PROFILES.md:13",
+          "cache:agile-v/threat-modeler/SKILL.md:19-29",
+          "cache:agile-v/build-agent/SKILL.md:47-48",
+          "cache:agile-v/test-designer/SKILL.md:78-90",
+          "cache:agile-v/red-team-verifier/SKILL.md:153-166",
+          "cache:agile-v/templates/agile-v/CONTROL_MATRIX.example.yaml:68",
+          "cache:agile-v/agile-v-core/SKILL.md:141-143"
+        ],
+        "conf": "M",
+        "note": "L5 unmet: no SAST/secret/dependency tool wired as a gate and no SSDF mapping (grep SSDF/800-218: no hits)",
+        "path": "regulated profile (threat-modeler) for L3/trust-boundary work",
+        "s": 4
+      },
+      "C12": {
+        "cites": [
+          "cache:agile-v/release-manager/SKILL.md:56-63,108-146",
+          "cache:agile-v/release-manager/SKILL.md:149-187",
+          "cache:agile-v/observability-planner/SKILL.md:117-164,181-187",
+          "cache:agile-v/docs/agile-v-runtime/04_RISK_CLASSIFICATION.md:11"
+        ],
+        "conf": "M",
+        "note": "L3: rollback plan, canary/feature flags, observability before rollout. L4: incident triage and post-mortem, incident -> CR intake, pre-release checklist tied to verified REQs. L5 unmet: rollback is human-executed (cache:agile-v/release-manager/SKILL.md:207), no automated threshold rollback",
+        "path": "regulated profile (release-manager + observability-planner)",
+        "s": 4
+      },
+      "C14": {
+        "cites": [
+          "cache:agile-v/docs/agile-v-runtime/11_RISK_ASSESSMENT_V2.md:9-42",
+          "cache:agile-v/benchmarks/agilev-bench/README.md:1-15"
+        ],
+        "conf": "M",
+        "note": "Scored rubric exists, but no worked cases or evals show the L0/L1 path keeps the safety invariants (bench has reference semantics only)",
+        "path": "any",
+        "s": 4
+      },
+      "C16": {
+        "cites": [
+          "cache:agile-v/agile-v-product-owner/SKILL.md:154-185",
+          "cache:agile-v/agile-v-compliance/SKILL.md:27-35",
+          "cache:agile-v/compliance-auditor/SKILL.md:133-148"
+        ],
+        "conf": "M",
+        "note": "L3: retro with owned action items, CAPA preventive actions converted into controls. L4: recurring NC triggers CAPA and governance conversion, open/overdue CAPAs tracked across cycles, KPIs computed at each Gate 2. L5 unmet: metrics are computed by the agent, not by tooling. Borderline: retro actions are process improvements not explicitly environment changes",
+        "path": "plugin install with agile-v-product-owner + agile-v-compliance + compliance-auditor",
+        "s": 4
+      },
+      "C2": {
+        "cites": [
+          "cache:agile-v/requirement-architect/SKILL.md:29-42",
+          "cache:agile-v/logic-gatekeeper/SKILL.md:20-47"
+        ],
+        "conf": "M",
+        "note": "L3 still unmet on every path: no skill requires a non-goals/out-of-scope element in the spec; only an example input has one (cache:agile-v/integrations/understand-anything/examples/existing_repo_change_request.md:44) and cache:agile-v/rd-innovator/SKILL.md:169 (prototype handoff, off-domain)",
+        "path": "any (requirement-architect + logic-gatekeeper; agile-v-lifecycle CR)",
+        "s": 2
+      },
+      "C3": {
+        "cites": [
+          "cache:agile-v/agile-v-behavioral/SKILL.md:114",
+          "cache:agile-v/domains/build-agent-python/SKILL.md:587"
+        ],
+        "conf": "M",
+        "note": "No refactoring step on any path (agile-v-behavioral discourages drive-by refactors); no systematic rationalization counters",
+        "path": "any",
+        "s": 3
+      },
+      "C5": {
+        "cites": [
+          "cache:agile-v/red-team-verifier/SKILL.md:108-126",
+          "cache:agile-v/docs/INSTALL_PROFILES.md:13"
+        ],
+        "conf": "M",
+        "note": "Still only (b) and (d); extra lenses are separate skills with no merge/dedup step and no receiver-side check rule, so L5 (all four of a-d) unmet",
+        "path": "regulated profile (threat-modeler, compliance-auditor)",
+        "s": 4
+      },
+      "C7": {
+        "cites": [
+          "cache:agile-v/agile-v-pipeline/SKILL.md:52-54",
+          "cache:agile-v/skills/impact-analysis-agent/SKILL.md:61-108",
+          "cache:agile-v/skills/regression-selection-agent/SKILL.md:60-89"
+        ],
+        "conf": "M",
+        "note": "Both E and K used with the pipeline, but L4 requires an integration step for parallel work; none is defined",
+        "path": "agile-v-pipeline companion + existing-repo graph skills",
+        "s": 3
+      },
+      "C9": {
+        "cites": [
+          "cache:agile-v/build-agent/SKILL.md:37-45",
+          "cache:agile-v/test-designer/SKILL.md:31",
+          "cache:agile-v/red-team-verifier/SKILL.md:67-71",
+          "cache:agile-v/skills/graph-traceability-agent/SKILL.md:92-103",
+          "cache:agile-v/release-manager/SKILL.md:29,37,77-103"
+        ],
+        "conf": "M",
+        "note": "L5 unmet: no shipped tool validates the user's trace links (tests validate repository fixtures only); production links exist in cache:agile-v/observability-planner/SKILL.md:37,46 but the machine-check half is missing",
+        "path": "existing-repo + release-manager (regulated profile)",
+        "s": 4
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "card": "S-B, S-D",
+        "default": 2,
+        "reason_quote": "S-B: (quotation omitted); S-D: (quotation omitted)"
+      },
+      {
+        "c": "C3",
+        "card": "S-B",
+        "default": 3,
+        "reason_quote": "S-B: (quotation omitted)"
+      },
+      {
+        "c": "C5",
+        "card": "S-B",
+        "default": 4,
+        "reason_quote": "S-B: 'no parallel lenses with a merge/dedup step on R's route (threat-modeler and compliance-auditor are in the regulated profile only)'"
+      },
+      {
+        "c": "C7",
+        "card": "S-B",
+        "default": 3,
+        "reason_quote": "S-B: 'E declared (dependency waves in the opt-in pipeline skill) ... not on R's default path'"
+      },
+      {
+        "c": "C9",
+        "card": "S-B",
+        "default": 3,
+        "reason_quote": "S-B: (quotation omitted)"
+      },
+      {
+        "c": "C11",
+        "card": "S-B",
+        "default": 3,
+        "reason_quote": "S-B: 'First unmet: L4: no risk-triggered threat-modeling procedure on R's route (threat-modeler is in the regulated profile only)'"
+      },
+      {
+        "c": "C12",
+        "card": "S-D",
+        "default": 2,
+        "reason_quote": "S-D: 'L3 unmet on R's default path: staged rollout and pre-release observability requirements live in opt-in skills'"
+      },
+      {
+        "c": "C14",
+        "card": "S-B",
+        "default": 4,
+        "reason_quote": "S-B: (quotation omitted)"
+      },
+      {
+        "c": "C16",
+        "card": "S-D",
+        "default": 2,
+        "reason_quote": "S-D: (quotation omitted)"
+      }
+    ]
+  },
+  "L3": {
+    "conf": "M",
+    "evidence": [
+      {
+        "cite": "cache:agile-v/docs/GOLDEN_JOURNEY.md:17-29 (11-step flow); cache:agile-v/agile-v-core/SKILL.md:49,53 (stop at Human Gates, durable checkpoint)",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:agile-v/build-agent/SKILL.md:55-67 (pre-execution plan check, synthesis, bounded auto-fix, halt conditions :85-86); cache:agile-v/red-team-verifier/SKILL.md:43-47,122-126 (executes tests, re-verifies); cache:agile-v/docs/GOLDEN_JOURNEY.md:24-26 run after Gate 1 without a human step",
+        "level": "A2"
+      },
+      {
+        "cite": "cache:agile-v/agile-v-core/SKILL.md:117-119 (thin orchestrator, fresh context per sub-agent, paths-only brief); cache:agile-v/build-agent/SKILL.md:53 (one artifact scope per context, spawn sub-agents); cache:agile-v/docs/GOLDEN_JOURNEY.md:24 (separate fresh contexts); one Gate 1 baseline covers all REQs, next human stop is Gate 2 (cache:agile-v/docs/GOLDEN_JOURNEY.md:22,29)",
+        "level": "A3"
+      }
+    ],
+    "first_unmet": "A4: no external loop that opens a new session per task; resume only from file state plus a human approval token (cache:agile-v/agile-v-core/SKILL.md:53,129); tools/ ships no runner; Gate 1 and Gate 2 are human stops by design",
+    "level": "A3"
+  },
+  "L4": {
+    "F1": {
+      "audit_override": true,
+      "cite": "cache:agile-v/requirement-architect/SKILL.md:55-60 (mandatory AI-influence questions); cache:agile-v/requirement-architect/SKILL.md:73-75 (L2+ blind human precommit with required fields); cache:agile-v/logic-gatekeeper/SKILL.md:27-28 (halt and ask)",
+      "v": 1
+    },
+    "F10": {
+      "cite": "cache:agile-v/agile-v-compliance/SKILL.md:27-33 (CAPA with 5-Whys root cause; companion/regulated, opt-in for R); cache:agile-v/build-agent/SKILL.md:63-67 (bounded auto-fix only, no root-cause procedure)",
+      "v": 1
+    },
+    "F11": {
+      "cite": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile roles); cache:agile-v/requirement-architect/SKILL.md:19; cache:agile-v/logic-gatekeeper/SKILL.md:18; cache:agile-v/build-agent/SKILL.md:28; cache:agile-v/test-designer/SKILL.md:21; cache:agile-v/red-team-verifier/SKILL.md:33",
+      "v": 2
+    },
+    "F12": {
+      "cite": "cache:agile-v/agile-v-core/SKILL.md:117-119 (thin orchestrator, pass paths not contents, fresh context per sub-agent, per-position read rules); cache:agile-v/build-agent/SKILL.md:53 (one artifact scope per context, spawn sub-agents); cache:agile-v/docs/GOLDEN_JOURNEY.md:24",
+      "v": 2
+    },
+    "F13": {
+      "cite": "cache:agile-v/red-team-verifier/SKILL.md:47 (audit log requires test commands and results); cache:agile-v/red-team-verifier/SKILL.md:71 (Gate 2 blocked); cache:agile-v/red-team-verifier/SKILL.md:126 (re-verification after fixes)",
+      "v": 2
+    },
+    "F14": {
+      "cite": "cache:agile-v/red-team-verifier/SKILL.md:33-39 (I2 fresh-context verifier reading only requirements and artifacts); cache:agile-v/agile-v-core/SKILL.md:119",
+      "v": 2
+    },
+    "F15": {
+      "cite": "cache:agile-v/red-team-verifier/SKILL.md:41-47,99-106,153-166 (several check categories in one verifier pass, single summary); no parallel lenses with merge/dedup on any path (threat-modeler, compliance-auditor in regulated profile are separate, unconsolidated)",
+      "v": 1
+    },
+    "F16": {
+      "cite": "cache:agile-v/docs/agile-v-runtime/04_RISK_CLASSIFICATION.md:11 (L2 requires security check); cache:agile-v/red-team-verifier/SKILL.md:104,153-166 (secrets CRITICAL, agentic security verification); cache:agile-v/test-designer/SKILL.md:78-90; cache:agile-v/threat-modeler/SKILL.md:19-29 (STRIDE, regulated profile only)",
+      "v": 2
+    },
+    "F17": {
+      "cite": "cache:agile-v/build-agent/SKILL.md:63-67 (max 3 auto-fix attempts then escalate); cache:agile-v/red-team-verifier/SKILL.md:124 (max 3 then escalate)",
+      "v": 2
+    },
+    "F18": {
+      "cite": "",
+      "v": 0
+    },
+    "F19": {
+      "cite": "",
+      "v": 0
+    },
+    "F2": {
+      "cite": "cache:agile-v/requirement-architect/SKILL.md:29-42 (per-REQ testable statement, verification criteria, done criteria in .agile-v/REQUIREMENTS.md)",
+      "v": 2
+    },
+    "F20": {
+      "cite": "cache:agile-v/agile-v-core/SKILL.md:53 (durable HITL checkpoint + resume_token); cache:agile-v/agile-v-core/SKILL.md:123-129 (state files under .agile-v/, resume protocol)",
+      "v": 2
+    },
+    "F21": {
+      "cite": "",
+      "v": 0
+    },
+    "F22": {
+      "cite": "cache:agile-v/docs/GOLDEN_JOURNEY.md:22 (approval in .agile-v/APPROVALS.md); cache:agile-v/agile-v-core/SKILL.md:53; cache:agile-v/red-team-verifier/SKILL.md:85; who/when/version fields only in cache:agile-v/agile-v-compliance/SKILL.md:37-39 (opt-in for R)",
+      "v": 1
+    },
+    "F23": {
+      "cite": "cache:agile-v/build-agent/SKILL.md:37-45 (ART -> REQ@revision); cache:agile-v/test-designer/SKILL.md:31,38 (TC -> REQ@revision); cache:agile-v/red-team-verifier/SKILL.md:67 (VER -> TC -> REQ)",
+      "v": 2
+    },
+    "F24": {
+      "cite": "cache:agile-v/red-team-verifier/SKILL.md:71 (audit trail section in VERIFICATION_SUMMARY); cache:agile-v/tools/aibom_to_cyclonedx.py:1-5 (export of AI_RUN_MANIFEST, not installed with the profile); no tool checks the user's trail",
+      "v": 1
+    },
+    "F25": {
+      "cite": "cache:agile-v/docs/agile-v-runtime/04_RISK_CLASSIFICATION.md:11 and cache:agile-v/red-team-verifier/SKILL.md:82 (rollback evidence required at L2); cache:agile-v/release-manager/SKILL.md:26-37,126-146 (release with rollback plan; regulated profile, opt-in for R)",
+      "v": 1
+    },
+    "F26": {
+      "cite": "cache:agile-v/observability-planner/SKILL.md:142-164 (incident lifecycle with post-mortem); cache:agile-v/release-manager/SKILL.md:146,171-187 (both regulated profile, opt-in for R)",
+      "v": 1
+    },
+    "F27": {
+      "cite": "cache:agile-v/agile-v-product-owner/SKILL.md:154-185 (retro with owned action items; not in any R profile); cache:agile-v/agile-v-compliance/SKILL.md:35 (governance conversion of preventive actions into controls; opt-in); cache:agile-v/agile-v-core/SKILL.md:91 (Evolve proposes improvement candidates only)",
+      "v": 1
+    },
+    "F28": {
+      "cite": "cache:agile-v/agile-v-core/SKILL.md:123-129 (persistent STATE, DECISION_LOG, cycle archives under .agile-v/); cache:agile-v/skills/system-understanding-agent/SKILL.md:53-69 (persisted understanding outputs)",
+      "v": 2
+    },
+    "F29": {
+      "cite": "cache:agile-v/README.md:148-156 (Claude Code, Cursor, VS Code, GitHub Copilot, other Agent Skills hosts)",
+      "v": 2
+    },
+    "F3": {
+      "cite": "cache:agile-v/logic-gatekeeper/SKILL.md:20-28,38-47 (independent FND findings without editing the draft; halt conditions)",
+      "v": 2
+    },
+    "F30": {
+      "cite": "cache:agile-v/docs/INSTALL_PROFILES.md:23-34 (versioned Agent Plugin packages with SHA256SUMS; none for existing-repo); cache:agile-v/CLAUDE.md:7-13 (Claude Code marketplace plugin, version in cache:agile-v/.claude-plugin/plugin.json:4); R route is manual cp per cache:agile-v/docs/INSTALL_PROFILES.md:36-52",
+      "v": 1
+    },
+    "F31": {
+      "cite": "cache:agile-v/.github/workflows/validate-control-matrix.yml:1-43 (pytest suite, plugin/catalog/manifest checks); cache:agile-v/tests/test_skill_frontmatter.py; cache:agile-v/tests/test_skill_catalog.py",
+      "v": 2
+    },
+    "F32": {
+      "cite": "cache:agile-v/templates/agile-v/CONTROL_MATRIX.example.yaml:115-121 (cost limits and cost_log path; template proposed per cache:agile-v/agile-v-core/SKILL.md:54); cache:agile-v/red-team-verifier/SKILL.md:84 (cost limit check); no token telemetry",
+      "v": 1
+    },
+    "F33": {
+      "cite": "cache:agile-v/agile-v-core/SKILL.md:117 (orchestrator ~10-15% context, tasks <=50%); cache:agile-v/build-agent/SKILL.md:53,58",
+      "v": 2
+    },
+    "F34": {
+      "cite": "cache:agile-v/benchmarks/agilev-bench/README.md:1-15 (108-case corpus; reference-semantics results only, no live runtime/agent results published)",
+      "v": 1
+    },
+    "F4": {
+      "cite": "cache:agile-v/requirement-architect/SKILL.md:77-83 (revisions, CR-XXXX in CHANGE_LOG with ART/TC impact, impact summary at Gate 1); cache:agile-v/docs/GOLDEN_JOURNEY.md:25 (requirement change mid-build -> CR + new Gate 1 baseline)",
+      "v": 2
+    },
+    "F5": {
+      "cite": "cache:agile-v/build-agent/SKILL.md:58 (pre-execution check of requirement coverage and dependency order, no dependency fields); cache:agile-v/agile-v-pipeline/SKILL.md:52-54 (dependency waves; companion skill outside the existing-repo profile)",
+      "v": 1
+    },
+    "F6": {
+      "cite": "cache:agile-v/agile-v-core/SKILL.md:74,99 (append-only DECISION_LOG with rationale on default path); cache:agile-v/agile-v-adr/SKILL.md:2-3,37-63 (full ADR skill, not in the existing-repo profile)",
+      "v": 1
+    },
+    "F7": {
+      "cite": "cache:agile-v/skills/system-understanding-agent/SKILL.md:14-23,71-118 (Gate 0 system overview and architecture map before requirements); cache:agile-v/skills/impact-analysis-agent/SKILL.md:61-108; cache:agile-v/docs/INSTALL_PROFILES.md:12",
+      "v": 2
+    },
+    "F8": {
+      "cite": "cache:agile-v/docs/GOLDEN_JOURNEY.md:19 (classify L0-L4 first); cache:agile-v/docs/agile-v-runtime/04_RISK_CLASSIFICATION.md:7-18 (levels and floors); cache:agile-v/docs/INSTALL_PROFILES.md:7-17 (profiles by risk/lifecycle)",
+      "v": 2
+    },
+    "F9": {
+      "cite": "cache:agile-v/test-designer/SKILL.md:21-34 (tests designed from baseline before/independently of code); cache:agile-v/docs/GOLDEN_JOURNEY.md:24 (test design first if one context); no rule that a failing test is observed before code",
+      "v": 1
+    }
+  },
+  "L4_total": 48,
+  "L5": {
+    "T0_root": "cache:agile-v",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/agile-v-core/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/requirement-architect/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/logic-gatekeeper/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/skills/system-understanding-agent/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/skills/impact-analysis-agent/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/skills/regression-selection-agent/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/skills/graph-traceability-agent/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/skills/diff-evidence-agent/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/build-agent/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/test-designer/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/red-team-verifier/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/agile-v-quality-gates/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:12 (existing-repo profile) + :36-52 (manual copy into .claude/skills/)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:agile-v/domains/build-agent-python/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:7 (add one domain build agent), :46-52 (build-agent-python example)"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/agile-v-core/SKILL.md",
+        "why": "cache:agile-v/README.md:44-48 and cache:agile-v/docs/INSTALL_PROFILES.md:56 (load agile-v-core first); cache:agile-v/agile-v-core/SKILL.md:3 (load first in every session); no file mandated on activation"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/agile-v-quality-gates/SKILL.md",
+        "why": "cache:agile-v/agile-v-quality-gates/SKILL.md:25,406-410 (load alongside agile-v-core, before role skills)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/templates/agile-v/CONTROL_MATRIX.example.yaml",
+        "why": "cache:agile-v/agile-v-core/SKILL.md:54 (non-trivial work with no control matrix: halt and propose one from this template)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/skills/system-understanding-agent/SKILL.md",
+        "why": "cache:agile-v/skills/system-understanding-agent/SKILL.md:20-22,27-30 (Gate 0 before any requirement on an existing repo)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/skills/impact-analysis-agent/SKILL.md",
+        "why": "cache:agile-v/skills/impact-analysis-agent/SKILL.md:22-33 (change to existing system, after Gate 0)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/requirement-architect/SKILL.md",
+        "why": "cache:agile-v/docs/GOLDEN_JOURNEY.md:20 (persist draft REQs)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/logic-gatekeeper/SKILL.md",
+        "why": "cache:agile-v/docs/GOLDEN_JOURNEY.md:21 (independent findings)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/skills/regression-selection-agent/SKILL.md",
+        "why": "cache:agile-v/skills/regression-selection-agent/SKILL.md:22-33 (impact map available, Test Designer needs existing tests)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/build-agent/SKILL.md",
+        "why": "cache:agile-v/docs/GOLDEN_JOURNEY.md:24 (build from baseline); cache:agile-v/domains/build-agent-python/SKILL.md:18-20 (inherits all build-agent rules)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/domains/build-agent-python/SKILL.md",
+        "why": "cache:agile-v/docs/INSTALL_PROFILES.md:7,46-52 (one domain build skill for implementation)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/templates/AI_RUN_MANIFEST.yaml",
+        "why": "cache:agile-v/build-agent/SKILL.md:79 (create AI_RUN_MANIFEST from this template before implementation)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/test-designer/SKILL.md",
+        "why": "cache:agile-v/docs/GOLDEN_JOURNEY.md:24 (independent test design)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/skills/graph-traceability-agent/SKILL.md",
+        "why": "cache:agile-v/skills/graph-traceability-agent/SKILL.md:22-33 (requirements exist for a change to an existing system)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/skills/diff-evidence-agent/SKILL.md",
+        "why": "cache:agile-v/skills/diff-evidence-agent/SKILL.md:22-30 (after build and tests, before Red Team)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:agile-v/red-team-verifier/SKILL.md",
+        "why": "cache:agile-v/docs/GOLDEN_JOURNEY.md:25-26,29 (independent verification, Eval Gate, Gate 2 evidence)"
+      }
+    ],
+    "notes": "Host Claude Code. Install route for R: manual copy of the existing-repo profile into .claude/skills/ (cache:agile-v/README.md:31-51 -> cache:agile-v/docs/INSTALL_PROFILES.md:12,36-52); there is no packaged plugin for existing-repo. Repo-root cache:agile-v/CLAUDE.md, cache:agile-v/AGENTS.md and cache:agile-v/CURSOR.md are repository guides, not copied into user projects by any install instruction, so not in T1. Alternative route (cache:agile-v/CLAUDE.md:7-11 marketplace plugin) would preload frontmatter of all 33 skills listed in cache:agile-v/.claude-plugin/plugin.json:20-54; not counted. Domain skill chosen: build-agent-python (INSTALL_PROFILES example); other domain skills differ in size. Excluded from T3: cache:agile-v/agile-v-human-oversight/SKILL.md, which cache:agile-v/agile-v-core/SKILL.md:55 says to load for L2+ gates, but it is a draft skill (status draft, line 9) that cache:agile-v/docs/INSTALL_PROFILES.md:13 admits only under approved local policy and that is not installed by the existing-repo profile; lower value taken. Also excluded: docs/agile-v-runtime/*.md and cache:agile-v/docs/GOLDEN_JOURNEY.md, cited as 'see' references or for human reading, not as mandated agent reads. Two T3 templates (CONTROL_MATRIX.example.yaml, AI_RUN_MANIFEST.yaml) live outside the copied skill dirs but in the clone the README tells the user to make."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code (cache:agile-v/README.md:152, first row of the Platforms table)",
+  "method": "agile-v",
+  "name": "Agile V",
+  "notes": "Route for R (fixed first): L2 risk (cache:agile-v/docs/agile-v-runtime/04_RISK_CLASSIFICATION.md:11,18: production release is at least L2), existing-repo profile (cache:agile-v/docs/INSTALL_PROFILES.md:12) + build-agent-python, Golden Journey flow (cache:agile-v/docs/GOLDEN_JOURNEY.md:17-29); the same route both v1 cards used. L2 selection: mechanical term match on both cards' rationale/first-unmet text (opt-in, optional, default path [incl. 'default-path', (quotation omitted)], route [incl. 'routes'], off the default path, cap at 2). C3 and C14 were selected on hyphen/inflected variants. Ceilings changed: C9 3->4, C11 3->4, C12 2->4, C16 2->4. Contestable: L3 A3 (planning stops at human Gate 1 before build; subagent dispatch rules live in agile-v-core prompt text; wave dispatch only in the companion pipeline skill); C16 ceiling depends on agile-v-product-owner, which no profile includes (it ships only in the Claude Code plugin skills list); F1, F6, F22 and F25 are borderline (F6, F22, F25 set at 1 by the lower-value rule). CC BY-SA: only paths and identifiers cited; reason_quote holds the v1 scorers' own words, not Agile V text.",
+  "pin": "4bcc9172f7e00fa3f04bd249584d537a7dbe5600",
+  "round": "2026-11"
+}

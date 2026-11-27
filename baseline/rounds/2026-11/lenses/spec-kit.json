@@ -1,0 +1,423 @@
+{
+  "L2": {
+    "ceiling": {
+      "C10": {
+        "cites": [
+          "cache:spec-kit/workflows/speckit/workflow.yml:50-68",
+          "cache:spec-kit/src/specify_cli/workflows/step/gate/__init__.py:22-31 (choice only, no who/version/owner)"
+        ],
+        "conf": "H",
+        "path": "opt-in speckit workflow gates",
+        "s": 2
+      },
+      "C11": {
+        "cites": [
+          "cache:spec-kit/templates/commands/checklist.md:142,307",
+          "grep security|threat|owasp over extensions/*/commands, presets/*/commands, workflows: no review lens or dependency hygiene"
+        ],
+        "conf": "M",
+        "path": "checklist security domain (opt-in)",
+        "s": 2
+      },
+      "C2": {
+        "cites": [
+          "cache:spec-kit/templates/spec-template.md:1-9 (Created/Status only, no revision field)",
+          "grep revision|changelog|version history over templates/, presets/, extensions/*/commands, workflows/: only cache:spec-kit/templates/commands/constitution.md:142"
+        ],
+        "conf": "M",
+        "path": "none beyond default full path; no shipped preset/extension adds spec versioning",
+        "s": 3
+      },
+      "C3": {
+        "cites": [
+          "cache:spec-kit/templates/tasks-template.md:83-85",
+          "cache:spec-kit/templates/commands/tasks.md:148,195",
+          "cache:spec-kit/templates/plan-template.md:106-110 (Complexity Tracking only for constitution violations)",
+          "cache:spec-kit/templates/constitution-template.md:27-29 (simplicity only as example comment)",
+          "cache:spec-kit/extensions/bug/commands/speckit.bug.fix.md:86-87 (bug-only, no design step)"
+        ],
+        "conf": "M",
+        "path": "TDD branch when tests are requested (tasks-template) / bug extension",
+        "s": 2
+      },
+      "C4": {
+        "audit_override": true,
+        "cites": [
+          "cache:spec-kit/extensions/bug/commands/speckit.bug.test.md:91-100,142,187",
+          "cache:spec-kit/templates/commands/implement.md:169-173"
+        ],
+        "conf": "L",
+        "path": "bug extension speckit.bug.test (bug-only; not applicable to feature R)",
+        "s": 3
+      },
+      "C5": {
+        "cites": [
+          "ls extensions/*/commands (agent-context, assess, bug, git, github, selftest, template: no review command)",
+          "cache:spec-kit/docs/quickstart.md:157"
+        ],
+        "conf": "H",
+        "path": "none: no first-party code-review command in core, extensions, presets or workflows",
+        "s": 1
+      },
+      "C8": {
+        "cites": [
+          "cache:spec-kit/workflows/speckit/workflow.yml:43-80",
+          "cache:spec-kit/docs/workflows/overview.md:27-34,62-65",
+          "cache:spec-kit/extensions/git/commands/speckit.git.feature.md:7",
+          "cache:spec-kit/docs/workflow-steps/types.md:320 (no sandbox)",
+          "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:420-430 (--yolo allow-all default)"
+        ],
+        "conf": "M",
+        "path": "opt-in `specify workflow run speckit` + git extension",
+        "s": 2
+      },
+      "C9": {
+        "cites": [
+          "cache:spec-kit/extensions/github/commands/speckit.github.taskstoissues.md:67-68",
+          "cache:spec-kit/extensions/git/git-config.yml:20-79 (commit messages carry no requirement/task IDs)"
+        ],
+        "conf": "M",
+        "path": "github extension taskstoissues (task ID -> issue title)",
+        "s": 2
+      }
+    },
+    "changed_cells": [],
+    "not_selected_notes": "Strict term match on rationale/first-unmet text only. C6: 'opt-in' appears only in the evidence column of both cards (workflow do_while), not in rationale -> not selected. C14: S-C says 'routing', not 'route'; C14 concerns the other paths anyway. C1: 'off the first path' is not a listed term. Not selected cells keep v1 default.",
+    "selected_cells": [
+      {
+        "c": "C2",
+        "card": "S-B",
+        "default": 3,
+        "reason_quote": "L3: default-path spec with Given/When/Then and required testable FRs, measurable SCs, scope bounded"
+      },
+      {
+        "c": "C3",
+        "card": "S-B+S-C",
+        "default": 2,
+        "reason_quote": "S-C: 'defined design practice on the default path' / first unmet 'default build path requires test-first or a per-task test obligation (tasks.md: 'Tests are OPTIONAL - only include them if explicitly requested')'"
+      },
+      {
+        "c": "C4",
+        "card": "S-C",
+        "default": 2,
+        "reason_quote": "the bug extension's verified/partial/failed verdict is opt-in and bug-only"
+      },
+      {
+        "c": "C5",
+        "card": "S-B",
+        "default": 1,
+        "reason_quote": "First unmet: L3: no review by an independent context and no multi-axis review checklist (design, tests, security) on the default path."
+      },
+      {
+        "c": "C8",
+        "card": "S-B+S-C",
+        "default": 2,
+        "reason_quote": "S-B: 'L2: opt-in unattended workflow engine with safeguards' ... 'git branching is a separate opt-in extension'; S-C: 'L2 (opt-in counts in C8)'"
+      },
+      {
+        "c": "C9",
+        "card": "S-B",
+        "default": 2,
+        "reason_quote": "no task->test or task->commit IDs on the default path; tests optional"
+      },
+      {
+        "c": "C10",
+        "card": "S-B+S-C",
+        "default": 2,
+        "reason_quote": "S-B: 'workflow.yml (approve/reject gates, opt-in)' / 'no approval record (who, when, which version) in default-path artifacts'; S-C: 'opt-in workflow gates approve/reject'"
+      },
+      {
+        "c": "C11",
+        "card": "S-B+S-C",
+        "default": 2,
+        "reason_quote": "S-B: 'L2: opt-in security checklist generation' / 'no security lens in review and no dependency hygiene rules on the default path'; S-C: 'an opt-in checklist domain'"
+      }
+    ]
+  },
+  "L3": {
+    "conf": "M",
+    "evidence": [
+      {
+        "cite": "cache:spec-kit/README.md:105-107 (run skills one at a time, reviewing each result); cache:spec-kit/docs/quickstart.md:18-19; cache:spec-kit/templates/commands/plan.md:3-9 (handoffs to next command)",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:spec-kit/templates/commands/implement.md:148-173 (executes all tasks phase by phase in dependency order, tests before code when present, halt if any non-parallel task fails, completion validation); cache:spec-kit/templates/commands/implement.md:79-83 (stop rule on unchecked checklists); cache:spec-kit/workflows/speckit/workflow.yml:43-80 (specify->plan->tasks->implement chained)",
+        "level": "A2"
+      }
+    ],
+    "first_unmet": "A3: no dispatch of fresh-context subagents per implementation task inside the session (implement runs every task in the authoring context; only plan Phase 0 research agents, cache:spec-kit/templates/commands/plan.md:121-128). The opt-in workflow engine does open a fresh `copilot -p` process per phase (cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:420-435) with persisted, resumable state, but per phase rather than per task, and its review gates are designed for a human verdict between phases (cache:spec-kit/docs/workflows/overview.md:27-37).",
+    "level": "A2"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:spec-kit/templates/commands/clarify.md:73-77,129-141 (taxonomy scan, max 5 questions one at a time; full path, cache:spec-kit/docs/quickstart.md:40-44)",
+      "v": 2
+    },
+    "F10": {
+      "cite": "cache:spec-kit/extensions/bug/commands/speckit.bug.assess.md:7,119-129 (opt-in bug extension: locate suspected root cause, reproduction)",
+      "v": 1
+    },
+    "F11": {
+      "cite": "",
+      "v": 0
+    },
+    "F12": {
+      "cite": "cache:spec-kit/templates/commands/plan.md:121-128 (dispatch research agents with one-line task brief; research only, isolation not stated)",
+      "v": 1
+    },
+    "F13": {
+      "cite": "cache:spec-kit/extensions/bug/commands/speckit.bug.test.md:91-100 (opt-in: capture command, exit status, output; not-run status); default cache:spec-kit/templates/commands/implement.md:169-173 asks to validate tests pass without evidence",
+      "v": 1
+    },
+    "F14": {
+      "cite": "",
+      "v": 0
+    },
+    "F15": {
+      "cite": "",
+      "v": 0
+    },
+    "F16": {
+      "cite": "cache:spec-kit/templates/commands/checklist.md:142,307 (opt-in security.md requirements checklist); cache:spec-kit/templates/commands/clarify.md:96 (security & privacy clarification category)",
+      "v": 1
+    },
+    "F17": {
+      "cite": "cache:spec-kit/templates/commands/specify.md:200-201 (re-run validation max 3 iterations, then document issues and warn user)",
+      "v": 2
+    },
+    "F18": {
+      "cite": "cache:spec-kit/docs/workflows/overview.md:27-34 and cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:420-435 (opt-in workflow runs each phase as a fresh `copilot -p` process; human review gates between phases)",
+      "v": 1
+    },
+    "F19": {
+      "cite": "cache:spec-kit/extensions/git/commands/speckit.git.feature.md:7 (opt-in feature branch); cache:spec-kit/docs/how-to/existing-projects.md:7-9 (baseline branch advice); cache:spec-kit/docs/how-to/existing-projects.md:30 (feature branches optional)",
+      "v": 1
+    },
+    "F2": {
+      "cite": "cache:spec-kit/templates/spec-template.md:36,90-93 (Given/When/Then scenarios, FR-### MUST requirements); cache:spec-kit/templates/commands/specify.md:150-168 (quality checklist requires testable requirements)",
+      "v": 2
+    },
+    "F20": {
+      "cite": "cache:spec-kit/docs/workflows/overview.md:62-65 (opt-in workflow: per-run persisted state, resume); cache:spec-kit/src/specify_cli/workflows/engine.py:1027-1036",
+      "v": 1
+    },
+    "F21": {
+      "cite": "",
+      "v": 0
+    },
+    "F22": {
+      "cite": "cache:spec-kit/src/specify_cli/workflows/step/gate/__init__.py:22-31 (opt-in gate choice stored in output.choice); cache:spec-kit/src/specify_cli/workflows/engine.py:1036 (timestamped run log) — no who or artifact version",
+      "v": 1
+    },
+    "F23": {
+      "cite": "cache:spec-kit/templates/spec-template.md:90 (FR-###); cache:spec-kit/templates/commands/tasks.md:174-175 (T### [US#]); tests OPTIONAL cache:spec-kit/templates/commands/tasks.md:148 — no test segment by default",
+      "v": 1
+    },
+    "F24": {
+      "cite": "cache:spec-kit/src/specify_cli/workflows/engine.py:1027-1045 (opt-in workflow log.jsonl with timestamps)",
+      "v": 1
+    },
+    "F25": {
+      "cite": "",
+      "v": 0
+    },
+    "F26": {
+      "cite": "",
+      "v": 0
+    },
+    "F27": {
+      "cite": "",
+      "v": 0
+    },
+    "F28": {
+      "cite": "cache:spec-kit/templates/commands/constitution.md:77 (cache:spec-kit/.specify/memory/constitution.md loaded by every command, e.g. cache:spec-kit/templates/commands/plan.md:64) — principles only, no accumulated learning",
+      "v": 1
+    },
+    "F29": {
+      "cite": "src/specify_cli/integrations/ (one adapter package per agent: copilot, claude, gemini, codex, cursor_agent, opencode, ...); cache:spec-kit/docs/integrations/index.md:114",
+      "v": 2
+    },
+    "F3": {
+      "cite": "cache:spec-kit/templates/commands/analyze.md:58 (read-only consistency pass run by the authoring agent); cache:spec-kit/docs/quickstart.md:117 (reviewer-owned requirement checklists) — critic is not an independent context",
+      "v": 1
+    },
+    "F30": {
+      "cite": "cache:spec-kit/README.md:79-81 (uv tool install specify-cli); cache:spec-kit/docs/upgrade.md:1-3 (versioned upgrade guide)",
+      "v": 2
+    },
+    "F31": {
+      "cite": "cache:spec-kit/.github/workflows/test.yml:1, cache:spec-kit/.github/workflows/lint.yml, cache:spec-kit/.github/workflows/extension-version-guard.yml (CI validates CLI, templates, extensions)",
+      "v": 2
+    },
+    "F32": {
+      "cite": "",
+      "v": 0
+    },
+    "F33": {
+      "cite": "cache:spec-kit/templates/commands/analyze.md:125 (limit 50 findings); cache:spec-kit/templates/commands/clarify.md:130 (max 5 questions) — no context or skill size budget",
+      "v": 1
+    },
+    "F34": {
+      "cite": "",
+      "v": 0
+    },
+    "F4": {
+      "cite": "cache:spec-kit/templates/commands/clarify.md:185-186 (dated Clarifications session log); cache:spec-kit/docs/how-to/evolving-specs.md:11,37 (change assessment, re-run analyze) — no spec versioning",
+      "v": 1
+    },
+    "F5": {
+      "cite": "cache:spec-kit/templates/commands/tasks.md:78,92,162 (dependency graph, Dependencies section, [P] only when no dependency on incomplete tasks)",
+      "v": 2
+    },
+    "F6": {
+      "cite": "cache:spec-kit/templates/commands/plan.md:130-133 (research.md Decision / Rationale / Alternatives considered)",
+      "v": 2
+    },
+    "F7": {
+      "cite": "cache:spec-kit/docs/how-to/existing-projects.md:46-57,85-86 (constitution from repository evidence, plan reuses existing architecture) — no code map artifact",
+      "v": 1
+    },
+    "F8": {
+      "cite": "cache:spec-kit/docs/quickstart.md:32,40 (Shorter path for smaller features vs Full path for production features; no measurable criteria)",
+      "v": 1
+    },
+    "F9": {
+      "cite": "cache:spec-kit/templates/tasks-template.md:12,83-85 (tests OPTIONAL; if requested: write tests FIRST, ensure they FAIL); cache:spec-kit/templates/commands/tasks.md:148",
+      "v": 1
+    }
+  },
+  "L4_total": 33,
+  "L5": {
+    "T0_root": "cache:spec-kit/templates",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/constitution.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/specify.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/clarify.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/plan.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/checklist.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/tasks.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/analyze.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/implement.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:spec-kit/templates/commands/converge.md",
+        "why": "cache:spec-kit/src/specify_cli/integrations/copilot/__init__.py:4-5,145-150,196 (Copilot default skills layout .github/skills/speckit-<name>/SKILL.md); cache:spec-kit/src/specify_cli/integrations/base.py:838-885,2206-2240 (every templates/commands/*.md becomes a SKILL.md with name+description frontmatter)"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/constitution.md",
+        "why": "cache:spec-kit/README.md:105-114 and cache:spec-kit/docs/quickstart.md:75-77 (first step, once per project; also cache:spec-kit/docs/how-to/existing-projects.md:46)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/constitution-template.md",
+        "why": "cache:spec-kit/templates/commands/constitution.md:8-10,83 (resolve-template constitution-template, parse TEMPLATE_CONTENT)"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/specify.md",
+        "why": "cache:spec-kit/docs/quickstart.md:40-50 full path step 2"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/spec-template.md",
+        "why": "cache:spec-kit/templates/commands/specify.md:12-14,99"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/checklist-template.md",
+        "why": "cache:spec-kit/templates/commands/specify.md:150 (requirements.md uses checklist template structure); cache:spec-kit/templates/commands/checklist.md:4,258"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/clarify.md",
+        "why": "cache:spec-kit/docs/quickstart.md:44"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/plan.md",
+        "why": "cache:spec-kit/docs/quickstart.md:40-50 step 4"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/plan-template.md",
+        "why": "cache:spec-kit/templates/commands/plan.md:64-66 (IMPL_PLAN template)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/checklist.md",
+        "why": "cache:spec-kit/docs/quickstart.md:46"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/tasks.md",
+        "why": "cache:spec-kit/docs/quickstart.md:40-50 step 6"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/tasks-template.md",
+        "why": "cache:spec-kit/templates/commands/tasks.md:63,83 (TASKS_TEMPLATE_CONTENT)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/analyze.md",
+        "why": "cache:spec-kit/docs/quickstart.md:48"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/implement.md",
+        "why": "cache:spec-kit/docs/quickstart.md:40-50 step 8"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:spec-kit/templates/commands/converge.md",
+        "why": "cache:spec-kit/docs/quickstart.md:50,157 (repeat implement/converge until Converged)"
+      }
+    ],
+    "notes": "Host = GitHub Copilot, default skills mode. No always-on instruction file is installed by default: copilot-instructions/CLAUDE.md management belongs to the opt-in agent-context extension (cache:spec-kit/extensions/catalog.json agent-context; command_init.py installs extensions only via --extension, :102-171,981-1004); Copilot event hooks file is written only when events are configured (base.py:1403-1414). specify init also installs cache:spec-kit/workflows/speckit/workflow.yml (command_init.py:840-846) but the host does not load it. Installed SKILL.md bodies are generated from the templates/commands sources (script placeholders resolved, frontmatter rebuilt), so counts on the source files are a proxy. cache:spec-kit/.specify/memory/constitution.md and spec/plan/tasks artifacts are project files produced by the run, not method files, so they are excluded. Scripts invoked by commands are executed, not read, and are excluded. T0: the distributable corpus is assembled from several roots (pyproject.toml:31-60): templates/ (given as T0_root), scripts/, extensions/{git,agent-context,assess,bug,github}, workflows/{speckit,bugfix,assess}, presets/{lean,constitution-sync}, bundles catalogs; count those too if the script supports several roots."
+  },
+  "evidence_limit": "I",
+  "host": "GitHub Copilot (cache:spec-kit/README.md:77,81: 'This example uses GitHub Copilot', specify init --integration copilot; default skills layout)",
+  "method": "spec-kit",
+  "name": "GitHub Spec Kit",
+  "notes": "Route for R: cache:spec-kit/docs/quickstart.md:40-50 'Full path - for production features' (constitution once -> specify -> clarify -> plan -> checklist -> tasks -> analyze -> implement -> converge), entered on an existing repo per cache:spec-kit/docs/how-to/existing-projects.md. R is a production feature, so the full path is the route; same reading as both v1 cards. Extensions, presets, workflows and bundles count as shipped paths only when first-party and bundled at the pin (pyproject.toml:45-60; cache:spec-kit/extensions/catalog.json author spec-kit-core). Community catalogs excluded. Contestable readings: (1) L2 C4: the bug extension's speckit.bug.test meets most C4 L3 items (commands run after the fix with exit status, verified/partial/failed verdict, not-run status) but only for bug fixes, not for a feature like R; first read at 2 per lower-on-ambiguity; the audit raised it to 3 because the bundled bug extension meets C4 L3 on a shipped path. (2) L2 C3: with TDD requested, tasks-template requires tests first and failing, and plan Phase 1 gives interface design, but the only simplicity mechanism is Complexity Tracking for constitution violations; taken at 2, could be 3. (3) L3: the opt-in workflow engine (fresh agent process per phase, persisted state, resume, verdict inputs that can pre-approve gates) could be read as A3 or higher; taken at A2 because new sessions are per phase not per task and gates are designed for a human. (4) The workflow dispatches Copilot with --yolo (allow-all tools) by default (copilot/__init__.py:420-430), which matters for the L3 x C8 reading.",
+  "pin": "a4d571229e164e440f8950cac034607bae7b7518",
+  "round": "2026-11"
+}

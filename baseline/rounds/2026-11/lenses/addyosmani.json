@@ -1,0 +1,492 @@
+{
+  "L2": {
+    "ceiling": {
+      "C11": {
+        "cites": [
+          "cache:addyosmani/skills/security-and-hardening/SKILL.md:36,138",
+          "cache:addyosmani/agents/security-auditor.md:39,104",
+          "cache:addyosmani/references/security-checklist.md:188-190"
+        ],
+        "conf": "M",
+        "path": "security-and-hardening and security-auditor add threat model, OWASP mapping and dependency provenance on every path, but no shipped path adds agent-side least-privilege tool permissions or skill provenance, so L4 stays unmet",
+        "s": 3
+      },
+      "C2": {
+        "cites": [
+          "cache:addyosmani/skills/doubt-driven-development/SKILL.md:14-28",
+          "cache:addyosmani/skills/spec-driven-development/SKILL.md:82,219-223,294-303"
+        ],
+        "conf": "M",
+        "path": "doubt-driven-development (opt-in) is the only fresh-context critic, but its When to Use (SKILL.md:14-28) covers decisions, code and claims, not a spec or requirements artifact; applying it to SPEC.md is a stretch, so the lower reading keeps L4 unmet (no independent spec critique). Stop rule (spec-driven-development/SKILL.md:82; build.md:39) and change control (:219-223, :228-250) exist but do not lift the cumulative gate",
+        "s": 3
+      },
+      "C4": {
+        "cites": [
+          "cache:addyosmani/.claude/commands/ship.md:18",
+          "cache:addyosmani/skills/source-driven-development/SKILL.md:175"
+        ],
+        "conf": "M",
+        "path": "no shipped path adds an explicit cannot-verify status for completion claims or tests designed outside the implementer (ship.md test-engineer analyses coverage gaps only; source-driven 'UNVERIFIED' is about doc citations)",
+        "s": 3
+      },
+      "C5": {
+        "cites": [
+          "cache:addyosmani/.claude/commands/ship.md:8-24,29-34,47-54,72",
+          "cache:addyosmani/skills/code-review-and-quality/SKILL.md:280-281"
+        ],
+        "conf": "M",
+        "path": "`/ship` fan-out meets L3 (independent personas, five axes, severity, Critical -> NO-GO) and L4 (a) merge with duplicate resolution (ship.md:33); (b) is not met: findings are sorted into blockers / recommended / acknowledged risks (ship.md:47-54) but not confirmed against the code or rejected with reason; (c) receiver-side check absent (code-review-and-quality/SKILL.md:281 defers to the author); (d) no scoped re-review. Only one of (a)-(d), so L4 unmet",
+        "s": 3
+      },
+      "C6": {
+        "cites": [
+          "cache:addyosmani/skills/doubt-driven-development/SKILL.md:183-193",
+          "cache:addyosmani/.claude/commands/build.md:37-38,45",
+          "cache:addyosmani/skills/debugging-and-error-recovery/SKILL.md:21-26"
+        ],
+        "conf": "M",
+        "path": "doubt-driven-development loop (exit on trivial findings, bound 3 cycles, escalate to user) plus `/build` auto build/debug loop (exit tests green; breaker 'no obvious fix' -> stop and ask user, debugging skill); L4 unmet (no state carried between iterations, no scoped re-check)",
+        "s": 3
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "default": 3,
+        "reason_quote": "S-A: \"L3: default-path SPEC.md with required 'specific, testable' Success Criteria\"; S-C: \"L3: on the default path SPEC.md requires specific, testable success criteria\""
+      },
+      {
+        "c": "C4",
+        "default": 3,
+        "reason_quote": "S-A first unmet: \"the default-path check of the implementer's verification is done in the authoring context (`/review` runs in the main session)\""
+      },
+      {
+        "c": "C5",
+        "default": 3,
+        "reason_quote": "S-A: \"exists on the default path, but it runs in the authoring context ... direct persona invocation is opt-in. Flagged contestable: if `/ship` were read as the pre-merge review, L3-L4 ... would be met\""
+      },
+      {
+        "c": "C6",
+        "default": 2,
+        "reason_quote": "S-C: \"Only the doubt loop is numerically bounded ... and it is invoked for high-risk decisions, not every task\"; first unmet: \"at least two loop types on the default path each with an explicit bound or breaker and escalation target\""
+      },
+      {
+        "c": "C11",
+        "default": 3,
+        "reason_quote": "S-A: \"L3: security on the default path (spec boundaries and DoD, security axis in review, secret rules, dependency hygiene ...)\""
+      }
+    ]
+  },
+  "L3": {
+    "conf": "H",
+    "evidence": [
+      {
+        "cite": "cache:addyosmani/skills/spec-driven-development/SKILL.md:177 (stop the turn until the human approves the spec); cache:addyosmani/.claude/commands/plan.md:15 (present the plan for human review); cache:addyosmani/.claude/commands/build.md:26 (default mode: mark the task complete and stop)",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:addyosmani/.claude/commands/build.md:28-43 (`/build` auto: one approval, then plan if needed and implement every task RED->GREEN->suite->build->commit, with explicit stop-and-ask conditions)",
+        "level": "A2"
+      }
+    ],
+    "first_unmet": "A3: `/build` auto runs every task in the main session; no shipped path dispatches a fresh-context subagent per task (subagents appear only as review personas in `/ship`, cache:addyosmani/.claude/commands/ship.md:12-24, and as the doubt-driven critic). cache:addyosmani/references/orchestration-patterns.md is reference material, not a task-chaining mechanism.",
+    "level": "A2"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:addyosmani/.claude/commands/spec.md:10-14 (clarifying questions on objective, features and acceptance criteria, stack, boundaries); cache:addyosmani/skills/spec-driven-development/SKILL.md:27,82 (Specify phase; do not silently fill ambiguous requirements)",
+      "v": 2
+    },
+    "F10": {
+      "cite": "cache:addyosmani/.claude/commands/build.md:45 (if any step fails, follow debugging-and-error-recovery); cache:addyosmani/skills/debugging-and-error-recovery/SKILL.md:10,21-26 (stop-the-line, structured triage to root cause)",
+      "v": 2
+    },
+    "F11": {
+      "cite": "cache:addyosmani/agents/code-reviewer.md:1-3, cache:addyosmani/agents/security-auditor.md:1-3, cache:addyosmani/agents/test-engineer.md:1-3 (role personas), invoked by cache:addyosmani/.claude/commands/ship.md:14-18",
+      "v": 2
+    },
+    "F12": {
+      "cite": "cache:addyosmani/.claude/commands/ship.md:12-24 (three subagents, each with its own context window, return only reports; persona briefs at :16-18)",
+      "v": 2
+    },
+    "F13": {
+      "cite": "cache:addyosmani/.claude/commands/build.md:23-26 (full test suite and build after the change, before commit); cache:addyosmani/references/definition-of-done.md:63 (unverified work is not done)",
+      "v": 2
+    },
+    "F14": {
+      "cite": "cache:addyosmani/.claude/commands/ship.md:12-24 (independent persona subagents review the change); `/review` itself runs in the main session (cache:addyosmani/docs/agents.md:39)",
+      "v": 2
+    },
+    "F15": {
+      "cite": "cache:addyosmani/.claude/commands/ship.md:29-38 (Phase B merge in main context, resolve duplicates between reviewers) and :42-65 (single GO/NO-GO output)",
+      "v": 2
+    },
+    "F16": {
+      "cite": "cache:addyosmani/.claude/commands/review.md:13 (security axis); cache:addyosmani/.claude/commands/ship.md:17 (security-auditor: OWASP, secrets, auth, CVEs, threat model); cache:addyosmani/skills/security-and-hardening/SKILL.md:36 (STRIDE threat model)",
+      "v": 2
+    },
+    "F17": {
+      "cite": "cache:addyosmani/skills/doubt-driven-development/SKILL.md:183-193 (bounded loop: 3 cycles, then escalate to user; decompose if too big) - invoked for high-risk steps (build.md:40), not every task",
+      "v": 1
+    },
+    "F18": {
+      "audit_override": true,
+      "cite": "",
+      "v": 1
+    },
+    "F19": {
+      "cite": "cache:addyosmani/skills/git-workflow-and-versioning/SKILL.md:20,123,147-149 (feature branches, worktrees for parallel agent work) - opt-in skill; `/build` auto runs on the current branch (build.md:33-36)",
+      "v": 1
+    },
+    "F2": {
+      "cite": "cache:addyosmani/skills/spec-driven-development/SKILL.md:118 (spec template, versioned title) and :143-144 (Success Criteria: specific, testable conditions); :301 (checklist: success criteria specific and testable)",
+      "v": 2
+    },
+    "F20": {
+      "cite": "cache:addyosmani/.claude/commands/build.md:17 (pick the next pending task from the plan) and :42 (re-invoke `/build` auto resumes from the next pending task); cache:addyosmani/skills/context-engineering/SKILL.md:123-135 (restartable session boundaries)",
+      "v": 2
+    },
+    "F21": {
+      "cite": "cache:addyosmani/hooks/SIMPLIFY-IGNORE.md:1-15 (opt-in hook hiding protected blocks from `/code-simplify`) - hooks are not wired by the plugin (no hooks.json; cache:addyosmani/hooks/session-start.sh:5)",
+      "v": 1
+    },
+    "F22": {
+      "cite": "",
+      "v": 0
+    },
+    "F23": {
+      "cite": "cache:addyosmani/skills/planning-and-task-breakdown/SKILL.md:84,171 (Task N; Source spec line); cache:addyosmani/skills/spec-driven-development/SKILL.md:65 (module ids) - no requirement or test IDs",
+      "v": 1
+    },
+    "F24": {
+      "cite": "",
+      "v": 0
+    },
+    "F25": {
+      "cite": "cache:addyosmani/.claude/commands/ship.md:56-59,71 (rollback plan with triggers, procedure, RTO mandatory before GO); cache:addyosmani/skills/shipping-and-launch/SKILL.md:3,77-79 (feature flags, staged rollout)",
+      "v": 2
+    },
+    "F26": {
+      "cite": "cache:addyosmani/skills/observability-and-instrumentation/SKILL.md:168-174 (alerts link runbooks); cache:addyosmani/skills/security-and-hardening/SKILL.md:152 (privacy incident postmortem via debugging skill) - no incident/postmortem procedure",
+      "v": 1
+    },
+    "F27": {
+      "cite": "",
+      "v": 0
+    },
+    "F28": {
+      "cite": "cache:addyosmani/skills/context-engineering/SKILL.md:123-135 (persist scope, decisions, status, verification and open questions before leaving a session; read rules/spec/plan in the fresh session) - guidance, no dedicated memory store",
+      "v": 1
+    },
+    "F29": {
+      "cite": "cache:addyosmani/README.md:73-188 (Claude Code, Cursor, Antigravity, Gemini CLI, Windsurf, OpenCode, GitHub Copilot, Kiro, Codex); cache:addyosmani/README.md:360-364 (per-platform adapters)",
+      "v": 2
+    },
+    "F3": {
+      "cite": "cache:addyosmani/skills/doubt-driven-development/SKILL.md:3,10,87 (fresh-context adversarial reviewer for non-trivial artifacts, incl. plans) - opt-in/high-risk; on the default path the spec check is self-run (spec-driven-development/SKILL.md:294-303)",
+      "v": 1
+    },
+    "F30": {
+      "cite": "cache:addyosmani/.claude-plugin/plugin.json:3 (version 0.6.16); cache:addyosmani/README.md:77-79 (marketplace install); cache:addyosmani/.github/workflows/test-plugin-install.yml:29 (validate-versions)",
+      "v": 2
+    },
+    "F31": {
+      "cite": "cache:addyosmani/.github/workflows/test-plugin-install.yml:23-50 (validate-skills, skill-lint tests, validate-versions, run-evals --min-rank1 95, reference-link validation)",
+      "v": 2
+    },
+    "F32": {
+      "cite": "",
+      "v": 0
+    },
+    "F33": {
+      "cite": "cache:addyosmani/scripts/lib/skill-lint.js:23,37,465-471 (500-line SKILL.md context budget) run in CI (cache:addyosmani/.github/workflows/test-plugin-install.yml:23); cache:addyosmani/skills/context-engineering/SKILL.md:198 (Context Budget Management)",
+      "v": 2
+    },
+    "F34": {
+      "cite": "cache:addyosmani/evals/README.md:41,49,60,67-75 (execution and plugin evals with graders, with/without-plugin results reported, pressure cases); cache:addyosmani/.claude-plugin/plugin.json:14-16 (experimental evals: evals/plugin); cache:addyosmani/scripts/run-evals.js:19,442 (tier 3 behavioural runs, opt-in)",
+      "v": 2
+    },
+    "F4": {
+      "cite": "cache:addyosmani/skills/spec-driven-development/SKILL.md:228-250 (Spec Evolution: version label bumped, Out of Scope (Deferred), delta spec with Status line); cache:addyosmani/.claude/commands/spec.md:22 (delta spec when SPEC.md exists)",
+      "v": 2
+    },
+    "F5": {
+      "cite": "cache:addyosmani/.claude/commands/plan.md:11-13 (dependency graph, vertical slices); cache:addyosmani/skills/planning-and-task-breakdown/SKILL.md:84,97 (Task N with Dependencies field)",
+      "v": 2
+    },
+    "F6": {
+      "cite": "cache:addyosmani/skills/planning-and-task-breakdown/SKILL.md:176 (plan template Architecture Decisions section); cache:addyosmani/skills/documentation-and-adrs/SKILL.md:23,46 (ADR section and template); cache:addyosmani/.claude/commands/ship.md:38 (ADRs verified before ship)",
+      "v": 2
+    },
+    "F7": {
+      "cite": "cache:addyosmani/.claude/commands/plan.md:8 (read the relevant codebase sections); cache:addyosmani/docs/adoption-guide.md Path B (rules file of real conventions, characterization tests) - guidance, no code-map artifact on the path",
+      "v": 1
+    },
+    "F8": {
+      "cite": "cache:addyosmani/.claude/commands/ship.md:73 (skip fan-out only if <=2 files, <50 lines and no auth/payments/data/config); cache:addyosmani/skills/spec-driven-development/SKILL.md:20 (When NOT to use)",
+      "v": 2
+    },
+    "F9": {
+      "cite": "cache:addyosmani/.claude/commands/build.md:21-22 (write a failing test RED, then minimum code GREEN)",
+      "v": 2
+    }
+  },
+  "L4_total": 51,
+  "L5": {
+    "T0_root": "cache:addyosmani",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/api-and-interface-design/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/browser-testing-with-devtools/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/ci-cd-and-automation/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/code-review-and-quality/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/code-simplification/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/constraint-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/context-engineering/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/debugging-and-error-recovery/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/deprecation-and-migration/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/documentation-and-adrs/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/doubt-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/frontend-ui-engineering/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/git-workflow-and-versioning/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/idea-refine/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/incremental-implementation/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/interview-me/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/observability-and-instrumentation/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/performance-optimization/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/planning-and-task-breakdown/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/security-and-hardening/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/shipping-and-launch/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/source-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/spec-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/test-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/skills/using-agent-skills/SKILL.md",
+        "why": "cache:addyosmani/.claude-plugin/plugin.json:12 (\"skills\": \"./skills\"); Claude Code preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/agents/code-reviewer.md",
+        "why": "plugin-root agents/ directory (default plugin agent location; used by cache:addyosmani/.claude/commands/ship.md:14 subagent_type); Claude Code preloads agent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/agents/security-auditor.md",
+        "why": "plugin-root agents/ directory (default plugin agent location; used by cache:addyosmani/.claude/commands/ship.md:14 subagent_type); Claude Code preloads agent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/agents/test-engineer.md",
+        "why": "plugin-root agents/ directory (default plugin agent location; used by cache:addyosmani/.claude/commands/ship.md:14 subagent_type); Claude Code preloads agent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:addyosmani/agents/web-performance-auditor.md",
+        "why": "plugin-root agents/ directory (default plugin agent location; used by cache:addyosmani/.claude/commands/ship.md:14 subagent_type); Claude Code preloads agent descriptions"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/.claude/commands/spec.md",
+        "why": "Entry for R: cache:addyosmani/README.md:11-17 and :28 (lifecycle starts at `/spec`)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/spec-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/spec.md:6 (invoke agent-skills:spec-driven-development)"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/.claude/commands/plan.md",
+        "why": "cache:addyosmani/README.md:29 (`/plan`); cache:addyosmani/skills/spec-driven-development/SKILL.md:177 (planning starts after approval)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/planning-and-task-breakdown/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/plan.md:6"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/.claude/commands/build.md",
+        "why": "cache:addyosmani/README.md:30 (`/build`, default single-task mode build.md:10)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/incremental-implementation/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/build.md:6"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/test-driven-development/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/build.md:6; cache:addyosmani/.claude/commands/test.md:6"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/references/definition-of-done.md",
+        "why": "cache:addyosmani/skills/incremental-implementation/SKILL.md:249 (apply the project-wide Definition of Done as the final gate before declaring a task done)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/context-engineering/SKILL.md",
+        "why": "cache:addyosmani/skills/spec-driven-development/SKILL.md:217 (Implement phase: use context-engineering to load the right spec sections) - contestable, see notes"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/.claude/commands/test.md",
+        "why": "cache:addyosmani/README.md:31 (`/test` lifecycle step)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/.claude/commands/review.md",
+        "why": "cache:addyosmani/README.md:33 (`/review` before merge)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/code-review-and-quality/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/review.md:6"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/security-and-hardening/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/review.md:13 ('Use security-and-hardening skill')"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/performance-optimization/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/review.md:14 ('Use performance-optimization skill')"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/.claude/commands/ship.md",
+        "why": "cache:addyosmani/README.md:36 (`/ship`); both v1 traces include it for a production change"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/skills/shipping-and-launch/SKILL.md",
+        "why": "cache:addyosmani/.claude/commands/ship.md:6"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/agents/code-reviewer.md",
+        "why": "cache:addyosmani/.claude/commands/ship.md:16 (persona subagent, system prompt loaded)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/agents/security-auditor.md",
+        "why": "cache:addyosmani/.claude/commands/ship.md:17"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:addyosmani/agents/test-engineer.md",
+        "why": "cache:addyosmani/.claude/commands/ship.md:18"
+      }
+    ],
+    "notes": "Host = Claude Code (cache:addyosmani/README.md:73 'Claude Code (recommended)', first native integration listed; plugin.json is the Claude Code manifest). No hooks.json, so no hook injection; cache:addyosmani/hooks/session-start.sh is explicitly not wired (cache:addyosmani/hooks/session-start.sh:5; cache:addyosmani/docs/codex-setup.md:35). Repo-root CLAUDE.md/AGENTS.md are contributor files and are excluded. T1 = 25 skills + 4 agents; the 9 .claude/commands (each with disable-model-invocation: true) are excluded (R-T1). commands/*.toml are listed in plugin.json:11 but are Gemini-format TOML; excluded from T1 for a Claude Code host - script owner may revisit. T3 = unconditional happy-path reads for `/plan` -> `/build` (default single-task mode, once per task, counted once) -> `/test` -> `/review` -> `/ship`, each once, excluding T2 files. Excluded as conditional or soft pointers: doubt-driven-development (high-risk steps only, build.md:40), debugging-and-error-recovery (on failure, build.md:45), skills' 'see ../../references/*-checklist.md' and testing-patterns.md pointers, security-and-hardening/references/hardening-patterns.md and performance-optimization/references/optimization-patterns.md ('open the section you need when you reach that code, not before'), cache:addyosmani/references/orchestration-patterns.md, accessibility checklist (ship.md:36 'or invoke'), using-agent-skills/SKILL.md (router not injected). Contestable inclusions: context-engineering/SKILL.md (mandated by the spec skill's Implement phase, not by build.md) and security-and-hardening/performance-optimization SKILL.md (parenthetical 'Use ... skill' in review.md:13-14)."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "addyosmani",
+  "name": "Addy Osmani agent-skills",
+  "notes": "Route chosen for R: `/spec` -> `/plan` -> `/build` (default single-task mode, human re-invokes per task) -> `/test` -> `/review` -> `/ship` (production-bound change; both v1 traces include `/ship`). `/build` auto is treated as opt-in. L2 selection was literal; Only C6 rises (2->3) by counting the doubt loop off the default path; C2, C4, C5 and C11 keep the default. L3 scored as offered across shipped paths. Contestable: C5 ceiling could be 4 if `/ship`'s blocker/recommended/acknowledged sorting is read as finding triage (S-C's reading); C2 ceiling could be 4 if doubt-driven is accepted as a spec critic. Lower readings taken.",
+  "pin": "39b723ceebf81474d0557c1fecd01eddab585563",
+  "round": "2026-11"
+}

@@ -1,0 +1,403 @@
+{
+  "L2": {
+    "ceiling": {
+      "C16": {
+        "cites": [
+          "cache:superpowers/skills/diagnosing-superpowers/SKILL.md:3,9-12"
+        ],
+        "conf": "M",
+        "path": "diagnosing-superpowers (opt-in): produces a report/issue for maintainers, not owned actions that change the project environment, so L3 fails on substance",
+        "s": 2
+      },
+      "C2": {
+        "cites": [
+          "cache:superpowers/skills/brainstorming/SKILL.md:229-239"
+        ],
+        "conf": "H",
+        "path": "no alternative path: brainstorming is the only spec mechanism",
+        "s": 2
+      },
+      "C3": {
+        "cites": [
+          "cache:superpowers/skills/executing-plans/SKILL.md:150-153",
+          "cache:superpowers/skills/test-driven-development/SKILL.md:31"
+        ],
+        "conf": "M",
+        "path": "executing-plans (Native) also loads TDD but adds no gate or in-repo eval",
+        "s": 4
+      },
+      "C4": {
+        "cites": [
+          "skills/executing-plans/scripts/task-done:1-5,46-55",
+          "cache:superpowers/skills/executing-plans/SKILL.md:226-233",
+          "cache:superpowers/skills/requesting-code-review/code-reviewer.md:43-47",
+          "cache:superpowers/skills/writing-plans/SKILL.md:192"
+        ],
+        "conf": "M",
+        "path": "executing-plans (Native) route: task-done refuses completion on failing tests (L5 element) but the route fails L4: no explicit cannot-verify status (code-reviewer.md 'Declined to judge' is scope set-aside), and tests are designed by the same session that implements; cumulative gate stops at 4",
+        "s": 4
+      },
+      "C5": {
+        "cites": [
+          "cache:superpowers/skills/requesting-code-review/code-reviewer.md:54-60"
+        ],
+        "conf": "H",
+        "path": "no shipped path adds parallel review lenses; code-reviewer.md forbids extra reviewers",
+        "s": 4
+      },
+      "C7": {
+        "cites": [
+          "cache:superpowers/skills/dispatching-parallel-agents/SKILL.md:3,12-14",
+          "cache:superpowers/skills/subagent-driven-development/SKILL.md:235"
+        ],
+        "conf": "M",
+        "path": "dispatching-parallel-agents (opt-in, for independent failures, not plan frontier); no codebase/knowledge map on any path, so L3 fails",
+        "s": 2
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "default": 2,
+        "reason_quote": "S-A: \"clarification interview on the default path\"; S-C: \"a design doc ... on the default path\""
+      },
+      {
+        "c": "C3",
+        "default": 4,
+        "reason_quote": "S-A: \"TDD required on default build path\"; S-C: \"default build path is TDD\""
+      },
+      {
+        "c": "C4",
+        "default": 4,
+        "reason_quote": "S-A first unmet: \"on R's SDD route, completion is a controller-written ledger line with no deterministic gate ... (A deterministic gate, task-done, exists but only on the inline executing-plans route.)\"; S-C: \"serves the Native/inline route, not the recommended SDD route\""
+      },
+      {
+        "c": "C5",
+        "default": 4,
+        "reason_quote": "S-A: \"independent fresh reviewer per task on the default path\"; S-C: \"fresh reviewer subagent per task on the default path\""
+      },
+      {
+        "c": "C7",
+        "default": 2,
+        "reason_quote": "S-C: \"Parallel dispatch exists only as an opt-in skill for independent problems (capped at 2)\""
+      },
+      {
+        "c": "C16",
+        "default": 2,
+        "reason_quote": "S-A: \"an optional, templated post-session diagnosis ... (diagnosis targets the plugin maintainers, opt-in)\"; S-C: \"an optional session retrospective ... it is not in the default cycle\""
+      }
+    ]
+  },
+  "L3": {
+    "conf": "H",
+    "evidence": [
+      {
+        "cite": "cache:superpowers/skills/brainstorming/SKILL.md:269-283 (HARD-GATE: nothing built until the human approves the design); cache:superpowers/skills/writing-plans/SKILL.md:179-198 (human reviews the plan and picks the executor)",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:superpowers/skills/subagent-driven-development/SKILL.md:17 (execute all tasks without stopping) and :27-31 (four named stop conditions); cache:superpowers/skills/finishing-a-development-branch/SKILL.md:14-26 (green suite before finish)",
+        "level": "A2"
+      },
+      {
+        "cite": "cache:superpowers/skills/subagent-driven-development/SKILL.md:8-10 (fresh implementer subagent per task, never inherits session context), :17 (no check-ins between tasks), :93-95 (loop to next task)",
+        "level": "A3"
+      }
+    ],
+    "first_unmet": "A4: no external loop that opens a new session per task; all tasks run in one controller session (subagent-driven-development/SKILL.md:56-57 'Both run in this session'); the ledger allows resume (references/resuming.md:6-9) but a human restarts the session. No shipped script launches headless sessions.",
+    "level": "A3"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:superpowers/skills/brainstorming/SKILL.md:99-108 (ask only questions that change what gets built, one at a time) and :26-32 (mandatory order before implementing)",
+      "v": 2
+    },
+    "F10": {
+      "cite": "cache:superpowers/skills/systematic-debugging/SKILL.md:168,231 (4-phase root-cause process; 3+ failed fixes -> question architecture) - triggered by bugs via cache:superpowers/skills/using-superpowers/SKILL.md:31, not invoked on the SDD route for R",
+      "v": 1
+    },
+    "F11": {
+      "cite": "cache:superpowers/skills/subagent-driven-development/implementer-prompt.md:1-3, task-reviewer-prompt.md:1-4, re-review-prompt.md:1-4; cache:superpowers/skills/requesting-code-review/code-reviewer.md:160; cache:superpowers/skills/brainstorming/builder-check-prompt.md:1-3 (role prompt templates)",
+      "v": 2
+    },
+    "F12": {
+      "cite": "cache:superpowers/skills/subagent-driven-development/SKILL.md:10 (never inherit session context) and :203-224 (task brief file, explicit dispatch contents)",
+      "v": 2
+    },
+    "F13": {
+      "cite": "cache:superpowers/skills/finishing-a-development-branch/SKILL.md:14-26 (full suite, failures stop); cache:superpowers/skills/verification-before-completion/SKILL.md:14-17 (no completion claims without fresh verification evidence); implementer-prompt.md:133 (TDD evidence in report)",
+      "v": 2
+    },
+    "F14": {
+      "cite": "cache:superpowers/skills/subagent-driven-development/SKILL.md:253-270 (fresh task reviewer per task with diff file); task-reviewer-prompt.md:64 (Do Not Trust the Report)",
+      "v": 2
+    },
+    "F15": {
+      "cite": "",
+      "v": 0
+    },
+    "F16": {
+      "cite": "cache:superpowers/skills/requesting-code-review/code-reviewer.md:80 ('Security concerns?') and :113-114 (security issues as Critical) - one checklist line, no security review procedure or threat model",
+      "v": 1
+    },
+    "F17": {
+      "cite": "cache:superpowers/skills/subagent-driven-development/references/fix-loop.md:20-21 (five rounds maximum per task) and :59-73 (breaker: adjudicate and park at the cap)",
+      "v": 2
+    },
+    "F18": {
+      "cite": "",
+      "v": 0
+    },
+    "F19": {
+      "cite": "cache:superpowers/skills/subagent-driven-development/SKILL.md:103-106 (isolated workspace via using-git-worktrees; never on main without consent); cache:superpowers/skills/using-git-worktrees/SKILL.md:121-132 (clean baseline)",
+      "v": 2
+    },
+    "F2": {
+      "cite": "cache:superpowers/skills/brainstorming/SKILL.md:229-239 (design doc template: intent, goals/non-goals/anti-goals, constraints, approaches) - no testable acceptance criteria required; testable values appear only in plan test steps (cache:superpowers/skills/writing-plans/SKILL.md:146-147)",
+      "v": 1
+    },
+    "F20": {
+      "cite": "cache:superpowers/skills/subagent-driven-development/SKILL.md:108-126 (ledger survives compaction); references/resuming.md:6-9 (resume at first incomplete task)",
+      "v": 2
+    },
+    "F21": {
+      "cite": "",
+      "v": 0
+    },
+    "F22": {
+      "cite": "",
+      "v": 0
+    },
+    "F23": {
+      "cite": "cache:superpowers/skills/writing-plans/SKILL.md:95 (Task N) and :167 (spec coverage self-check); cache:superpowers/skills/subagent-driven-development/SKILL.md:313 (ledger links Task N to commit range) - no requirement IDs",
+      "v": 1
+    },
+    "F24": {
+      "cite": "",
+      "v": 0
+    },
+    "F25": {
+      "cite": "",
+      "v": 0
+    },
+    "F26": {
+      "cite": "",
+      "v": 0
+    },
+    "F27": {
+      "cite": "cache:superpowers/skills/diagnosing-superpowers/SKILL.md:1-12 (opt-in post-session diagnosis with evidence, reports to plugin maintainers; does not change the project environment)",
+      "v": 1
+    },
+    "F28": {
+      "cite": "",
+      "v": 0
+    },
+    "F29": {
+      "cite": "cache:superpowers/README.md:56-283 (Claude Code, Antigravity, Codex, Cursor, Devin, Factory Droid, Gemini CLI, Copilot CLI, Grok, Kimi, OpenCode, Pi, Qwen, Hermes, Muse); per-platform manifests .claude-plugin/, .codex-plugin/, .cursor-plugin/, gemini-extension.json",
+      "v": 2
+    },
+    "F3": {
+      "cite": "cache:superpowers/skills/brainstorming/SKILL.md:250-267 (builder check by a fresh subagent with builder-check-prompt.md, for a project)",
+      "v": 2
+    },
+    "F30": {
+      "cite": "cache:superpowers/.claude-plugin/plugin.json:4 (version 7.0.2); cache:superpowers/README.md:62-66 (`/plugin` install superpowers@claude-plugins-official); .version-bump.json:1-15 (version synchronized across manifests); cache:superpowers/RELEASE-NOTES.md:3 (v7.0.2 notes)",
+      "v": 2
+    },
+    "F31": {
+      "cite": "cache:superpowers/tests/skill-size/test-skill-size.sh:1-20, cache:superpowers/tests/skill-layout/test-no-dev-files-in-skills.sh:1-2, .pre-commit-config.yaml - validation scripts exist but no CI workflow (.github has no workflows/)",
+      "v": 1
+    },
+    "F32": {
+      "cite": "cache:superpowers/tests/claude-code/analyze-token-usage.py:1-5 (token usage per session and subagent from transcripts) - maintainer test tool, not on the user path",
+      "v": 1
+    },
+    "F33": {
+      "audit_override": true,
+      "cite": "cache:superpowers/tests/skill-size/test-skill-size.sh:2-16 (SKILL.md 20,000-byte limit, script not wired in CI); cache:superpowers/skills/writing-plans/SKILL.md:175 (plan-to-spec proportion check, no number)",
+      "v": 2
+    },
+    "F34": {
+      "cite": "cache:superpowers/tests/explicit-skill-requests/run-test.sh:1-8 (tests whether Claude invokes a skill); cache:superpowers/tests/systematic-debugging/pressure-scenarios/test-pressure-1.md:1-3; behaviour evals live in an external repo not at the pin (cache:superpowers/README.md:386)",
+      "v": 1
+    },
+    "F4": {
+      "cite": "",
+      "v": 0
+    },
+    "F5": {
+      "cite": "cache:superpowers/skills/writing-plans/SKILL.md:102-106 (per-task Interfaces: Consumes from earlier tasks / Produces for later tasks)",
+      "v": 2
+    },
+    "F6": {
+      "cite": "cache:superpowers/skills/brainstorming/SKILL.md:219-222 (design doc Approaches part: options, trade-offs, which picked and why, committed at :245-246); cache:superpowers/skills/subagent-driven-development/SKILL.md:19-25 (every ruling recorded in the ledger)",
+      "v": 2
+    },
+    "F7": {
+      "cite": "cache:superpowers/skills/brainstorming/SKILL.md:42-50 (Look Before You Ask: read the code until you can explain how it works) - advice, no map artifact; cache:superpowers/skills/writing-plans/SKILL.md:30",
+      "v": 1
+    },
+    "F8": {
+      "audit_override": true,
+      "cite": "cache:superpowers/skills/brainstorming/SKILL.md:209-224 (Size the Work: small change vs project, step up a size if it grows); :22-23 quick clear task",
+      "v": 1
+    },
+    "F9": {
+      "cite": "cache:superpowers/skills/writing-plans/SKILL.md:108-131 (Step 1 write failing test, Step 2 run to verify it fails, then implement); cache:superpowers/skills/test-driven-development/SKILL.md:31,47-59",
+      "v": 2
+    }
+  },
+  "L4_total": 40,
+  "L5": {
+    "T0_root": "cache:superpowers",
+    "T1": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/using-superpowers/SKILL.md",
+        "why": "cache:superpowers/hooks/hooks.json:4-12 (SessionStart startup|clear|compact) runs hooks/session-start, which reads the full body (hooks/session-start:25-28) and injects it as additionalContext (hooks/session-start:49)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/brainstorming/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/diagnosing-superpowers/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/dispatching-parallel-agents/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/executing-plans/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/finishing-a-development-branch/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/receiving-code-review/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/requesting-code-review/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/subagent-driven-development/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/systematic-debugging/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/test-driven-development/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/using-git-worktrees/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/verification-before-completion/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/writing-plans/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:superpowers/skills/writing-skills/SKILL.md",
+        "why": "Claude Code preloads name+description of every plugin skill under skills/ (plugin ships 15 skills; no commands/ or agents/ directories)"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/brainstorming/SKILL.md",
+        "why": "Entry skill for R: cache:superpowers/skills/using-superpowers/SKILL.md:30 ('Let's build X' -> superpowers:brainstorming first); cache:superpowers/README.md:310"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/using-superpowers/references/claude-code-tools.md",
+        "why": "cache:superpowers/skills/using-superpowers/SKILL.md:54-56 ('If your harness appears here, read its reference file' - Claude Code)"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/brainstorming/builder-check-prompt.md",
+        "why": "cache:superpowers/skills/brainstorming/SKILL.md:250-251 (builder check for a project; R is a project per Size the Work :214-217) - read by the dispatched subagent"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/writing-plans/SKILL.md",
+        "why": "cache:superpowers/skills/brainstorming/SKILL.md:32 and :281-282 (invoke superpowers:writing-plans after approval)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/using-git-worktrees/SKILL.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/SKILL.md:103-104 (use superpowers:using-git-worktrees in Setup); cache:superpowers/README.md:312"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/subagent-driven-development/SKILL.md",
+        "why": "cache:superpowers/skills/writing-plans/SKILL.md:59 and :200-201 (Subagent-driven recommended; REQUIRED SUB-SKILL)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/subagent-driven-development/references/preflight.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/SKILL.md:136-138 (read before dispatching Task 1)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/subagent-driven-development/implementer-prompt.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/SKILL.md:237 (implementer template, every task)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/subagent-driven-development/task-reviewer-prompt.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/SKILL.md:295 (task reviewer template, every task)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/subagent-driven-development/references/final-review.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/SKILL.md:323-325 (read when every task is complete)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/requesting-code-review/code-reviewer.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/references/final-review.md:12-14 (final whole-branch reviewer template)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:superpowers/skills/finishing-a-development-branch/SKILL.md",
+        "why": "cache:superpowers/skills/subagent-driven-development/references/final-review.md:49"
+      }
+    ],
+    "notes": "Host = Claude Code (cache:superpowers/README.md:10 and :56, first platform listed; claude-code-tools.md:3 'Claude Code is the reference harness'). Repo-root cache:superpowers/AGENTS.md, cache:superpowers/GEMINI.md and CLAUDE-style contributor files are not injected into an adopter's session and are excluded from T1. The session-start hook also adds a short wrapper string around using-superpowers (hooks/session-start:49), not a file. T3 lists unconditional happy-path reads only, each once, excluding T1/T2 files. Scripts the path executes (sdd-workspace, task-brief, review-package) are run, not read, and are excluded. Conditional reads left out of T3: references/fix-loop.md and re-review-prompt.md (only when a review has findings; SDD SKILL.md:299-305, final-review.md:18-25), references/cannot-verify.md (SKILL.md:291-293), references/handling-reports.md (non-DONE status, :245-247), references/resuming.md (existing ledger, :119-121), references/batching.md (:179-181), brainstorming/visual-companion.md (:315-316). test-driven-development/SKILL.md is not an explicit mandatory read on the SDD route (implementer-prompt.md:36 'following TDD if task says to'; using-superpowers is ignored by subagents, using-superpowers/SKILL.md:6-8); it is mandatory on the Native route (executing-plans/SKILL.md:150-153). The spec, plan, briefs, reports and review packages are project artifacts, not method files."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "superpowers",
+  "name": "Superpowers",
+  "notes": "Route chosen for R: brainstorming (project size, full design doc + builder check + HARD-GATE) -> writing-plans -> using-git-worktrees -> subagent-driven-development (recommended in the plan header, writing-plans/SKILL.md:59; matches both v1 traces) -> final whole-branch review -> finishing-a-development-branch. L2 selection was literal (any rationale or first-unmet mentioning the default path, a route, opt-in or optional); over-selected cells keep the default because no other shipped path raises them. Contestable: C4 ceiling could be read as 5 if the planner role on the Native route is accepted as independent test design and code-reviewer.md 'Declined to judge' as a cannot-verify status; the lower reading was taken. L3 is scored as offered across shipped paths. L4 F29-F34 (ecosystem/economy) are scored as shipped-and-operational (2) vs present but partial, manual or maintainer-only (1).",
+  "pin": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "round": "2026-11"
+}

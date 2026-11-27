@@ -1,0 +1,88 @@
+{
+  "method": "spec-kit",
+  "methodology_sha256": "a6e3953725b67db0189e188c1495ee9b54975e48f65c28baaa01f459b69cf9a4",
+  "scorer": "S-B",
+  "scores": {
+    "C1": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C10": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C11": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C12": {
+      "conf": "M",
+      "ev": "I",
+      "s": 1
+    },
+    "C13": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C14": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C15": {
+      "conf": "H",
+      "ev": "I",
+      "s": 5
+    },
+    "C16": {
+      "conf": "H",
+      "ev": "I",
+      "s": 0
+    },
+    "C2": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C3": {
+      "conf": "H",
+      "ev": "I",
+      "s": 2
+    },
+    "C4": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C5": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C6": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C7": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C8": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C9": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    }
+  },
+  "version": "github/spec-kit a4d571229e164e440f8950cac034607bae7b7518 (main, commit date 2026-11-20; clone at scratchpad/refs-scoring/S-B/github_spec-kit)"
+}

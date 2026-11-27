@@ -1,0 +1,629 @@
+{
+  "L2": {
+    "ceiling": {
+      "C1": {
+        "cites": [
+          "cache:bmad/skills/core-tools/bmad/references/setup.md:17-29",
+          "cache:bmad/docs/start/install-bmad.md:56-66"
+        ],
+        "conf": "M",
+        "note": "v1 default already 5; no headroom",
+        "path": "default (already at max)",
+        "s": 5
+      },
+      "C10": {
+        "cites": [
+          "cache:bmad/skills/method/bmad-build/step-02-plan.md:65-71",
+          "cache:bmad/skills/method/bmod-method/help/unattended-builds.md:56"
+        ],
+        "conf": "M",
+        "first_unmet": "L4: no waiver/exception procedure with recorded rationale and no risk-scaled approval depth ('BMad ships no such process')",
+        "path": "any shipped path (incl. BRD approval block, PRD sign-offs)",
+        "s": 3
+      },
+      "C11": {
+        "cites": [
+          "cache:bmad/skills/method/bmod-method/doc-templates/template-security-review.md:1-30",
+          "cache:bmad/skills/method/bmad-architecture/references/reviewer-gate.md:7"
+        ],
+        "conf": "M",
+        "first_unmet": "L3: no shipped path combines a security review lens with secret-handling and dependency-hygiene rules",
+        "path": "template-security-review (PM facilitation)",
+        "s": 2
+      },
+      "C12": {
+        "cites": [
+          "cache:bmad/skills/method/bmad-agent-pm/assets/template-launch.md:57-59",
+          "cache:bmad/skills/method/bmod-method/doc-templates/template-postmortem.md:5"
+        ],
+        "conf": "M",
+        "first_unmet": "L3: no shipped release step requiring a rollback plan with staged-rollout/feature-flag guidance and observability requirements before release (launch template is a product launch plan)",
+        "path": "bmad-agent-pm launch template + postmortem template",
+        "s": 2
+      },
+      "C2": {
+        "cites": [
+          "cache:bmad/skills/core-tools/bmad-facilitate/scripts/check_ids.py:5-27",
+          "cache:bmad/skills/method/bmad-agent-po/references/spec.md:15"
+        ],
+        "conf": "M",
+        "first_unmet": "L5: check_ids.py validates id cross-references (undefined/duplicate/withdrawn ids, TOC) but does not check that acceptance criteria are present or flag vague terms; ACs not made executable",
+        "path": "any shipped path (Sofia SPEC, bmad-agent-pm + bmad-facilitate check_ids.py)",
+        "s": 4
+      },
+      "C3": {
+        "cites": [
+          "cache:bmad/skills/method/bmad-agent-dev/customize.toml:40-48",
+          "cache:bmad/skills/method/bmad-agent-po/customize.toml:141-142",
+          "cache:bmad/skills/method/bmad-build/review-prompts/verification-gap.md:25"
+        ],
+        "conf": "M",
+        "first_unmet": "L4: no explicit counters to agent rationalizations on any shipped path (searched rationaliz/excuse/tempt/red flag); Amelia's red-green-refactor is a persona principle with no fail-first observation procedure",
+        "path": "Amelia persona (bmad-agent-dev) + refactor sweep story",
+        "s": 3
+      },
+      "C4": {
+        "cites": [
+          "cache:bmad/skills/method/bmad-build-auto/step-04-review.md:149-176",
+          "cache:bmad/skills/method/bmad-build-auto/step-03-implement.md:55"
+        ],
+        "conf": "M",
+        "first_unmet": "L5: verification outcomes are persisted in the plan (committed, with baseline_revision) but no staleness rule (re-run when stale/unknown) and no script or CI refuses completion; ambiguous, lower value kept",
+        "path": "bmad-build-auto (Auto Run Result)",
+        "s": 4
+      },
+      "C5": {
+        "cites": [
+          "cache:bmad/skills/method/bmad-build/SKILL.md:16",
+          "cache:bmad/skills/method/bmad-build/customize.toml:93-97",
+          "cache:bmad/skills/method/bmad-build/customize.toml:121-186",
+          "cache:bmad/skills/method/bmad-build/customize.toml:129-132",
+          "cache:bmad/skills/method/bmad-build/step-04-review.md:39",
+          "cache:bmad/skills/method/bmad-build/step-04-review.md:55",
+          "cache:bmad/skills/method/bmad-build/step-04-review.md:59-65",
+          "cache:bmad/skills/method/bmad-build/step-04-review.md:77",
+          "cache:bmad/skills/method/bmad-build/step-04-review.md:84-86",
+          "cache:bmad/skills/method/bmad-build/step-05-present.md:33",
+          "cache:bmad/skills/method/bmad-walkthrough/SKILL.md:3"
+        ],
+        "conf": "M",
+        "path": "bmad-build with review=thorough (invocation 'thorough', or review=auto on the full route)",
+        "rationale": "L3 independent context-free lenses, verdict scale, blocking via loopback; L4/L5 (a) four parallel lenses + group by shared root cause; (b) every finding verified and logged; (c) reviewer finding floor + re-check on zero findings, receiver verifies each claim; (d) re-review after loopback with carried rows; plus triage log, calibration (finding floor), structured hand-off (bmad-walkthrough). Contestable: no explicit security/design axis in the lenses; (d) re-review is full re-run with carried rows, patches get re-verification only",
+        "s": 5
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C1",
+        "card": "S-A",
+        "default": 5,
+        "reason_quote": "advanced modules optional"
+      },
+      {
+        "c": "C2",
+        "card": "S-A,S-D",
+        "default": 4,
+        "reason_quote": "S-A: 'L3: default-path epic requirements...'; S-D: 'L5 unmet: no script checks AC presence or flags vague terms on the default path'"
+      },
+      {
+        "c": "C3",
+        "card": "S-A",
+        "default": 3,
+        "reason_quote": "S-A first unmet: 'test-first appears only in the optional Amelia persona'"
+      },
+      {
+        "c": "C4",
+        "card": "S-A",
+        "default": 4,
+        "reason_quote": "S-A first unmet: 'on the interactive route verification output is not persisted bound to the commit'"
+      },
+      {
+        "c": "C5",
+        "card": "S-A,S-D",
+        "default": 4,
+        "reason_quote": "S-A: 'reviewer-side calibration (finding floor, re-check on zero findings) exists only in the opt-in `thorough` set, not in the default `quick` lens'; S-D: '(a) parallel lenses are opt-in (`thorough`) on Build'"
+      },
+      {
+        "c": "C10",
+        "card": "S-A",
+        "default": 3,
+        "reason_quote": "S-A: 'L3: named checkpoints on the default path with owner roles'"
+      },
+      {
+        "c": "C11",
+        "card": "S-A,S-D",
+        "default": 2,
+        "reason_quote": "S-A: 'a security review template exists, opt-in'; S-D: 'exists but is opt-in (a PM document)'"
+      },
+      {
+        "c": "C12",
+        "card": "S-A,S-D",
+        "default": 2,
+        "reason_quote": "S-A: 'deployment guidance and an optional launch template... no release step on the default path'; S-D: 'release guidance exists ... but opt-in. L3 unmet: no release step on the default path'"
+      }
+    ],
+    "selection_notes": "Mechanical scan of rationale/first-unmet text (both cards, union) for {opt-in, optional, default path/default-path, route, off the default path, cap/capped at 2}. C6 and C8 contain 'cap' only as a loop/iteration bound ('a numeric cap', 'the 5-iteration cap is a loop bound'), not the opt-in cap at level 2: excluded (contestable; if included they keep 4 and 3 since C8 is already evaluated as offered and C6 L5 needs script-enforced bounds, absent). C14 matched no term in the rationale columns (route_selection appears only in the evidence column). Only C5 changes (4->5)."
+  },
+  "L3": {
+    "conf": "H",
+    "evidence": [
+      {
+        "cite": "cache:bmad/skills/method/bmad-build/workflow.md:71-80; cache:bmad/skills/method/bmad-build/step-02-plan.md:65-71 (multi-step workflow halting at CHECKPOINT 1 for the human)",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:bmad/skills/method/bmad-build-auto/workflow.md:5,9-27 (plan->implement->verify->review->commit in one session without human interaction, HALT protocol with terminal statuses); cache:bmad/skills/method/bmad-build-auto/step-03-implement.md:55; cache:bmad/skills/method/bmad-build-auto/step-04-review.md:171-176",
+        "level": "A2"
+      }
+    ],
+    "first_unmet": "A3: chaining several tasks without a human per task inside one session is only documented ('Use an AI coding session as the orchestrator', cache:bmad/docs/build/autonomous-development-loops.md:108-113); no shipped orchestrator skill does it, bmad-build-auto 'never advance[s] to a different ticket' (cache:bmad/skills/method/bmad-build-auto/step-01-clarify-and-route.md:31) and bmad-loop is a separate repository that 'does not dispatch from the ticket tree yet' (cache:bmad/docs/build/autonomous-development-loops.md:103-104). Subagent dispatch with fresh context exists (bmad-build/customize.toml:85-91), so only the chaining half is missing; doc-only evidence caps at A2.",
+    "level": "A2"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/spec.md:31; cache:bmad/skills/method/bmad-build/step-02-plan.md:47",
+      "v": 2
+    },
+    "F10": {
+      "audit_override": true,
+      "cite": "",
+      "v": 1
+    },
+    "F11": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/workflow.md:4; cache:bmad/docs/plan/choose-a-planning-path.md:73-82",
+      "v": 2
+    },
+    "F12": {
+      "cite": "cache:bmad/skills/method/bmad-build/customize.toml:85-91; cache:bmad/skills/method/bmad-build/step-03-implement.md:31",
+      "v": 2
+    },
+    "F13": {
+      "cite": "cache:bmad/skills/method/bmad-build/step-03-implement.md:41; cache:bmad/skills/method/bmad-build/step-04-review.md:97",
+      "v": 2
+    },
+    "F14": {
+      "cite": "cache:bmad/skills/method/bmad-build/customize.toml:107-119",
+      "v": 2
+    },
+    "F15": {
+      "cite": "cache:bmad/skills/method/bmad-retrospective/workflow.md:83; cache:bmad/skills/method/bmad-retrospective/workflow.md:86 (on R at epic close; per-story Build multi-lens is opt-in thorough: cache:bmad/skills/method/bmad-build/customize.toml:121-186)",
+      "v": 2
+    },
+    "F16": {
+      "cite": "cache:bmad/skills/method/bmod-method/doc-templates/template-security-review.md:5 (opt-in)",
+      "v": 1
+    },
+    "F17": {
+      "cite": "cache:bmad/skills/method/bmad-build/step-04-review.md:84",
+      "v": 2
+    },
+    "F18": {
+      "cite": "cache:bmad/docs/build/autonomous-development-loops.md:108-111 (documented only; bmad-build-auto is one ticket per run: cache:bmad/skills/method/bmad-build-auto/step-01-clarify-and-route.md:31)",
+      "v": 1
+    },
+    "F19": {
+      "cite": "cache:bmad/skills/method/bmad-build/step-01-clarify-and-route.md:75 (branch-fit and clean-tree check only; no branch/worktree/sandbox created)",
+      "v": 1
+    },
+    "F2": {
+      "cite": "cache:bmad/skills/method/bmad-build/workflow.md:18; cache:bmad/skills/method/bmad-build/plan-template.md:72-73",
+      "v": 2
+    },
+    "F20": {
+      "cite": "cache:bmad/skills/method/bmad-build/workflow.md:64; cache:bmad/skills/method/bmad-build/step-01-clarify-and-route.md:20",
+      "v": 2
+    },
+    "F21": {
+      "cite": "",
+      "v": 0
+    },
+    "F22": {
+      "cite": "cache:bmad/skills/method/bmad-build/step-02-plan.md:71 (status ready-for-dev and frozen block; approver identity/time not recorded)",
+      "v": 1
+    },
+    "F23": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/spec.md:15; cache:bmad/skills/method/bmad-agent-po/assets/tickets-template.toml:15 (requirement->ticket->plan; tests not linked to ids)",
+      "v": 1
+    },
+    "F24": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/spec.md:19-22 (append-only memlog written through memlog.py; not exported or validated as an audit trail)",
+      "v": 1
+    },
+    "F25": {
+      "cite": "cache:bmad/skills/method/bmad-agent-pm/assets/template-launch.md:57 (opt-in)",
+      "v": 1
+    },
+    "F26": {
+      "cite": "cache:bmad/skills/method/bmod-method/doc-templates/template-postmortem.md:5 (opt-in)",
+      "v": 1
+    },
+    "F27": {
+      "cite": "cache:bmad/skills/method/bmad-retrospective/references/acceptance-verdict.md:10; cache:bmad/skills/method/bmad-retrospective/references/acceptance-verdict.md:16",
+      "v": 2
+    },
+    "F28": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/spec.md:15; cache:bmad/skills/method/bmad-build/step-01-clarify-and-route.md:57",
+      "v": 2
+    },
+    "F29": {
+      "cite": "cache:bmad/docs/reference/skills-and-agents.md:29-38 (install directories per tool, documented; no officially named supported-platform set)",
+      "v": 1
+    },
+    "F3": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/validate.md:3; cache:bmad/skills/method/bmad-agent-po/references/slice.md:91",
+      "v": 2
+    },
+    "F30": {
+      "cite": "cache:bmad/docs/start/install-bmad.md:62-66; cache:bmad/skills/core-tools/bmad/references/setup.md:37",
+      "v": 2
+    },
+    "F31": {
+      "cite": ".pre-commit-config.yaml:40-48; cache:bmad/.github/workflows/quality.yaml:42-43",
+      "v": 2
+    },
+    "F32": {
+      "cite": "cache:bmad/skills/toolsmith/bmad-eval/references/harness.md:30 (optional Toolsmith module; token counts in eval runs only)",
+      "v": 1
+    },
+    "F33": {
+      "cite": "cache:bmad/skills/method/bmad-build/workflow.md:25-31; cache:bmad/skills/method/bmad-build/step-02-plan.md:39",
+      "v": 2
+    },
+    "F34": {
+      "cite": "cache:bmad/skills/toolsmith/bmad-eval/SKILL.md:3 (optional Toolsmith module); cache:bmad/skills/method/bmad-agent-pm/evals/triggers.json",
+      "v": 1
+    },
+    "F4": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/spec.md:15; cache:bmad/skills/method/bmad-agent-po/references/spec.md:69; cache:bmad/skills/method/bmad-agent-po/references/replan.md:7-8",
+      "v": 2
+    },
+    "F5": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/assets/tickets-template.toml:15-16; cache:bmad/skills/method/bmad-agent-po/scripts/tickets.py:545",
+      "v": 2
+    },
+    "F6": {
+      "cite": "cache:bmad/skills/method/bmad-agent-po/references/slice.md:25; cache:bmad/skills/method/bmad-retrospective/workflow.md:96",
+      "v": 2
+    },
+    "F7": {
+      "cite": "cache:bmad/skills/method/bmad-build/step-02-plan.md:11; cache:bmad/skills/method/bmad-agent-po/references/slice.md:15",
+      "v": 2
+    },
+    "F8": {
+      "cite": "cache:bmad/skills/method/bmad-build/customize.toml:37-44; cache:bmad/docs/plan/choose-a-planning-path.md:94-99",
+      "v": 2
+    },
+    "F9": {
+      "cite": "cache:bmad/skills/method/bmad-agent-dev/customize.toml:48 (opt-in persona principle only)",
+      "v": 1
+    }
+  },
+  "L4_total": 53,
+  "L5": {
+    "T0_root": "cache:bmad/skills",
+    "T1": [
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-advanced-elicitation/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-brainstorming/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-customize/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-deep-recon/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-facilitate/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-forge-idea/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-ingest/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-party-mode/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-review/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad-shard-pro/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmad/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/core-tools/bmod-core-tools/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-agent-analyst/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-agent-architect/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-agent-dev/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-agent-pm/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-agent-po/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-agent-ux-designer/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-architecture/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-build-auto/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-build/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-code-review/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-project-context/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-qa-generate-e2e-tests/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-retrospective/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-ux/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmad-walkthrough/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:bmad/skills/method/bmod-method/SKILL.md",
+        "why": "installed whole by cache:bmad/README.md:37-38 / cache:bmad/docs/start/install-bmad.md:31-35; Claude Code loads skills from .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33) and preloads name+description"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad/SKILL.md",
+        "why": "cache:bmad/README.md:52-53 entry point: 'ask the bmad skill to run bmad setup'"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad/references/setup.md",
+        "why": "cache:bmad/skills/core-tools/bmad/SKILL.md:15 (setup action loads it)"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/SKILL.md",
+        "why": "R route starts with Sofia: cache:bmad/docs/plan/choose-a-planning-path.md:32-34,116"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/workflow.md",
+        "why": "printed by render_skill.py: bmad-agent-po/SKILL.md:11-15"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/customize.toml",
+        "why": "merged into the rendered workflow (agent/workflow values): bmad-agent-po/workflow.md:19-39"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/references/slice.md",
+        "why": "Intake Epic: bmad-agent-po/workflow.md:52"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/references/spec.md",
+        "why": "slice.md:10 (Requirements written per spec.md)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/assets/ticket-template.md",
+        "why": "spec.md:9; slice.md:55 ({{workflow.ticket_template}}, customize.toml:106)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/assets/tickets-template.toml",
+        "why": "slice.md:91 ({{workflow.tickets_template}}, customize.toml:112)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/references/validate.md",
+        "why": "slice.md:91 (run the set check in validate.md)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/references/validate-checks.md",
+        "why": "validate.md:3 (read by fresh-context check subagents)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/references/ticket.md",
+        "why": "validate.md:14 (check agents pointed at its rules)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-agent-po/references/board.md",
+        "why": "slice.md:104 (commit per board.md); workflow.md:45; board.md:42 hands entry to bmad-build"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/SKILL.md",
+        "why": "per story: board.md:42; choose-a-planning-path.md:140"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/workflow.md",
+        "why": "printed by render_skill.py: bmad-build/SKILL.md:11-17"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/customize.toml",
+        "why": "rendered values (route_selection, implementation_handoff, quick_lenses) injected: step-02-plan.md:26, step-03-implement.md:29, step-04-review.md:42"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/step-01-clarify-and-route.md",
+        "why": "bmad-build/workflow.md:84"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/step-02-plan.md",
+        "why": "step-01-clarify-and-route.md:95"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/plan-template.md",
+        "why": "step-02-plan.md:36 (full route)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/step-03-implement.md",
+        "why": "step-02-plan.md:75"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/step-04-review.md",
+        "why": "step-03-implement.md:51"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-build/step-05-present.md",
+        "why": "step-04-review.md:108"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/SKILL.md",
+        "why": "epic close: cache:bmad/docs/plan/choose-a-planning-path.md:148"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/workflow.md",
+        "why": "printed by render_skill.py: bmad-retrospective/SKILL.md:11-15"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/customize.toml",
+        "why": "rendered values injected into workflow.md"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/references/retro-document.md",
+        "why": "bmad-retrospective/workflow.md:65,101"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/references/evidence-gathering.md",
+        "why": "bmad-retrospective/workflow.md:77"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/references/aggregate-views.md",
+        "why": "bmad-retrospective/workflow.md:83"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/method/bmad-retrospective/references/acceptance-verdict.md",
+        "why": "bmad-retrospective/workflow.md:61,97"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad-review/SKILL.md",
+        "why": "bmad-retrospective/workflow.md:84 (invoke bmad-review on the epic diff)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad-review/customize.toml",
+        "why": "bmad-review/SKILL.md:30 (resolve customization / read defaults)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad-review/references/lens-adversarial.md",
+        "why": "bmad-review/customize.toml:112; retro workflow.md:84 names the adversarial lens"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad-review/references/lens-edge-case-hunter.md",
+        "why": "bmad-review/customize.toml:119"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:bmad/skills/core-tools/bmad-review/references/lens-verification-gap.md",
+        "why": "bmad-review/customize.toml:126"
+      }
+    ],
+    "notes": "Host: README names no platform (cache:bmad/README.md:32 'an AI coding tool that supports skills'); first named in docs is Claude Code (cache:bmad/docs/index.md:17; cache:bmad/docs/start/build-your-first-change.md:45), skills dir .claude/skills (cache:bmad/docs/reference/skills-and-agents.md:33). T1: no instruction file is shipped into user projects (setup.py writes _bmad/ only; cache:bmad/AGENTS.md block is generated per project by opt-in bmad-project-context), so T1 = frontmatter of the 28 SKILL.md in the core-tools and method modules installed with --skill '*' (incl. module records bmod-core-tools, bmod-method). T2 chosen as the documented single entry point `bmad` with setup.md (first-run action); alternative reading: T2 = bmad-agent-po (first skill of the R route) - it is listed first in T3 so totals T2+T3 are unaffected. customize.toml files are included because render_skill.py merges their values into the printed workflow; Python scripts' stdout (render_skill.py, tickets.py, knowledge.py) is not counted. Opt-in reads excluded: bmad-project-context, Build thorough review-prompts, retro team-discussion.md, replan.md (only on mid-flight change). validate-checks.md and ticket.md are read by fresh-context check subagents (still consumed tokens). T0_root = skills/ (the distributable folder installed by npx skills add; toolsmith and founder are optional modules inside it)."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "bmad",
+  "name": "BMad Method v7",
+  "notes": "Route for R (fixed first): epic path per cache:bmad/docs/plan/choose-a-planning-path.md:32-34,109-148 - Sofia (bmad-agent-po) writes epic Requirements and slices into tickets.toml with fresh-context set check and approval; bmad-build per story with route auto -> full (feature >100 LOC, customize.toml:37-44) and shipped review default 'quick' (customize.toml:97); local commit, no push; bmad-retrospective at epic close (invokes bmad-review lenses on the epic diff). Same route as both v1 cards. Contestable: C5 ceiling 5 rests on the thorough lens set lacking an explicit security/design axis (S-D already accepted 3 of 5 axes at L3) and on loopback re-review as (d); F15 scored 2 because the retro's multi-lens review with merge/dedupe is on R, though per-story Build multi-lens is opt-in; F31 scored 2 as repository CI present without opt-in; F6 scored 2 via dated Decision: lines and retro decision records (bmad-architecture ADs are opt-in).",
+  "pin": "e435a22574fe55722841086e5566420178b98df3",
+  "round": "2026-11"
+}

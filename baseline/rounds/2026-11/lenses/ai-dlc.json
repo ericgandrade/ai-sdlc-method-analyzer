@@ -1,0 +1,704 @@
+{
+  "L2": {
+    "ceiling": {
+      "C10": {
+        "cites": [
+          "cache:ai-dlc/core/scopes/aidlc-enterprise.md:7",
+          "cache:ai-dlc/core/aidlc-common/conductor.md:90",
+          "cache:ai-dlc/core/tools/aidlc-orchestrate.ts:5872",
+          "cache:ai-dlc/core/tools/aidlc-orchestrate.ts:5882",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-sensors.md:8",
+          "cache:ai-dlc/core/hooks/aidlc-record-human-turn.ts:1",
+          "cache:ai-dlc/core/hooks/aidlc-plan-approval-guard.ts:1"
+        ],
+        "conf": "M",
+        "note": "L4: strict reopens Plan Approval on edits (conductor.md:90, I) and the engine re-asks approved Units on a change only under strict (aidlc-orchestrate.ts:5872-5882, I); Override of blocking checks recorded with receipt; reviewer/Product Leader and team-owned gates as roles; scopes scale ceremony by risk. L5 not credited: plan-approval-guard hook enforces Plan Approval, but no branch protection/required reviewers, and no audit export or mapping to a named standard was found.",
+        "path": "enterprise scope (guard_policy: strict, collaborators on, Comprehensive depth)",
+        "s": 4
+      },
+      "C11": {
+        "cites": [
+          "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:8",
+          "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:10",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-collaborators.md:3",
+          "cache:ai-dlc/core/scopes/aidlc-security-patch.md:1"
+        ],
+        "conf": "M",
+        "note": "build-and-test and nfr-requirements are mode: inline, so the devsecops support agent is not dispatched there; code-generation lists no support agents; no path adds a security lens in diff review or dependency-hygiene rules. L3 unmet everywhere.",
+        "path": "collaborators on (enterprise) brings aidlc-devsecops-agent to non-inline stages only",
+        "s": 2
+      },
+      "C12": {
+        "cites": [
+          "cache:ai-dlc/core/aidlc-common/stages/operation/deployment-pipeline.md:40",
+          "cache:ai-dlc/core/aidlc-common/stages/operation/incident-response.md:12",
+          "cache:ai-dlc/core/knowledge/aidlc-operations-agent/incident-response-guide.md:57"
+        ],
+        "conf": "M",
+        "note": "Incident plan and a postmortem guide exist, but no go/no-go release criteria tied to the spec on any path (approval-handoff go/no-go is an Ideation recommendation). L4 unmet.",
+        "path": "feature/enterprise Operation stages",
+        "s": 3
+      },
+      "C14": {
+        "cites": [
+          "cache:ai-dlc/core/agents/aidlc-composer-agent.md:174",
+          "cache:ai-dlc/core/knowledge/aidlc-shared/brownfield.md:21"
+        ],
+        "conf": "L",
+        "note": "The opt-in composer is an L5 element; the L4 brownfield-artifact requirement judged unmet in v1 reconciliation does not depend on the route (test baseline compares suites, it is not regression selection). Contestable.",
+        "path": "composer (`/aidlc compose`) scored routing; no path adds characterization tests or regression selection",
+        "s": 3
+      },
+      "C16": {
+        "cites": [
+          "cache:ai-dlc/core/tools/aidlc-metrics.ts:1",
+          "cache:ai-dlc/core/skills/aidlc-outcomes-pack/SKILL.md:1"
+        ],
+        "conf": "M",
+        "note": "Opt-in metrics are event/token counters and a handover pack, not defined outcome metrics (DORA, rework, escaped defects) collected each cycle. L4 unmet on every path.",
+        "path": "aidlc-metrics.ts (opt-in StatsD) and aidlc-outcomes-pack skill",
+        "s": 3
+      },
+      "C2": {
+        "cites": [
+          "cache:ai-dlc/core/scopes/aidlc-enterprise.md:7",
+          "cache:ai-dlc/core/aidlc-common/conductor.md:90",
+          "cache:ai-dlc/core/tools/aidlc-orchestrate.ts:5872",
+          "cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md:196",
+          "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:304"
+        ],
+        "conf": "M",
+        "note": "Under strict a post-approval change reopens approval (conductor.md:90; engine aidlc-orchestrate.ts:5872), meeting one L5 half. The other half is not shown: ATDD acceptance tests (code-generation.md:196) are not bound to the spec's AC IDs, and sensor-traceability (build-and-test.md:304) checks AC IDs are traced but flags no vague terms. Ambiguous -> lower: stays 4.",
+        "path": "enterprise scope (guard_policy: strict) and Testing Posture `atdd` considered; no path reaches L5",
+        "s": 4
+      },
+      "C3": {
+        "cites": [
+          "cache:ai-dlc/core/sensors/aidlc-linter.md",
+          "cache:ai-dlc/docs/guide/13-customization.md:393"
+        ],
+        "conf": "M",
+        "note": "The opt-in element (sensors set to blocking) is an L5 mechanism; L4 stays unmet on every path (no rationalization counters, no test anti-pattern catalogue for the developer path), so the gate holds at 3.",
+        "path": "none raises it",
+        "s": 3
+      },
+      "C5": {
+        "cites": [
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer.md:132",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer.md:133",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-collaborators.md:11"
+        ],
+        "conf": "M",
+        "note": "Collaborators `mob` mode runs parallel support agents with triage, but on authoring contributions, not on review of the diff; .github AI PR-review lenses serve the repository itself. (a) stays unmet, so L5 unreachable.",
+        "path": "feature route (adversarial reviewer); no path adds parallel review lenses",
+        "s": 4
+      },
+      "C6": {
+        "cites": [
+          "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:246",
+          "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:269",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md:7",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md:26",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md:148"
+        ],
+        "conf": "M",
+        "note": "L3: in-stage fix max 2, loop-back max 3, reviewer repair <= reviewer_max_iterations, each escalating to halt-and-ask. L4: root-cause routing (own scaffolding vs Code Generation vs human backward jump), Loop-Back Log carries diagnosis, only named Units reopened. L5 not credited: loop-back/in-stage bounds counted from a markdown ledger by the agent; engine enforcement verified only for reviewer passes (ambiguous -> lower).",
+        "path": "feature scope (adversarial reviewer loop + Build-and-Test loop-back protocol); equals default",
+        "s": 4
+      },
+      "C7": {
+        "cites": [
+          "cache:ai-dlc/docs/guide/workflow-profiles.md:233",
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-swarm.md:481",
+          "cache:ai-dlc/core/tools/aidlc-unit-dag.ts:59",
+          "cache:ai-dlc/core/knowledge/aidlc-shared/brownfield.md:9"
+        ],
+        "conf": "L",
+        "note": "Swarm gives parallel frontier dispatch with serialized merge, removing the opt-in blocker. L4 also needs K used (impact analysis from the code map feeding plan/test selection); brownfield.md Blast Radius Analysis inspects imports, not the codekb map, and v1 reconciliation held K unmet. Contestable: if K is read as used, 5 follows (DAG computed with cycle detection).",
+        "path": "stage-major + swarm execution (opt-in) lifts E to used/computed; K stays declared",
+        "s": 3
+      },
+      "C8": {
+        "cites": [
+          "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-swarm.md:481"
+        ],
+        "conf": "M",
+        "note": "§2.2 exempts C8 from the opt-in cap, so L2 removes nothing here; kept at the v1 default (4).",
+        "path": "n/a (C8 already evaluated as offered in v1)",
+        "s": 4
+      },
+      "C9": {
+        "cites": [
+          "cache:ai-dlc/plugins/test-pro/README.md:13",
+          "cache:ai-dlc/plugins/test-pro/sensors/aidlc-requirement-coverage.md:1",
+          "cache:ai-dlc/core/agents/aidlc-pipeline-deploy-agent.md:51"
+        ],
+        "conf": "M",
+        "note": "No shipped path links requirement IDs to release notes or PRs (release notes come from commit history). L4 unmet on every path.",
+        "path": "test-pro plugin (first-party, optional) adds requirement->test matrix but no release link",
+        "s": 3
+      }
+    },
+    "selected_cells": [
+      {
+        "c": "C2",
+        "default": 4,
+        "reason_quote": "S-B: \"under the default Guard Policy (off) a post-approval change is announced but does not re-open approval\"; S-C: \"Feature default Guard Policy `off` only records CHANGE_ACCEPTED\""
+      },
+      {
+        "c": "C3",
+        "default": 3,
+        "reason_quote": "S-B evidence: \"cache:ai-dlc/core/sensors/aidlc-linter.md, aidlc-type-check.md (default_severity advisory)\"; S-C: \"linter/type-check sensors exist but default to advisory\""
+      },
+      {
+        "c": "C5",
+        "default": 4,
+        "reason_quote": "S-B: \"no parallel lenses with merge/dedup on R's route (single reviewer per stage). Route-dependent: under `classic` reviews are a single advisory pass\""
+      },
+      {
+        "c": "C6",
+        "default": 4,
+        "reason_quote": "S-B: \"First unmet: none (review-fix loop is weaker under `classic`)\""
+      },
+      {
+        "c": "C7",
+        "default": 3,
+        "reason_quote": "S-B: \"parallel frontier dispatch is opt-in (stage-major + swarm must be chosen explicitly; default is serial)\""
+      },
+      {
+        "c": "C8",
+        "default": 4,
+        "reason_quote": "S-C: \"L3: opt-in autonomous Construction/swarm with preflight before worktree creation\""
+      },
+      {
+        "c": "C9",
+        "default": 3,
+        "reason_quote": "S-B: \"stable IDs FR -> US/AC -> Unit -> ... in default-path artifacts\""
+      },
+      {
+        "c": "C10",
+        "default": 3,
+        "reason_quote": "S-B: \"under the default Guard Policy (off) an edit after approval keeps the approval (announced only); re-opening on change requires opting into `strict`\""
+      },
+      {
+        "c": "C11",
+        "default": 2,
+        "reason_quote": "S-B: \"on R's route the devsecops agent is off (collaborators off)\"; S-C: \"dependency-hygiene rules on the default path\""
+      },
+      {
+        "c": "C12",
+        "default": 3,
+        "reason_quote": "S-B: \"All Operation stages are CONDITIONAL and `classic` skips them\"; S-C: \"L3 (Feature route)\""
+      },
+      {
+        "c": "C14",
+        "default": 3,
+        "reason_quote": "S-C: \"the composer routes by a scored rubric (opt-in, counted in C14)\""
+      },
+      {
+        "c": "C16",
+        "default": 3,
+        "reason_quote": "S-B: \"metrics emission is opt-in StatsD counters\"; S-C: \"only opt-in event/token counters exist\""
+      }
+    ]
+  },
+  "L3": {
+    "conf": "M",
+    "evidence": [
+      {
+        "cite": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:117 (approval gate via AskUserQuestion, END THE TURN); cache:ai-dlc/core/scopes/aidlc-feature.md:1",
+        "level": "A1"
+      },
+      {
+        "cite": "cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md:8 (Code Generation dispatched to developer subagent); cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:246 (failure ladder: in-stage max 2, loop-back max 3, halt-and-ask at 269)",
+        "level": "A2"
+      },
+      {
+        "cite": "cache:ai-dlc/docs/guide/workflow-profiles.md:227 (Continue automatically waives Unit checkpoints); cache:ai-dlc/docs/guide/workflow-profiles.md:233 (stage-major + swarm fan-out); cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-swarm.md:481 (one parallel aidlc-developer-agent task per unit in isolated worktrees, batches chained via next)",
+        "level": "A3"
+      }
+    ],
+    "first_unmet": "A4: no external loop opens a fresh session per task; the live `/aidlc` session is the conductor and owns fan-out and retries (stage-protocol-swarm.md:481 'The swarm never escapes the conductor'). Plan Approval per Unit still needs a human answer unless plan approval is turned off (workflow-profiles.md:235).",
+    "level": "A3"
+  },
+  "L4": {
+    "F1": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/requirements-analysis.md:163; :171 (all [Answer] tags filled, no partial answers)",
+      "v": 2
+    },
+    "F10": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:251 (classify root cause, estimate impact); cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md:7",
+      "v": 2
+    },
+    "F11": {
+      "cite": "cache:ai-dlc/core/agents/aidlc-architecture-reviewer-agent.md, cache:ai-dlc/core/agents/aidlc-developer-agent.md (14 role agents; lead_agent per stage frontmatter)",
+      "v": 2
+    },
+    "F12": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md:8 (mode: subagent); cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-ensemble.md:3; reviewer dispatch brief cache:ai-dlc/core/agents/aidlc-architecture-reviewer-agent.md:46",
+      "v": 2
+    },
+    "F13": {
+      "cite": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-checkpoint.md:5 (human-authorized verification command, proof bound to source; stale evidence at :150)",
+      "v": 2
+    },
+    "F14": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md frontmatter reviewer: aidlc-architecture-reviewer-agent, reviewer_max_iterations: 2; cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer.md:132",
+      "v": 2
+    },
+    "F15": {
+      "audit_override": true,
+      "cite": "",
+      "v": 1
+    },
+    "F16": {
+      "cite": "cache:ai-dlc/core/agents/aidlc-devsecops-agent.md:22 (STRIDE); support agent only with collaborators on; cache:ai-dlc/core/aidlc-common/stages/construction/nfr-requirements.md:1 CONDITIONAL",
+      "v": 1
+    },
+    "F17": {
+      "cite": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md:26 (max 3 loop-backs per intent) ; cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md:269 (halt-and-ask at bound)",
+      "v": 2
+    },
+    "F18": {
+      "cite": "",
+      "v": 0
+    },
+    "F19": {
+      "cite": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-swarm.md:481 (isolated worktrees per Unit; swarm is opt-in, workflow-profiles.md:233)",
+      "v": 1
+    },
+    "F2": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/user-stories.md:133 (AC IDs per story; INVEST incl. Testable at :92)",
+      "v": 2
+    },
+    "F20": {
+      "cite": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-recovery.md:3 (session resume, compaction reconstruct at :12)",
+      "v": 2
+    },
+    "F21": {
+      "cite": "cache:ai-dlc/core/hooks/aidlc-plan-approval-guard.ts:1 (PreToolUse exit 2 refusal); cache:ai-dlc/harness/claude/settings.json (hook registration, permissions)",
+      "v": 2
+    },
+    "F22": {
+      "audit_override": true,
+      "cite": "cache:ai-dlc/core/hooks/aidlc-record-human-turn.ts:1 (HUMAN_TURN audit event); cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:48 (Plan Approval binds to plan content and stage attempt)",
+      "v": 1
+    },
+    "F23": {
+      "audit_override": true,
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/units-generation.md:42 (traceability.json); cache:ai-dlc/core/sensors/aidlc-traceability.md:7 (upstream coverage, orphans)",
+      "v": 1
+    },
+    "F24": {
+      "cite": "cache:ai-dlc/core/hooks/aidlc-write-audit-log.ts; cache:ai-dlc/core/tools/aidlc-audit.ts:1026 (append-only audit shards written and checked by tool)",
+      "v": 2
+    },
+    "F25": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/operation/deployment-pipeline.md:40 (rollback-runbook.md; stage CONDITIONAL 'when CD pipeline needs creation', R already has CI/CD)",
+      "v": 1
+    },
+    "F26": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/operation/incident-response.md:12 (runbooks, incident plan; CONDITIONAL); postmortem only in cache:ai-dlc/core/knowledge/aidlc-operations-agent/incident-response-guide.md:57",
+      "v": 1
+    },
+    "F27": {
+      "cite": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-learnings.md:17 (corrections written to memory rule files); :18 (new sensors bound to stage)",
+      "v": 2
+    },
+    "F28": {
+      "cite": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 (memory imported every session); cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-learnings.md:17",
+      "v": 2
+    },
+    "F29": {
+      "cite": "cache:ai-dlc/README.md:5 (Claude Code, Kiro CLI, Kiro IDE, Codex CLI, Cursor, opencode, Copilot)",
+      "v": 2
+    },
+    "F3": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/requirements-analysis.md frontmatter reviewer: aidlc-product-lead-agent (advisory subagent pass); cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer.md:3",
+      "v": 2
+    },
+    "F30": {
+      "cite": "cache:ai-dlc/README.md:20 (versioned installer); cache:ai-dlc/docs/guide/18-install-and-lifecycle.md:33 (aidlc update / rollback)",
+      "v": 2
+    },
+    "F31": {
+      "cite": "cache:ai-dlc/.github/workflows/deterministic-tests.yml:113; cache:ai-dlc/.github/workflows/markdownlint.yml",
+      "v": 2
+    },
+    "F32": {
+      "cite": "cache:ai-dlc/core/hooks/aidlc-fold-usage.ts:1 (usage ledger every LLM call); cache:ai-dlc/core/skills/aidlc-session-cost/SKILL.md:1",
+      "v": 2
+    },
+    "F33": {
+      "cite": "cache:ai-dlc/core/tools/aidlc-orchestrate.ts:1442 (directiveMaxBytes budget); cache:ai-dlc/scripts/manifest-types.ts:387",
+      "v": 2
+    },
+    "F34": {
+      "cite": "cache:ai-dlc/tests/README.md:28 (intent-grounding regression checks on live Kiro journey artifacts); cache:ai-dlc/tests/e2e/t-acp-kiro-reviewer.serial.test.ts",
+      "v": 2
+    },
+    "F4": {
+      "audit_override": true,
+      "cite": "cache:ai-dlc/docs/guide/13-customization.md:386 (feature = Guard Policy off: changes after approval recorded/announced, approval kept; reopening needs strict); cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md:7",
+      "v": 2
+    },
+    "F5": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/units-generation.md:5 (unit-of-work-dependency DAG consumed by Delivery Planning)",
+      "v": 2
+    },
+    "F6": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/domain-design.md:143 (ADRs in decisions.md; domain-design is CONDITIONAL: new components only)",
+      "v": 1
+    },
+    "F7": {
+      "cite": "cache:ai-dlc/core/aidlc-common/stages/inception/reverse-engineering.md:5 (brownfield codekb, 9 artifacts at :38)",
+      "v": 2
+    },
+    "F8": {
+      "cite": "cache:ai-dlc/docs/guide/05-scopes-and-depth.md:237 (agent proposes a profile); cache:ai-dlc/docs/guide/workflow-profiles.md (11 profiles with choose-when criteria)",
+      "v": 2
+    },
+    "F9": {
+      "cite": "cache:ai-dlc/core/memory/org.md:68 (default Methodology: test-after when no posture affirmed); TDD/BDD/ATDD opt-in at cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md:194",
+      "v": 1
+    }
+  },
+  "L4_total": 57,
+  "L5": {
+    "T0_root": "cache:ai-dlc",
+    "T1": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/templates/onboarding-harness.md",
+        "why": "cache:ai-dlc/harness/claude/onboarding.fills.ts:2 (packager concatenates onboarding-harness.md + neutral onboarding into .claude/CLAUDE.md); manifest.ts onboarding dst cache:ai-dlc/CLAUDE.md"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/templates/onboarding.md",
+        "why": "cache:ai-dlc/harness/claude/onboarding.fills.ts:2"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/harness/claude/rules-aidlc.md",
+        "why": "cache:ai-dlc/harness/claude/manifest.ts:204 (-> .claude/rules/aidlc.md, @-imported by cache:ai-dlc/CLAUDE.md title_block)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/org.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/team.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/project.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/phases/ideation.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/phases/inception.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/phases/construction.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/memory/phases/operation.md",
+        "why": "cache:ai-dlc/harness/claude/rules-aidlc.md:25 @-import of aidlc/active-memory copy (engine copy of shipped memory)"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md",
+        "why": "Claude Code preloads skill descriptions; manifest.ts orchestratorSkillPath"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/skills/aidlc-session-cost/SKILL.md",
+        "why": "cache:ai-dlc/harness/claude/manifest.ts coreDirs skills/aidlc-session-cost"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/skills/aidlc-replay/SKILL.md",
+        "why": "cache:ai-dlc/harness/claude/manifest.ts coreDirs skills/aidlc-replay"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/skills/aidlc-outcomes-pack/SKILL.md",
+        "why": "cache:ai-dlc/harness/claude/manifest.ts coreDirs skills/aidlc-outcomes-pack"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/skills/aidlc-issue-report/SKILL.md",
+        "why": "cache:ai-dlc/harness/claude/manifest.ts coreDirs skills/aidlc-issue-report"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/skills/aidlc-knowledge/SKILL.md",
+        "why": "cache:ai-dlc/harness/claude/manifest.ts coreDirs skills/aidlc-knowledge"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-architect-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-architecture-reviewer-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-aws-platform-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-compliance-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-composer-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-delivery-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-design-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-developer-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-devsecops-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-operations-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-pipeline-deploy-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-product-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-product-lead-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      },
+      {
+        "frontmatter_only": true,
+        "path": "cache:ai-dlc/core/agents/aidlc-quality-agent.md",
+        "why": "manifest.ts coreDirs agents -> .claude/agents; Claude Code preloads subagent descriptions"
+      }
+    ],
+    "T2": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md",
+        "why": "entry `/aidlc` (cache:ai-dlc/README.md Quick Start step 3)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/conductor.md",
+        "why": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:125 (engine bakes conductor persona into first run-stage directive)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol.md",
+        "why": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:25 (voice contract mandatory in every message)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/harness/claude/skills/aidlc/question-rendering.md",
+        "why": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:91 (first ask: plan/profile confirmation)"
+      }
+    ],
+    "T3": [
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/initialization/workspace-detection.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/initialization/state-init.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/initialization/workspace-scaffold.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/ideation/intent-capture.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/ideation/scope-definition.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/ideation/approval-handoff.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/inception/reverse-engineering.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/inception/practices-discovery.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/inception/requirements-analysis.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/inception/user-stories.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/inception/units-generation.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/inception/delivery-planning.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/construction/functional-design.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/construction/code-generation.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/stages/construction/build-and-test.md",
+        "why": "feature scope marks all stages EXECUTE (cache:ai-dlc/core/scopes/aidlc-feature.md:35); stage body read at run-stage (SKILL.md:90)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer.md",
+        "why": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:113 (load when directive lists reviewer)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer-unit.md",
+        "why": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer-unit.md:3 (review of one Unit)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-summary.md",
+        "why": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-summary.md:3 (summary_confirmation: on in feature)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-sensors.md",
+        "why": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-sensors.md:3 (sensors: on in feature)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-learnings.md",
+        "why": "feature learnings: on; stage-protocol.md:63 (learnings module listed)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-construction.md",
+        "why": "cache:ai-dlc/harness/claude/skills/aidlc/SKILL.md:90 (Construction steps routed by the Construction module first)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-checkpoint.md",
+        "why": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-checkpoint.md:3 (Unit/skeleton checkpoint; skeleton: on in feature)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-ensemble.md",
+        "why": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-ensemble.md:3 (code-generation mode: subagent)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-governance.md",
+        "why": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-governance.md:3 (phase transitions)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/agents/aidlc-product-lead-agent.md",
+        "why": "reviewer subagent for intent-capture, requirements-analysis, user-stories (stage frontmatter reviewer:)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/agents/aidlc-architecture-reviewer-agent.md",
+        "why": "reviewer subagent for units-generation, functional-design, code-generation"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/agents/aidlc-developer-agent.md",
+        "why": "code-generation mode: subagent, lead_agent aidlc-developer-agent"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/knowledge/aidlc-shared/brownfield.md",
+        "why": "cache:ai-dlc/core/tools/aidlc-inline-context.ts:125 (engine inlines brownfield safeguards)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-loopback.md",
+        "why": "aidlc-orchestrate.ts:10428-10433 (carregado sem condição em code-generation e build-and-test)"
+      },
+      {
+        "frontmatter_only": false,
+        "path": "cache:ai-dlc/core/aidlc-common/protocols/stage-protocol-reviewer-repair.md",
+        "why": "aidlc-orchestrate.ts:10406-10411 (default adversarial review in Construction)"
+      }
+    ],
+    "notes": "Host = Claude Code (first harness in cache:ai-dlc/README.md:5 and Pick-your-harness table). T1: Claude Code loads .claude/CLAUDE.md (built from core/templates/onboarding*.md plus string slots from cache:ai-dlc/harness/claude/onboarding.fills.ts, which is TypeScript and excluded to avoid counting code; its slots are ~700 words, so T1 is slightly undercounted), which @-imports .claude/rules/aidlc.md, which @-imports the seven active-memory files (engine copy of core/memory/*). Generated runner skills carry disable-model-invocation: true (manifest.ts runnerFrontmatterAdditions) so their descriptions are not preloaded and are excluded; they are generated at package time and not in the source tree. T3 conditional-stage choice for R (existing production web service with CI/CD, medium feature): included reverse-engineering (brownfield), practices-discovery ('always rerun'), user-stories and functional-design (user-facing feature with new business logic); excluded market-research, feasibility, team-formation, rough/refined mockups, domain-design, contract-design, nfr-*, infrastructure-design, ci-pipeline (CI exists) and all Operation stages (CD exists; conditional), and opt-in modules (swarm, wave, collaborators, loopback on failure, recovery on resume, composer.md on compose). Lead-agent persona files for inline stages are not listed because the engine-delivered directive carries the role; only subagent-dispatched agent files are in T3. T0_root is the repository root; distributable content is core/ + harness/claude/ (+ plugins/ optional)."
+  },
+  "evidence_limit": "I",
+  "host": "Claude Code",
+  "method": "ai-dlc",
+  "name": "AWS AI-DLC",
+  "notes": "Route for R: `feature` profile (cache:ai-dlc/docs/guide/workflow-profiles.md 'production feature'; cache:ai-dlc/core/scopes/aidlc-feature.md: guard_policy off, collaborators off, sensors/learnings on, plan approval on, skeleton on), same as both v1 scorecards. Contestable: feature scope text says it is 'the implicit freeform fallback' (aidlc-feature.md:35) while 13-customization.md:412 and settings.json name classic as implicit default. L2 rule applied: a selected cell is raised only when the requirement blocking the next level is the opt-in/route one and the remaining requirements were met per v1 evidence; C8 is exempt from the opt-in cap by §2.2 so it keeps its default. Operation stages: L2 C12 keeps the v1 credit (both v1 traces include them on the feature route), while L4 F25/F26 are 1 and T3 excludes them because each is CONDITIONAL and R's service already has CD and operations (explicit split, contestable). L4 F9 scored 1 because org.md:68 makes test-after the default posture when none is affirmed. L4 repository-level items (F29-F31, F34) scored as present when the method ships/maintains them.",
+  "pin": "1c557ea277817b72ed4e07d076c0f21740748e3a",
+  "round": "2026-11"
+}

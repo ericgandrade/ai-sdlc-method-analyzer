@@ -1,0 +1,88 @@
+{
+  "method": "ai-dlc",
+  "methodology_sha256": "a6e3953725b67db0189e188c1495ee9b54975e48f65c28baaa01f459b69cf9a4",
+  "scorer": "S-B",
+  "scores": {
+    "C1": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C10": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C11": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C12": {
+      "conf": "L",
+      "ev": "I",
+      "s": 3
+    },
+    "C13": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C14": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C15": {
+      "conf": "L",
+      "ev": "I",
+      "s": 2
+    },
+    "C16": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C2": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C3": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C4": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C5": {
+      "conf": "L",
+      "ev": "I",
+      "s": 4
+    },
+    "C6": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C7": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C8": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C9": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    }
+  },
+  "version": "awslabs/aidlc-workflows 1c557ea277817b72ed4e07d076c0f21740748e3a (README badge v2.11.4; commit 2026-11-20; clone at scratchpad/refs-scoring/S-B/awslabs_aidlc-workflows)"
+}

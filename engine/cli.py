@@ -18,6 +18,7 @@ IMPLEMENTED = {
     "hooks": "hooks",
     "verify-freeze": "freeze",
     "validate": "validate",
+    "baseline": "baseline",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

@@ -1,0 +1,88 @@
+{
+  "method": "addyosmani",
+  "methodology_sha256": "a6e3953725b67db0189e188c1495ee9b54975e48f65c28baaa01f459b69cf9a4",
+  "scorer": "S-A",
+  "scores": {
+    "C1": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C10": {
+      "conf": "H",
+      "ev": "I",
+      "s": 2
+    },
+    "C11": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C12": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C13": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C14": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C15": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C16": {
+      "conf": "M",
+      "ev": "I",
+      "s": 1
+    },
+    "C2": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C3": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C4": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C5": {
+      "conf": "L",
+      "ev": "I",
+      "s": 2
+    },
+    "C6": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C7": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C8": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C9": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    }
+  },
+  "version": "39b723ceebf81474d0557c1fecd01eddab585563"
+}

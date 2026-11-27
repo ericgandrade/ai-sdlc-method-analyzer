@@ -12,3 +12,5 @@ All notable changes to this project are recorded here. The version authority is 
 - English translation of rubric v2.0 (non-normative), reviewed section by section by a second reviewer.
 - Rulings v1 (common yardstick) and protocol v1 (process addenda, interpretations I-1 and I-2), frozen at creation.
 - Reference registry (`references/registry.yaml`: 9 benchmarks, 2 additional references, 3 variants), strict mini-YAML parser and `engine validate registry`.
+- Reference baseline round `2026-11` for the 9 benchmark methods: reconciled L1 vectors with scorer pairs, scorecard machine blocks, post-audit lenses, lens audits and uniform-ruler divergences, with `MANIFEST.json` and `engine baseline verify`. Analyses, tokens and derived results follow (see `TODO.md`).
+- `engine/stats.py` (plan §7.3) and `engine/paths.assert_portable`.

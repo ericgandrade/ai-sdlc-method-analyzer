@@ -1,0 +1,88 @@
+{
+  "method": "agile-v",
+  "methodology_sha256": "a6e3953725b67db0189e188c1495ee9b54975e48f65c28baaa01f459b69cf9a4",
+  "scorer": "S-B",
+  "scores": {
+    "C1": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C10": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C11": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C12": {
+      "conf": "L",
+      "ev": "I",
+      "s": 3
+    },
+    "C13": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C14": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C15": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C16": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C2": {
+      "conf": "L",
+      "ev": "I",
+      "s": 2
+    },
+    "C3": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C4": {
+      "conf": "M",
+      "ev": "I",
+      "s": 5
+    },
+    "C5": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C6": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    },
+    "C7": {
+      "conf": "M",
+      "ev": "I",
+      "s": 3
+    },
+    "C8": {
+      "conf": "M",
+      "ev": "I",
+      "s": 2
+    },
+    "C9": {
+      "conf": "M",
+      "ev": "I",
+      "s": 4
+    }
+  },
+  "version": "Agile-V/agile_v_skills 4bcc9172f7e00fa3f04bd249584d537a7dbe5600 (commit 2026-10-06; repository version 3.9.x; clone at scratchpad/refs/agilev)"
+}

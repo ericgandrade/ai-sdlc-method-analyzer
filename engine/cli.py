@@ -30,6 +30,11 @@ IMPLEMENTED = {
     "answers": ("runlog", "configure_answers", "run_answers"),
     "tty-check": ("state", "configure_tty", "run_tty"),
     "adjudication": "adjudication",
+    "scorecard": "scorecard",
+    "reconcile": ("reconcile", "configure_reconcile", "run_reconcile"),
+    "calibration": ("reconcile", "configure_run", "run_calibration"),
+    "alpha": ("reconcile", "configure_alpha", "run_alpha"),
+    "audit-scope": ("reconcile", "configure_run", "run_audit_scope"),
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

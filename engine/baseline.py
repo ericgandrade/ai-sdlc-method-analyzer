@@ -7,6 +7,8 @@ import sys
 
 from .common import EXIT_INTEGRITY, EXIT_MISSING, EXIT_OK, EXIT_USAGE
 
+DERIVED_SEED = 20261127
+
 
 def current_round(root="."):
     p = pathlib.Path(root) / "baseline" / "current"
@@ -95,17 +97,62 @@ def promote(run_id, root="."):
     changelog = pathlib.Path(root) / "CHANGELOG.md"
     if not changelog.exists() or run_id not in changelog.read_text(encoding="utf-8"):
         raise PromoteError(f"CHANGELOG.md has no entry naming run {run_id}")
-    for f in ("l1.final.json", "lenses.final.json"):
+    for f in ("l1.final.json", "lenses.final.json", "reconcile-pre.json", "lens-audit.json", "tokens.json"):
         if not (rd / f).exists():
             raise PromoteError(f"run file {f} missing", EXIT_MISSING)
-    lenses = read_json(rd / "lenses.final.json")
-    write_json(d / "lenses" / f"{slug}.json", lenses)
+    row = promoted_l1_row(st, rd)
+    tok = read_json(rd / "tokens.json").get("methods", {}).get(slug)
+    if tok is None:
+        raise PromoteError(f"tokens.json of the run has no row for {slug}", EXIT_MISSING)
+    write_json(d / "lenses" / f"{slug}.json", read_json(rd / "lenses.final.json"))
+    write_json(d / "audits" / f"{slug}.json", read_json(rd / "lens-audit.json"))
     l1 = read_json(d / "l1.json")
-    final = read_json(rd / "l1.final.json")
-    l1.setdefault(slug, {})["scores"] = final["vector"]
+    l1[slug] = row
     write_json(d / "l1.json", l1)
+    tp = d / "tokens.json"
+    tokens = read_json(tp) if tp.exists() else {"methods": {}}
+    tokens.setdefault("methods", {})[slug] = tok
+    write_json(tp, tokens)
+    refresh_derived(root, rid)
     refresh_manifest(root, rid)
     return rid
+
+
+def promoted_l1_row(st, rd):
+    """The l1.json row of a promoted reference run: the final vector, the pre-reconciliation pairs of
+    the two active scorer instances, u from those pairs (plan 7.3), and U_recorded = total_u(u, baseline):
+    a re-scored reference records the engine's own U (see TODO.md)."""
+    from . import state, stats
+    from .common import CRITERIA, PROFILES
+    from .consolidate import _u_for
+    from .jsonio import read_json
+    final = read_json(rd / "l1.final.json")
+    pre = read_json(rd / "reconcile-pre.json")
+    insts = state.active_instances(st)[:2]
+    pairs = []
+    for c in CRITERIA:
+        sc = pre["cells"][c]["scores"]
+        if any(i not in sc for i in insts):
+            raise PromoteError(f"reconcile-pre.json lacks scores of {insts} for {c}", EXIT_MISSING)
+        pairs.append([sc[i] for i in insts])
+    cells = read_json(rd / "reconciled.json").get("cells", {}) if (rd / "reconciled.json").exists() else {}
+    u = [round(x, 4) for x in _u_for(rd, final["vector"], cells)]
+    models = [st["stages"].get(f"S04:{i}", {}).get("model") or i for i in insts]
+    return {"scores": final["vector"], "pairs": pairs, "u": u, "scorers": models,
+            "U_recorded": stats.total_u(u, PROFILES["baseline"]), "run": st["run_id"]}
+
+
+def refresh_derived(root=".", round_id=None):
+    """Recompute derived/{results,ranking,sensitivity}.json of a round, keeping its seed and draws."""
+    from . import rank, sensitivity
+    from .consolidate import consolidate
+    from .jsonio import read_json, write_json
+    d = round_dir(root, round_id) / "derived"
+    old = read_json(d / "sensitivity.json") if (d / "sensitivity.json").exists() else {}
+    results = consolidate(out_dir=d, root=root, round_id=round_id)
+    write_json(d / "ranking.json", rank.rank(results))
+    write_json(d / "sensitivity.json", sensitivity.sensitivity(
+        results, old.get("seed", DERIVED_SEED), old.get("draws", sensitivity.DEFAULT_DRAWS)))
 
 
 def run(args):

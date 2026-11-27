@@ -173,3 +173,64 @@ def test_leakcheck_baseline_ccbysa():
     if corpus is None or not corpus.is_dir():
         pytest.skip("CC BY-SA corpus absent here; the CI leakcheck job enforces it")
     assert _leak("--ccbysa").returncode == 0
+
+
+# ---------------------------------------------------------------- promote: full write (after Task 2.10)
+
+def _promotable(tmp_path, monkeypatch):
+    import shutil
+    from engine import state
+    from engine.jsonio import read_json, write_json
+    monkeypatch.chdir(ROOT)
+    monkeypatch.setattr(state, "is_interactive", lambda: True)
+    root = tmp_path / "proj"
+    shutil.copytree(ROOT / "baseline", root / "baseline")
+    shutil.copytree(ROOT / "references", root / "references")
+    rid = "20261127-120000-superpowers"
+    (root / "CHANGELOG.md").write_text(f"# Changelog\n\n- Refresh superpowers ({rid}).\n")
+    state.init(rid, "reference", "superpowers")
+    rd = state.run_path(rid)
+    rnd = root / "baseline" / "rounds" / "2026-11"
+    vec = [3, 2, 4, 4, 4, 4, 2, 3, 2, 2, 1, 0, 5, 2, 4, 2]          # C1 raised from 2 to 3 (synthetic)
+    pin = {e["slug"]: e for e in entries(load_registry(ROOT))}["superpowers"]["pin"]
+    write_json(rd / "target.json", {"pin": pin})
+    write_json(rd / "l1.final.json", {"vector": vec, "r": None, "ra": None, "source": "redteam.final",
+                                      "adjudicated": [], "boundary": []})
+    shutil.copy(rnd / "lenses" / "superpowers.json", rd / "lenses.final.json")
+    shutil.copy(rnd / "audits" / "superpowers.json", rd / "lens-audit.json")
+    cells = {f"C{i + 1}": {"scores": {"S1": v, "S2": v + (1 if i == 0 else 0)}, "conf_worst": "M"} for i, v in enumerate(vec)}
+    write_json(rd / "reconcile-pre.json", {"instances": ["S1", "S2"], "cells": cells})
+    tok = read_json(rnd / "tokens.json")["methods"]["superpowers"]
+    write_json(rd / "tokens.json", {"methods": {"superpowers": dict(tok, T1=tok["T1"] + 1)}})
+    st = state.load(rid)
+    st["status"] = "closed"
+    state.save(st)
+    return root, rid, vec
+
+
+def test_promote_writes_pairs_u_audits_tokens_and_derived(tmp_path, monkeypatch):
+    from engine.jsonio import read_json
+    root, rid, vec = _promotable(tmp_path, monkeypatch)
+    old_seed = read_json(root / "baseline/rounds/2026-11/derived/sensitivity.json")["seed"]
+    assert baseline.promote(rid, root) == "2026-11"
+    d = root / "baseline" / "rounds" / "2026-11"
+    row = read_json(d / "l1.json")["superpowers"]
+    assert row["scores"] == vec and row["pairs"][0] == [3, 4] and row["pairs"][1] == [2, 2]
+    assert row["u"][0] == 0.5 and row["run"] == rid
+    assert read_json(d / "tokens.json")["methods"]["superpowers"]["T1"] == 1246
+    assert read_json(d / "audits" / "superpowers.json") == read_json(ROOT / "baseline/rounds/2026-11/audits/superpowers.json")
+    res = read_json(d / "derived" / "results.json")
+    assert res["superpowers"]["L1_scores"] == vec and res["superpowers"]["U"]["baseline"] == row["U_recorded"]
+    assert read_json(d / "derived" / "sensitivity.json")["seed"] == old_seed
+    assert baseline.verify(root, "2026-11") == ([], baseline.verify(root, "2026-11")[1])
+    # the shipped repository round is untouched
+    assert baseline.verify(ROOT, "2026-11")[0] == []
+
+
+def test_promote_refuses_without_lens_audit(tmp_path, monkeypatch):
+    root, rid, _ = _promotable(tmp_path, monkeypatch)
+    from engine import state
+    (state.run_path(rid) / "lens-audit.json").unlink()
+    with pytest.raises(baseline.PromoteError) as e:
+        baseline.promote(rid, root)
+    assert e.value.code == 3

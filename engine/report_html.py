@@ -53,7 +53,7 @@ tfoot td{background:var(--wash);font-weight:600;border-block-start:1px solid var
 .band .axis{stroke:var(--rule);stroke-width:1}
 .band .u{fill:var(--accent);opacity:.35}
 .band .t{stroke:var(--ink);stroke-width:2}
-.grid{max-width:520px;width:100%;height:auto;color:var(--ink);margin-block:1rem}
+.grid{max-width:700px;width:100%;height:auto;color:var(--ink);margin-block:1rem}
 .grid .cell{fill:none;stroke:var(--rule-soft)}
 .grid .ax{fill:var(--ink-soft);font-size:10px}
 .grid .lb{fill:var(--ink);font-size:9px}
@@ -109,7 +109,7 @@ def table(head, rows, foot):
 
 def grid(points):
     """6×6 grid: L3 (A0–A5) on x, C8 (0–5) on y; method labels stacked per cell."""
-    cw, ch, ox, oy = 72, 42, 34, 8
+    cw, ch, ox, oy = 104, 46, 34, 8
     out = [f'<svg class="grid" viewBox="0 0 {ox + 6 * cw + 4} {oy + 6 * ch + 30}" role="img" '
            f'aria-label="Autonomy level L3 against safety C8 for {len(points)} methods">']
     for i in range(6):
@@ -124,7 +124,7 @@ def grid(points):
         stack[(x, y)] = k + 1
         px, py = ox + x * cw + 6, oy + (5 - y) * ch + 11 + k * 10
         out.append(f'<circle class="dot" cx="{px}" cy="{py - 3}" r="2.5"/>'
-                   f'<text class="lb" x="{px + 5}" y="{py}">{html.escape(name[:16])}</text>')
+                   f'<text class="lb" x="{px + 5}" y="{py}">{html.escape(name[:18])}</text>')
     out.append("</svg>")
     return "".join(out)
 

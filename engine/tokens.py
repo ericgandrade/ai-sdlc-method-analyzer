@@ -155,9 +155,17 @@ def for_run(run_id, count=None):
     count = count or Counter()
     t = st.get("target") or {}
     rec = read_json(rd / "target.json") if (rd / "target.json").exists() else {}
-    root = rec.get("root") if rec.get("root") in ("target:",) or str(rec.get("root", "")).startswith("cache:") else None
-    row = count_method(read_json(src), lambda p: paths.resolve(p, run=rd), count, closed=t.get("type") == "closed",
-                       method_root=root)
+    root = rec.get("root")
+    root = root if root == "target:" or str(root or "").startswith("cache:") else None
+    ttype = rec.get("type") or t.get("type")
+    shipped = None
+    if root and root.startswith("cache:"):
+        from .registry import entries, load_registry
+        entry = {e["slug"]: e for e in entries(load_registry(paths.project_root()))}.get(root[len("cache:"):], {})
+        shipped = entry.get("shipped_root")
+        ttype = entry.get("type", ttype)
+    row = count_method(read_json(src), lambda p: paths.resolve(p, run=rd), count, closed=ttype == "closed",
+                       shipped_root=shipped, method_root=root)
     out = {"tokenizer": count.name, "reading": READING, "methods": {t.get("slug", "target"): row}}
     write_json(rd / "tokens.json", out)
     return out

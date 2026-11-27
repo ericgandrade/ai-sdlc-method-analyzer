@@ -375,3 +375,22 @@ def test_estimate_request_deleted_and_refused_after_s01(tmp_path):
                        capture_output=True, text=True, stdin=subprocess.DEVNULL)
     assert r.returncode == 0, r.stderr
     assert not p.exists()
+
+
+def test_reference_intake(monkeypatch):
+    from engine import fetch
+    pin = "22f0b463e7a5e579904dd6211a520321035526f7"
+    rid = "20261127-140000-superpowers"
+    state.init(rid, "reference", "superpowers")
+    with pytest.raises(IntakeError) as e:
+        intake.intake(rid, mode="reference", slug="superpowers")
+    assert e.value.code == 3                                   # not in the cache
+    cache = paths.refs_dir() / "superpowers"
+    shutil.copytree(TINY, cache)
+    monkeypatch.setattr(fetch, "head", lambda d: "0" * 40)
+    with pytest.raises(IntakeError) as e:
+        intake.intake(rid, mode="reference", slug="superpowers")
+    assert e.value.code == 4                                   # cache not at the pin
+    monkeypatch.setattr(fetch, "head", lambda d: pin)
+    rec = intake.intake(rid, mode="reference", slug="superpowers")
+    assert rec["private"] is False and rec["root"] == "cache:superpowers" and rec["pin"] == pin

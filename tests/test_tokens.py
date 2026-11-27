@@ -154,3 +154,34 @@ def test_baseline_recount_equals_a4():
         r = out["methods"][slug]
         assert (r["T1"], r["T2"], r["T3"], r["T0"]) == _expected(slug), slug
         assert r["missing"] == []
+
+
+def _reference_run(monkeypatch, slug, ttype, files):
+    from engine import state
+    from engine.jsonio import write_json
+    monkeypatch.chdir(ROOT)
+    rid = f"20261127-130000-{slug}"
+    state.init(rid, "reference", slug)
+    base = paths.refs_dir() / slug
+    for rel, text in files.items():
+        (base / rel).parent.mkdir(parents=True, exist_ok=True)
+        (base / rel).write_text(text)
+    rd = state.run_path(rid)
+    write_json(rd / "target.json", {"root": f"cache:{slug}", "type": ttype, "slug": slug})
+    write_json(rd / "lenses.final.json", {"host": "x", "L5": {"T1": [], "T2": [], "T3": [], "T0_root": f"cache:{slug}"}})
+    return rid
+
+
+def test_reference_run_uses_registry_shipped_root(monkeypatch):
+    rid = _reference_run(monkeypatch, "bmad", "open", {"skills/x.md": "a" * 40, "docs/build/y.md": "b" * 400,
+                                                         "skills/build/z.md": "c" * 80})
+    row = tokens.for_run(rid, count=tokens.Counter(force_fallback=True))["methods"]["bmad"]
+    assert row["T0"] == 10 + 20                       # docs/build/ (outside skills/) skipped; skills/build kept
+
+
+def test_reference_run_closed_gives_nulls(monkeypatch):
+    from engine import state
+    rid = _reference_run(monkeypatch, "kiro", "open", {"README.md": "x" * 40})
+    assert state.load(rid)["target"]["type"] == "closed"     # type comes from the registry
+    row = tokens.for_run(rid, count=tokens.Counter(force_fallback=True))["methods"]["kiro"]
+    assert [row[t] for t in ("T1", "T2", "T3", "T0")] == [None] * 4

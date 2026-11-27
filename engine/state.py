@@ -456,7 +456,8 @@ def init(run_id, mode, slug, *, sources=(), seed=None, status="implemented", typ
     st = {
         "run_id": run_id, "tool_version": version, "created": now(), "mode": mode,
         "target": None if mode in ("compare", "fitgap") else
-        {"slug": slug, "name": name or (entry or {}).get("name") or slug, "type": type_, "status": status},
+        {"slug": slug, "name": name or (entry or {}).get("name") or slug,
+         "type": (entry or {}).get("type", type_) if mode == "reference" else type_, "status": status},
         "freeze": freeze_map, "seed": seed, "audit_seed": random.Random(seed).randrange(1, 2 ** 31),
         "cal_refs": cal_refs, "cal_reason": reason or "", "isolation": isolation,
         "self_assessment": bool(self_assessment),

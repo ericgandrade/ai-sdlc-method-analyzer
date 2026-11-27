@@ -62,9 +62,9 @@ def pre_push(repo, stdin_text):
     else:
         print("pre-push: notice: no local denylist; the denylist scan runs in CI and on the "
               "maintainer's clone. Built-in patterns still run.", file=sys.stderr)
-    corpus_dir = repo / leakcheck.DEFAULT_CCBYSA_CORPUS
+    corpus_dir = leakcheck.default_corpus()
     corpus = None
-    if corpus_dir.is_dir():
+    if corpus_dir is not None and corpus_dir.is_dir():
         corpus = leakcheck.build_corpus(corpus_dir)
     else:
         print("pre-push: warning: CC BY-SA corpus absent; shingle detector skipped locally "

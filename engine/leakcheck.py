@@ -22,7 +22,7 @@ from .common import EXIT_OK, EXIT_LEAK, EXIT_MISSING, EXIT_USAGE
 SKIP_DIRS = {".git", ".venv", "venv", ".cache", "__pycache__", "node_modules", ".pytest_cache", "dist"}
 DEFAULT_DENYLIST = ".leakcheck/denylist.txt"
 DEFAULT_ALLOWLIST = ".leakcheck/allowlist.txt"
-DEFAULT_CCBYSA_CORPUS = ".cache/refs/agile-v"
+DEFAULT_CCBYSA_CORPUS = "$AMA_HOME/cache/refs/agile-v"
 CCBYSA_CITATION = "cache:" + "agile-v/"
 # Standard licence texts are not the CC BY-SA work itself; they are excluded from the corpus.
 LICENCE_FILES = ("LICENSE", "LICENCE", "COPYING", "NOTICE")
@@ -48,6 +48,15 @@ BUILTINS = [
 # Non-personal addresses that are part of normal git practice.
 _EMAIL_OK_LOCAL = {"noreply", "git"}
 _EMAIL_OK_DOMAIN_SUFFIX = ("users.noreply.github.com",)
+
+
+def default_corpus():
+    """The CC BY-SA corpus fetched by `engine fetch --slug agile-v`, or None when unresolvable."""
+    from . import paths
+    try:
+        return paths.refs_dir() / "agile-v"
+    except paths.PathError:
+        return None
 
 
 def quiet_mode(args):
@@ -408,8 +417,8 @@ def run(args):
             return EXIT_USAGE
     corpus = None
     if args.ccbysa:
-        cpath = pathlib.Path(args.ccbysa_corpus or DEFAULT_CCBYSA_CORPUS)
-        if cpath.is_dir():
+        cpath = pathlib.Path(args.ccbysa_corpus) if args.ccbysa_corpus else default_corpus()
+        if cpath is not None and cpath.is_dir():
             corpus = build_corpus(cpath)
             if not corpus:
                 print("leakcheck: CC BY-SA corpus is empty", file=sys.stderr)

@@ -16,3 +16,7 @@ packages = ["engine"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+markers = [
+  "needs_cache: reads the real reference cache in $AMA_HOME (skips when absent)",
+  "network_local: serves files from a localhost http.server inside the test",
+]

@@ -8,7 +8,7 @@ import sys
 
 import pytest
 
-from engine import baseline, stats
+from engine import baseline, leakcheck, stats
 from engine.paths import assert_portable
 from engine.registry import entries, load_registry, validate
 
@@ -167,8 +167,9 @@ def test_leakcheck_baseline_owner_denylist(tmp_path):
     assert _leak("--denylist", str(deny)).returncode == 0
 
 
+@pytest.mark.needs_cache
 def test_leakcheck_baseline_ccbysa():
-    corpus = ROOT / ".cache" / "refs" / "agile-v"
-    if not corpus.is_dir():
+    corpus = leakcheck.default_corpus()
+    if corpus is None or not corpus.is_dir():
         pytest.skip("CC BY-SA corpus absent here; the CI leakcheck job enforces it")
     assert _leak("--ccbysa").returncode == 0

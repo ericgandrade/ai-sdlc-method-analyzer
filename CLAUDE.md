@@ -12,6 +12,7 @@ Rules for agents and people working **on** this repository. The tool's own runti
 ## Content rules
 
 - All repository content is in English, except the frozen Portuguese rubric original.
+- Never write outside the repository while working on it. The tool's runs, reports and cache live in `$AMA_HOME`, never in the clone.
 - No absolute home paths, emails, credentials, or names of private methods, companies or clients in any file, fixture or commit message.
 - Frozen files under `methodology/` never change; `python -m engine verify-freeze` must pass.
 - Agile V is CC BY-SA 4.0: cite its paths only, never paste its text (`leakcheck --ccbysa`).
@@ -20,3 +21,5 @@ Rules for agents and people working **on** this repository. The tool's own runti
 
 - Python >= 3.10, stdlib only for `engine/`. Tests: `python -m pytest -q`.
 - Commit after every task with a conventional message.
+- The version authority is `.claude-plugin/plugin.json`; `pyproject.toml` and the top `CHANGELOG.md` release must match it (`tests/test_skeleton.py`). Never set `version` in `marketplace.json`.
+- Every change to a brief (`.claude/agents/`, `.claude/skills/`), a rule (`rules/`) or `AGENTS.md` gets a `CHANGELOG.md` line.

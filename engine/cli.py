@@ -39,6 +39,7 @@ IMPLEMENTED = {
     "audit-scope": ("reconcile", "configure_run", "run_audit_scope"),
     "consolidate": "consolidate",
     "ranges": "ranges",
+    "rank": "rank",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

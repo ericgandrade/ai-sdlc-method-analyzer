@@ -1,0 +1,1279 @@
+{
+  "autonomy_safety": {
+    "addyosmani": {
+      "C8": 2,
+      "L1": 57.6,
+      "L3": "A2",
+      "reading": "assisted"
+    },
+    "agile-v": {
+      "C8": 2,
+      "L1": 67.0,
+      "L3": "A3",
+      "reading": "autonomy above protection"
+    },
+    "ai-dlc": {
+      "C8": 4,
+      "L1": 68.6,
+      "L3": "A3",
+      "reading": "orchestrates with partial protection"
+    },
+    "bmad": {
+      "C8": 3,
+      "L1": 66.8,
+      "L3": "A2",
+      "reading": "assisted"
+    },
+    "kiro": {
+      "C8": 2,
+      "L1": 44.4,
+      "L3": "A3",
+      "reading": "autonomy above protection"
+    },
+    "mattpocock": {
+      "C8": 2,
+      "L1": 43.8,
+      "L3": "A3",
+      "reading": "autonomy above protection"
+    },
+    "openspec": {
+      "C8": 0,
+      "L1": 38.8,
+      "L3": "A1",
+      "reading": "assisted"
+    },
+    "spec-kit": {
+      "C8": 2,
+      "L1": 43.2,
+      "L3": "A2",
+      "reading": "assisted"
+    },
+    "superpowers": {
+      "C8": 3,
+      "L1": 56.0,
+      "L3": "A3",
+      "reading": "orchestrates with partial protection"
+    }
+  },
+  "benchmark_set": [
+    "addyosmani",
+    "agile-v",
+    "ai-dlc",
+    "bmad",
+    "kiro",
+    "mattpocock",
+    "openspec",
+    "spec-kit",
+    "superpowers"
+  ],
+  "best_refs": [
+    5,
+    4,
+    5,
+    5,
+    4,
+    4,
+    3,
+    4,
+    3,
+    4,
+    3,
+    3,
+    5,
+    4,
+    5,
+    3
+  ],
+  "leaders": {
+    "autonomous": {
+      "leader": "ai-dlc",
+      "tied": [
+        "ai-dlc"
+      ]
+    },
+    "baseline": {
+      "leader": "ai-dlc",
+      "tied": [
+        "ai-dlc"
+      ]
+    },
+    "equal": {
+      "leader": "ai-dlc",
+      "tied": [
+        "agile-v",
+        "ai-dlc"
+      ]
+    },
+    "regulated": {
+      "leader": "ai-dlc",
+      "tied": [
+        "ai-dlc"
+      ]
+    },
+    "startup": {
+      "leader": "bmad",
+      "tied": [
+        "bmad"
+      ]
+    }
+  },
+  "leaders_criterion": {
+    "C1": {
+      "leaders": [
+        "bmad"
+      ],
+      "max": 5,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C10": {
+      "leaders": [
+        "agile-v"
+      ],
+      "max": 4,
+      "median_refs": 2,
+      "target": {}
+    },
+    "C11": {
+      "leaders": [
+        "addyosmani",
+        "agile-v"
+      ],
+      "max": 3,
+      "median_refs": 2,
+      "target": {}
+    },
+    "C12": {
+      "leaders": [
+        "addyosmani",
+        "ai-dlc"
+      ],
+      "max": 3,
+      "median_refs": 1,
+      "target": {}
+    },
+    "C13": {
+      "leaders": [
+        "addyosmani",
+        "ai-dlc",
+        "superpowers"
+      ],
+      "max": 5,
+      "median_refs": 4,
+      "target": {}
+    },
+    "C14": {
+      "leaders": [
+        "agile-v"
+      ],
+      "max": 4,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C15": {
+      "leaders": [
+        "agile-v",
+        "spec-kit"
+      ],
+      "max": 5,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C16": {
+      "leaders": [
+        "ai-dlc",
+        "bmad"
+      ],
+      "max": 3,
+      "median_refs": 2,
+      "target": {}
+    },
+    "C2": {
+      "leaders": [
+        "ai-dlc",
+        "bmad",
+        "openspec"
+      ],
+      "max": 4,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C3": {
+      "leaders": [
+        "addyosmani"
+      ],
+      "max": 5,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C4": {
+      "leaders": [
+        "agile-v",
+        "ai-dlc"
+      ],
+      "max": 5,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C5": {
+      "leaders": [
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "superpowers"
+      ],
+      "max": 4,
+      "median_refs": 3,
+      "target": {}
+    },
+    "C6": {
+      "leaders": [
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "superpowers"
+      ],
+      "max": 4,
+      "median_refs": 2,
+      "target": {}
+    },
+    "C7": {
+      "leaders": [
+        "agile-v",
+        "ai-dlc",
+        "bmad",
+        "kiro"
+      ],
+      "max": 3,
+      "median_refs": 2,
+      "target": {}
+    },
+    "C8": {
+      "leaders": [
+        "ai-dlc"
+      ],
+      "max": 4,
+      "median_refs": 2,
+      "target": {}
+    },
+    "C9": {
+      "leaders": [
+        "agile-v",
+        "ai-dlc",
+        "bmad"
+      ],
+      "max": 3,
+      "median_refs": 2,
+      "target": {}
+    }
+  },
+  "leaders_group": {
+    "Autonomy": {
+      "leaders": [
+        "ai-dlc",
+        "kiro"
+      ],
+      "max": 70,
+      "median_refs": 60,
+      "target": {}
+    },
+    "Construction": {
+      "leaders": [
+        "addyosmani"
+      ],
+      "max": 100,
+      "median_refs": 75,
+      "target": {}
+    },
+    "Design": {
+      "leaders": [
+        "bmad"
+      ],
+      "max": 100,
+      "median_refs": 75,
+      "target": {}
+    },
+    "Discovery": {
+      "leaders": [
+        "ai-dlc",
+        "bmad"
+      ],
+      "max": 100,
+      "median_refs": 75,
+      "target": {}
+    },
+    "Economy": {
+      "leaders": [
+        "ai-dlc"
+      ],
+      "max": 100,
+      "median_refs": 67,
+      "target": {}
+    },
+    "Ecosystem": {
+      "leaders": [
+        "addyosmani",
+        "ai-dlc",
+        "openspec",
+        "spec-kit"
+      ],
+      "max": 100,
+      "median_refs": 83,
+      "target": {}
+    },
+    "Governance": {
+      "leaders": [
+        "agile-v",
+        "ai-dlc"
+      ],
+      "max": 67,
+      "median_refs": 33,
+      "target": {}
+    },
+    "Operations": {
+      "leaders": [
+        "ai-dlc",
+        "bmad"
+      ],
+      "max": 75,
+      "median_refs": 38,
+      "target": {}
+    },
+    "Verification": {
+      "leaders": [
+        "addyosmani"
+      ],
+      "max": 100,
+      "median_refs": 62,
+      "target": {}
+    }
+  },
+  "margins": {
+    "addyosmani": {
+      "against": "ai-dlc",
+      "delta": -11.0,
+      "margin": 8.5,
+      "reading": "below"
+    },
+    "agile-v": {
+      "against": "ai-dlc",
+      "delta": -1.6,
+      "margin": 9.5,
+      "reading": "technical-tie"
+    },
+    "ai-dlc": {
+      "against": "ai-dlc",
+      "delta": 0.0,
+      "margin": 8.8,
+      "reading": "leader"
+    },
+    "bmad": {
+      "against": "ai-dlc",
+      "delta": -1.8,
+      "margin": 8.2,
+      "reading": "technical-tie"
+    },
+    "kiro": {
+      "against": "ai-dlc",
+      "delta": -24.2,
+      "margin": 8.2,
+      "reading": "below"
+    },
+    "mattpocock": {
+      "against": "ai-dlc",
+      "delta": -24.8,
+      "margin": 8.4,
+      "reading": "below"
+    },
+    "openspec": {
+      "against": "ai-dlc",
+      "delta": -29.8,
+      "margin": 8.1,
+      "reading": "below"
+    },
+    "spec-kit": {
+      "against": "ai-dlc",
+      "delta": -25.4,
+      "margin": 8.1,
+      "reading": "below"
+    },
+    "superpowers": {
+      "against": "ai-dlc",
+      "delta": -12.6,
+      "margin": 7.7,
+      "reading": "below"
+    }
+  },
+  "margins_profiles": {
+    "autonomous": {
+      "addyosmani": {
+        "against": "ai-dlc",
+        "delta": -14.8,
+        "margin": 9.8,
+        "reading": "below"
+      },
+      "agile-v": {
+        "against": "ai-dlc",
+        "delta": -4.6,
+        "margin": 10.9,
+        "reading": "technical-tie"
+      },
+      "ai-dlc": {
+        "against": "ai-dlc",
+        "delta": 0.0,
+        "margin": 10.7,
+        "reading": "leader"
+      },
+      "bmad": {
+        "against": "ai-dlc",
+        "delta": -4.2,
+        "margin": 9.6,
+        "reading": "technical-tie"
+      },
+      "kiro": {
+        "against": "ai-dlc",
+        "delta": -26.8,
+        "margin": 9.4,
+        "reading": "below"
+      },
+      "mattpocock": {
+        "against": "ai-dlc",
+        "delta": -27.4,
+        "margin": 10.1,
+        "reading": "below"
+      },
+      "openspec": {
+        "against": "ai-dlc",
+        "delta": -35.2,
+        "margin": 9.4,
+        "reading": "below"
+      },
+      "spec-kit": {
+        "against": "ai-dlc",
+        "delta": -28.8,
+        "margin": 9.4,
+        "reading": "below"
+      },
+      "superpowers": {
+        "against": "ai-dlc",
+        "delta": -11.8,
+        "margin": 9.2,
+        "reading": "below"
+      }
+    },
+    "baseline": {
+      "addyosmani": {
+        "against": "ai-dlc",
+        "delta": -11.0,
+        "margin": 8.5,
+        "reading": "below"
+      },
+      "agile-v": {
+        "against": "ai-dlc",
+        "delta": -1.6,
+        "margin": 9.5,
+        "reading": "technical-tie"
+      },
+      "ai-dlc": {
+        "against": "ai-dlc",
+        "delta": 0.0,
+        "margin": 8.8,
+        "reading": "leader"
+      },
+      "bmad": {
+        "against": "ai-dlc",
+        "delta": -1.8,
+        "margin": 8.2,
+        "reading": "technical-tie"
+      },
+      "kiro": {
+        "against": "ai-dlc",
+        "delta": -24.2,
+        "margin": 8.2,
+        "reading": "below"
+      },
+      "mattpocock": {
+        "against": "ai-dlc",
+        "delta": -24.8,
+        "margin": 8.4,
+        "reading": "below"
+      },
+      "openspec": {
+        "against": "ai-dlc",
+        "delta": -29.8,
+        "margin": 8.1,
+        "reading": "below"
+      },
+      "spec-kit": {
+        "against": "ai-dlc",
+        "delta": -25.4,
+        "margin": 8.1,
+        "reading": "below"
+      },
+      "superpowers": {
+        "against": "ai-dlc",
+        "delta": -12.6,
+        "margin": 7.7,
+        "reading": "below"
+      }
+    },
+    "equal": {
+      "addyosmani": {
+        "against": "ai-dlc",
+        "delta": -11.2,
+        "margin": 9.7,
+        "reading": "below"
+      },
+      "agile-v": {
+        "against": "ai-dlc",
+        "delta": 0.0,
+        "margin": 10.4,
+        "reading": "leader"
+      },
+      "ai-dlc": {
+        "against": "ai-dlc",
+        "delta": 0.0,
+        "margin": 11.3,
+        "reading": "leader"
+      },
+      "bmad": {
+        "against": "ai-dlc",
+        "delta": -1.2,
+        "margin": 9.9,
+        "reading": "technical-tie"
+      },
+      "kiro": {
+        "against": "ai-dlc",
+        "delta": -21.2,
+        "margin": 9.7,
+        "reading": "below"
+      },
+      "mattpocock": {
+        "against": "ai-dlc",
+        "delta": -22.4,
+        "margin": 9.7,
+        "reading": "below"
+      },
+      "openspec": {
+        "against": "ai-dlc",
+        "delta": -30.0,
+        "margin": 9.7,
+        "reading": "below"
+      },
+      "spec-kit": {
+        "against": "ai-dlc",
+        "delta": -22.4,
+        "margin": 9.5,
+        "reading": "below"
+      },
+      "superpowers": {
+        "against": "ai-dlc",
+        "delta": -12.4,
+        "margin": 9.2,
+        "reading": "below"
+      }
+    },
+    "regulated": {
+      "addyosmani": {
+        "against": "ai-dlc",
+        "delta": -13.8,
+        "margin": 9.5,
+        "reading": "below"
+      },
+      "agile-v": {
+        "against": "ai-dlc",
+        "delta": -2.8,
+        "margin": 10.8,
+        "reading": "technical-tie"
+      },
+      "ai-dlc": {
+        "against": "ai-dlc",
+        "delta": 0.0,
+        "margin": 10.2,
+        "reading": "leader"
+      },
+      "bmad": {
+        "against": "ai-dlc",
+        "delta": -3.2,
+        "margin": 9.2,
+        "reading": "technical-tie"
+      },
+      "kiro": {
+        "against": "ai-dlc",
+        "delta": -26.8,
+        "margin": 9.2,
+        "reading": "below"
+      },
+      "mattpocock": {
+        "against": "ai-dlc",
+        "delta": -28.0,
+        "margin": 9.2,
+        "reading": "below"
+      },
+      "openspec": {
+        "against": "ai-dlc",
+        "delta": -31.2,
+        "margin": 9.1,
+        "reading": "below"
+      },
+      "spec-kit": {
+        "against": "ai-dlc",
+        "delta": -28.8,
+        "margin": 9.1,
+        "reading": "below"
+      },
+      "superpowers": {
+        "against": "ai-dlc",
+        "delta": -17.4,
+        "margin": 8.5,
+        "reading": "below"
+      }
+    },
+    "startup": {
+      "addyosmani": {
+        "against": "bmad",
+        "delta": -8.6,
+        "margin": 9.2,
+        "reading": "technical-tie"
+      },
+      "agile-v": {
+        "against": "bmad",
+        "delta": -0.8,
+        "margin": 10.2,
+        "reading": "technical-tie"
+      },
+      "ai-dlc": {
+        "against": "bmad",
+        "delta": -1.4,
+        "margin": 12.2,
+        "reading": "technical-tie"
+      },
+      "bmad": {
+        "against": "bmad",
+        "delta": 0.0,
+        "margin": 10.2,
+        "reading": "leader"
+      },
+      "kiro": {
+        "against": "bmad",
+        "delta": -20.6,
+        "margin": 9.1,
+        "reading": "below"
+      },
+      "mattpocock": {
+        "against": "bmad",
+        "delta": -22.2,
+        "margin": 9.5,
+        "reading": "below"
+      },
+      "openspec": {
+        "against": "bmad",
+        "delta": -28.2,
+        "margin": 9.2,
+        "reading": "below"
+      },
+      "spec-kit": {
+        "against": "bmad",
+        "delta": -20.6,
+        "margin": 9.8,
+        "reading": "below"
+      },
+      "superpowers": {
+        "against": "bmad",
+        "delta": -10.4,
+        "margin": 8.9,
+        "reading": "below"
+      }
+    }
+  },
+  "median_refs": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    3,
+    3,
+    2
+  ],
+  "not_ranked": [],
+  "profiles": {
+    "autonomous": [
+      {
+        "U": 3.8,
+        "rank": 1,
+        "slug": "ai-dlc",
+        "total": 72.0
+      },
+      {
+        "U": 2.9,
+        "rank": 2,
+        "slug": "bmad",
+        "total": 67.8
+      },
+      {
+        "U": 3.9,
+        "rank": 3,
+        "slug": "agile-v",
+        "total": 67.4
+      },
+      {
+        "U": 2.6,
+        "rank": 4,
+        "slug": "superpowers",
+        "total": 60.2
+      },
+      {
+        "U": 3.1,
+        "rank": 5,
+        "slug": "addyosmani",
+        "total": 57.2
+      },
+      {
+        "U": 2.8,
+        "rank": 6,
+        "slug": "kiro",
+        "total": 45.2
+      },
+      {
+        "U": 3.3,
+        "rank": 7,
+        "slug": "mattpocock",
+        "total": 44.6
+      },
+      {
+        "U": 2.8,
+        "rank": 8,
+        "slug": "spec-kit",
+        "total": 43.2
+      },
+      {
+        "U": 2.8,
+        "rank": 9,
+        "slug": "openspec",
+        "total": 36.8
+      }
+    ],
+    "baseline": [
+      {
+        "U": 3.1,
+        "rank": 1,
+        "slug": "ai-dlc",
+        "total": 68.6
+      },
+      {
+        "U": 3.6,
+        "rank": 2,
+        "slug": "agile-v",
+        "total": 67.0
+      },
+      {
+        "U": 2.7,
+        "rank": 3,
+        "slug": "bmad",
+        "total": 66.8
+      },
+      {
+        "U": 2.9,
+        "rank": 4,
+        "slug": "addyosmani",
+        "total": 57.6
+      },
+      {
+        "U": 2.3,
+        "rank": 5,
+        "slug": "superpowers",
+        "total": 56.0
+      },
+      {
+        "U": 2.7,
+        "rank": 6,
+        "slug": "kiro",
+        "total": 44.4
+      },
+      {
+        "U": 2.8,
+        "rank": 7,
+        "slug": "mattpocock",
+        "total": 43.8
+      },
+      {
+        "U": 2.6,
+        "rank": 8,
+        "slug": "spec-kit",
+        "total": 43.2
+      },
+      {
+        "U": 2.6,
+        "rank": 9,
+        "slug": "openspec",
+        "total": 38.8
+      }
+    ],
+    "equal": [
+      {
+        "U": 3.3,
+        "rank": 1,
+        "slug": "agile-v",
+        "total": 66.2
+      },
+      {
+        "U": 4.0,
+        "rank": 1,
+        "slug": "ai-dlc",
+        "total": 66.2
+      },
+      {
+        "U": 2.9,
+        "rank": 3,
+        "slug": "bmad",
+        "total": 65.0
+      },
+      {
+        "U": 2.7,
+        "rank": 4,
+        "slug": "addyosmani",
+        "total": 55.0
+      },
+      {
+        "U": 2.3,
+        "rank": 5,
+        "slug": "superpowers",
+        "total": 53.8
+      },
+      {
+        "U": 2.7,
+        "rank": 6,
+        "slug": "kiro",
+        "total": 45.0
+      },
+      {
+        "U": 2.7,
+        "rank": 7,
+        "slug": "mattpocock",
+        "total": 43.8
+      },
+      {
+        "U": 2.6,
+        "rank": 7,
+        "slug": "spec-kit",
+        "total": 43.8
+      },
+      {
+        "U": 2.7,
+        "rank": 9,
+        "slug": "openspec",
+        "total": 36.2
+      }
+    ],
+    "regulated": [
+      {
+        "U": 3.6,
+        "rank": 1,
+        "slug": "ai-dlc",
+        "total": 68.4
+      },
+      {
+        "U": 4.0,
+        "rank": 2,
+        "slug": "agile-v",
+        "total": 65.6
+      },
+      {
+        "U": 2.9,
+        "rank": 3,
+        "slug": "bmad",
+        "total": 65.2
+      },
+      {
+        "U": 3.1,
+        "rank": 4,
+        "slug": "addyosmani",
+        "total": 54.6
+      },
+      {
+        "U": 2.3,
+        "rank": 5,
+        "slug": "superpowers",
+        "total": 51.0
+      },
+      {
+        "U": 2.9,
+        "rank": 6,
+        "slug": "kiro",
+        "total": 41.6
+      },
+      {
+        "U": 2.9,
+        "rank": 7,
+        "slug": "mattpocock",
+        "total": 40.4
+      },
+      {
+        "U": 2.8,
+        "rank": 8,
+        "slug": "spec-kit",
+        "total": 39.6
+      },
+      {
+        "U": 2.8,
+        "rank": 9,
+        "slug": "openspec",
+        "total": 37.2
+      }
+    ],
+    "startup": [
+      {
+        "U": 3.6,
+        "rank": 1,
+        "slug": "bmad",
+        "total": 68.8
+      },
+      {
+        "U": 3.6,
+        "rank": 2,
+        "slug": "agile-v",
+        "total": 68.0
+      },
+      {
+        "U": 4.9,
+        "rank": 3,
+        "slug": "ai-dlc",
+        "total": 67.4
+      },
+      {
+        "U": 2.9,
+        "rank": 4,
+        "slug": "addyosmani",
+        "total": 60.2
+      },
+      {
+        "U": 2.6,
+        "rank": 5,
+        "slug": "superpowers",
+        "total": 58.4
+      },
+      {
+        "U": 2.8,
+        "rank": 6,
+        "slug": "kiro",
+        "total": 48.2
+      },
+      {
+        "U": 3.3,
+        "rank": 6,
+        "slug": "spec-kit",
+        "total": 48.2
+      },
+      {
+        "U": 3.1,
+        "rank": 8,
+        "slug": "mattpocock",
+        "total": 46.6
+      },
+      {
+        "U": 2.9,
+        "rank": 9,
+        "slug": "openspec",
+        "total": 40.6
+      }
+    ]
+  },
+  "weakest_vs_median": {
+    "addyosmani": [
+      {
+        "best": 3,
+        "c": "C16",
+        "leaders": [
+          "ai-dlc",
+          "bmad"
+        ],
+        "median": 2,
+        "s": 0
+      },
+      {
+        "best": 5,
+        "c": "C1",
+        "leaders": [
+          "bmad"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C4",
+        "leaders": [
+          "agile-v",
+          "ai-dlc"
+        ],
+        "median": 3,
+        "s": 3
+      }
+    ],
+    "agile-v": [
+      {
+        "best": 4,
+        "c": "C2",
+        "leaders": [
+          "ai-dlc",
+          "bmad",
+          "openspec"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C3",
+        "leaders": [
+          "addyosmani"
+        ],
+        "median": 3,
+        "s": 3
+      },
+      {
+        "best": 5,
+        "c": "C1",
+        "leaders": [
+          "bmad"
+        ],
+        "median": 3,
+        "s": 3
+      }
+    ],
+    "ai-dlc": [
+      {
+        "best": 5,
+        "c": "C1",
+        "leaders": [
+          "bmad"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C15",
+        "leaders": [
+          "agile-v",
+          "spec-kit"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C3",
+        "leaders": [
+          "addyosmani"
+        ],
+        "median": 3,
+        "s": 3
+      }
+    ],
+    "bmad": [
+      {
+        "best": 5,
+        "c": "C15",
+        "leaders": [
+          "agile-v",
+          "spec-kit"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C3",
+        "leaders": [
+          "addyosmani"
+        ],
+        "median": 3,
+        "s": 3
+      },
+      {
+        "best": 3,
+        "c": "C11",
+        "leaders": [
+          "addyosmani",
+          "agile-v"
+        ],
+        "median": 2,
+        "s": 2
+      }
+    ],
+    "kiro": [
+      {
+        "best": 5,
+        "c": "C3",
+        "leaders": [
+          "addyosmani"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C4",
+        "leaders": [
+          "agile-v",
+          "ai-dlc"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 4,
+        "c": "C2",
+        "leaders": [
+          "ai-dlc",
+          "bmad",
+          "openspec"
+        ],
+        "median": 3,
+        "s": 2
+      }
+    ],
+    "mattpocock": [
+      {
+        "best": 5,
+        "c": "C4",
+        "leaders": [
+          "agile-v",
+          "ai-dlc"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 4,
+        "c": "C2",
+        "leaders": [
+          "ai-dlc",
+          "bmad",
+          "openspec"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 4,
+        "c": "C5",
+        "leaders": [
+          "agile-v",
+          "ai-dlc",
+          "bmad",
+          "superpowers"
+        ],
+        "median": 3,
+        "s": 2
+      }
+    ],
+    "openspec": [
+      {
+        "best": 4,
+        "c": "C8",
+        "leaders": [
+          "ai-dlc"
+        ],
+        "median": 2,
+        "s": 0
+      },
+      {
+        "best": 5,
+        "c": "C13",
+        "leaders": [
+          "addyosmani",
+          "ai-dlc",
+          "superpowers"
+        ],
+        "median": 4,
+        "s": 2
+      },
+      {
+        "best": 3,
+        "c": "C16",
+        "leaders": [
+          "ai-dlc",
+          "bmad"
+        ],
+        "median": 2,
+        "s": 0
+      }
+    ],
+    "spec-kit": [
+      {
+        "best": 4,
+        "c": "C5",
+        "leaders": [
+          "agile-v",
+          "ai-dlc",
+          "bmad",
+          "superpowers"
+        ],
+        "median": 3,
+        "s": 1
+      },
+      {
+        "best": 3,
+        "c": "C16",
+        "leaders": [
+          "ai-dlc",
+          "bmad"
+        ],
+        "median": 2,
+        "s": 0
+      },
+      {
+        "best": 5,
+        "c": "C3",
+        "leaders": [
+          "addyosmani"
+        ],
+        "median": 3,
+        "s": 2
+      }
+    ],
+    "superpowers": [
+      {
+        "best": 4,
+        "c": "C2",
+        "leaders": [
+          "ai-dlc",
+          "bmad",
+          "openspec"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 5,
+        "c": "C1",
+        "leaders": [
+          "bmad"
+        ],
+        "median": 3,
+        "s": 2
+      },
+      {
+        "best": 3,
+        "c": "C11",
+        "leaders": [
+          "addyosmani",
+          "agile-v"
+        ],
+        "median": 2,
+        "s": 1
+      }
+    ]
+  }
+}

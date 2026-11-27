@@ -43,6 +43,7 @@ IMPLEMENTED = {
     "sensitivity": "sensitivity",
     "superiority": "superiority",
     "lineage": "lineage",
+    "fitgap": "fitgap",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

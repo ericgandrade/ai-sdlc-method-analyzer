@@ -20,6 +20,7 @@ IMPLEMENTED = {
     "validate": "validate",
     "baseline": "baseline",
     "state": "state",
+    "fetch": "fetch",
     "log": ("runlog", "configure_log", "run_log"),
     "answers": ("runlog", "configure_answers", "run_answers"),
     "tty-check": ("state", "configure_tty", "run_tty"),

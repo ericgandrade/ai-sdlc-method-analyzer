@@ -9,3 +9,4 @@ All notable changes to this project are recorded here. The version authority is 
 - Engine CLI skeleton, methodology constants and the CI matrix.
 - Leak gate: `engine leakcheck` (denylist, built-in patterns, CC BY-SA detectors, git-history and pre-push modes), `engine hooks install`, `.githooks/pre-push`, and a CI leak job.
 - Frozen methodology v1.0, evaluator v1.0 and rubric v2.0 (Portuguese original) with `methodology/FREEZE.md` and `engine verify-freeze`.
+- English translation of rubric v2.0 (non-normative), reviewed section by section by a second reviewer.

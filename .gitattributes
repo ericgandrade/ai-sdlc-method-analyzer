@@ -1,2 +1,3 @@
 methodology/*.md -text
 baseline/** -text
+tests/fixtures/** text eol=lf

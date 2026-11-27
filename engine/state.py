@@ -112,10 +112,19 @@ def _parse_time(s):
 
 
 def is_interactive():
-    """Whether stdin is a terminal. Agent Bash calls are not; tests monkeypatch this."""
+    """Whether stdin is a terminal. Agent Bash calls are not; tests monkeypatch this.
+    On Windows, isatty() is also true for the NUL device, so a real console handle is required."""
     try:
-        return sys.stdin is not None and sys.stdin.isatty()
-    except (AttributeError, ValueError):
+        if sys.stdin is None or not sys.stdin.isatty():
+            return False
+        if sys.platform.startswith("win"):
+            import ctypes
+            import msvcrt
+            mode = ctypes.c_uint32()
+            handle = msvcrt.get_osfhandle(sys.stdin.fileno())
+            return bool(ctypes.windll.kernel32.GetConsoleMode(handle, ctypes.byref(mode)))
+        return True
+    except (AttributeError, ValueError, OSError):
         return False
 
 

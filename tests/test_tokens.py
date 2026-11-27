@@ -57,8 +57,9 @@ def test_chars4_exact_counts(refs, fallback):
 
 def test_crlf_normalized(refs, fallback):
     f = refs / "tiny" / "README.md"
-    lf = len(f.read_text()) // 4
-    f.write_bytes(f.read_bytes().replace(b"\n", b"\r\n"))
+    data = f.read_bytes().replace(b"\r\n", b"\n")      # the checkout may already use CRLF (Windows)
+    lf = len(data.decode("utf-8")) // 4
+    f.write_bytes(data.replace(b"\n", b"\r\n"))
     row = tokens.count_method(lens({"T2": [{"path": "cache:tiny/README.md", "frontmatter_only": False}]}),
                               resolver(refs), fallback)
     assert row["T2"] == lf

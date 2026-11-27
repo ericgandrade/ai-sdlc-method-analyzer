@@ -171,8 +171,10 @@ def test_t0_excludes_dist_only_with_declared_shipped_root(tmp_path):
 
 def test_tree_hash_stable_across_crlf_and_layout(tmp_path):
     a, b = copy_tiny(tmp_path, "a"), copy_tiny(tmp_path, "b")
+    for f in a.rglob("*.md"):                     # the checkout may already use CRLF (Windows)
+        f.write_bytes(f.read_bytes().replace(b"\r\n", b"\n"))
     for f in b.rglob("*.md"):
-        f.write_bytes(f.read_bytes().replace(b"\n", b"\r\n"))
+        f.write_bytes(f.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n"))
     assert intake.tree_hash(a) == intake.tree_hash(b)
     (b / "skills" / "plan" / "SKILL.md").write_text("changed\n")
     assert intake.tree_hash(a) != intake.tree_hash(b)

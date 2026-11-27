@@ -1,0 +1,11 @@
+{
+  "name": "ai-sdlc-method-analyzer",
+  "owner": {"name": "Eric Andrade"},
+  "plugins": [
+    {
+      "name": "ai-sdlc-method-analyzer",
+      "source": "./",
+      "description": "Assess AI-assisted software development methods against a frozen 16-criterion methodology and a public reference baseline; produces a themeable comparative report."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "fixture-method": {
+    "S1": {
+      "M": 8.1,
+      "best": "ai-dlc",
+      "delta": -0.6,
+      "pass": false
+    },
+    "S2": {
+      "failed": [
+        "equal",
+        "startup",
+        "regulated",
+        "autonomous"
+      ],
+      "pass": false,
+      "profiles": {
+        "autonomous": {
+          "M": 9.3,
+          "best": "ai-dlc",
+          "delta": -4.0,
+          "pass": false
+        },
+        "equal": {
+          "M": 9.4,
+          "best": "ai-dlc",
+          "delta": 0.0,
+          "pass": false
+        },
+        "regulated": {
+          "M": 9.1,
+          "best": "ai-dlc",
+          "delta": -2.0,
+          "pass": false
+        },
+        "startup": {
+          "M": 9.1,
+          "best": "bmad",
+          "delta": 1.0,
+          "pass": false
+        }
+      }
+    },
+    "S3": {
+      "checks": {
+        "centred": false,
+        "loo": false,
+        "score_perturbation": false,
+        "uniform": false
+      },
+      "pass": false
+    },
+    "S4": {
+      "below_median": [],
+      "pass": true
+    },
+    "S5": {
+      "best_in_class": [
+        "C2",
+        "C5",
+        "C7",
+        "C9",
+        "C11"
+      ],
+      "core": [
+        "C2",
+        "C5"
+      ],
+      "pass": false
+    },
+    "S6": {
+      "pass": true
+    },
+    "S7": {
+      "alpha": 0.712,
+      "pass": true
+    },
+    "failed": [
+      "S1",
+      "S2",
+      "S3",
+      "S5"
+    ],
+    "interpretation": "strict",
+    "notes": {
+      "I-1": "strict: 'Conditionally superior' also requires S5 (methodology 9 lists S1, S4, S6 and S7); literal: S5 is not required for that verdict.",
+      "I-2": "strict: S2 failures <= 1 and at least one of S2 or S3 not fully passing; literal: S2 fails for at most one profile, or S3 falls short.",
+      "U": "every U is read from results.json (plan 7.6); B(P) is the tied best reference with the larger U[P], then slug order."
+    },
+    "verdict": "Comparable"
+  }
+}

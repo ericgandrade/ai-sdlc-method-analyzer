@@ -11,6 +11,6 @@ def test_unknown_command_is_usage_error():
     assert run("frobnicate").returncode == 2
 
 def test_unbuilt_command_exits_2():
-    r = run("report")
+    r = run("slides")
     assert r.returncode == 2
     assert "not implemented" in r.stderr

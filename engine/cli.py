@@ -44,6 +44,7 @@ IMPLEMENTED = {
     "superiority": "superiority",
     "lineage": "lineage",
     "fitgap": "fitgap",
+    "report": "report_html",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

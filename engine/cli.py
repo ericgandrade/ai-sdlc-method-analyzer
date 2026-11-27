@@ -42,6 +42,7 @@ IMPLEMENTED = {
     "rank": "rank",
     "sensitivity": "sensitivity",
     "superiority": "superiority",
+    "lineage": "lineage",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)

@@ -12,13 +12,18 @@ import sys
 
 from .common import EXIT_USAGE
 
-# command name -> module name (implemented commands)
+# command name -> module name, or (module, configure function, run function)
 IMPLEMENTED = {
     "leakcheck": "leakcheck",
     "hooks": "hooks",
     "verify-freeze": "freeze",
     "validate": "validate",
     "baseline": "baseline",
+    "state": "state",
+    "log": ("runlog", "configure_log", "run_log"),
+    "answers": ("runlog", "configure_answers", "run_answers"),
+    "tty-check": ("state", "configure_tty", "run_tty"),
+    "adjudication": "adjudication",
 }
 
 # command name -> one-line help (every command of plan §7, in plan order)
@@ -78,11 +83,12 @@ def build_parser():
     sub.required = True
     for name, help_text in COMMANDS.items():
         p = sub.add_parser(name, help=help_text, description=help_text)
-        module_name = IMPLEMENTED.get(name)
-        if module_name:
+        spec = IMPLEMENTED.get(name)
+        if spec:
+            module_name, conf, runf = spec if isinstance(spec, tuple) else (spec, "configure", "run")
             module = importlib.import_module(f".{module_name}", __package__)
-            module.configure(p)
-            p.set_defaults(func=module.run)
+            getattr(module, conf)(p)
+            p.set_defaults(func=getattr(module, runf))
         else:
             p.add_argument("rest", nargs=argparse.REMAINDER, help=argparse.SUPPRESS)
             p.set_defaults(func=_not_implemented)

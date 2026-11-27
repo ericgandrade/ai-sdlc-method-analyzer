@@ -1,5 +1,5 @@
-"""Shipped baseline (plan §0.3 #42, §7.15): round resolution and `engine baseline verify`.
-`promote` arrives with the run layer (Phase 2)."""
+"""Shipped baseline (plan §0.3 #42, §7.15): round resolution, `engine baseline verify`
+and `engine baseline promote` (interactive only, #78)."""
 import hashlib
 import json
 import pathlib
@@ -50,13 +50,74 @@ def configure(p):
     v = sub.add_parser("verify", help="check MANIFEST.json hashes (exit 4 on mismatch)")
     v.add_argument("--root", default=".")
     v.add_argument("--round", default=None, help="round id (default: every round present)")
-    sub.add_parser("promote", help="not implemented yet (needs the run layer)")
+    pr = sub.add_parser("promote", help="promote a closed reference run into its round (interactive only)")
+    pr.add_argument("--run", required=True)
+    pr.add_argument("--root", default=".")
+
+
+def refresh_manifest(root=".", round_id=None):
+    """Recompute MANIFEST.json `files` for every file in the round (notes are kept)."""
+    from .jsonio import read_json, write_json
+    d = round_dir(root, round_id)
+    m = d / "MANIFEST.json"
+    man = read_json(m) if m.exists() else {"files": {}, "notes": {}}
+    man["files"] = {p.relative_to(d).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                    for p in sorted(d.rglob("*")) if p.is_file() and p.name != "MANIFEST.json"}
+    write_json(m, man)
+    return man
+
+
+class PromoteError(Exception):
+    def __init__(self, message, code=1):
+        super().__init__(message)
+        self.code = code
+
+
+def promote(run_id, root="."):
+    """Write a closed reference run into baseline/rounds/<the run's round>/ only (#62)."""
+    from . import state
+    from .jsonio import read_json, write_json
+    from .registry import entries, load_registry
+    st = state.load(run_id)
+    state.require_tty(f"baseline promote --run {run_id}", st.get("python", "python3"))
+    if st["mode"] != "reference" or st["status"] != "closed":
+        raise PromoteError("only a closed reference run can be promoted")
+    rid = st["round_id"].split("+", 1)[-1]
+    d = round_dir(root, rid)
+    if not d.is_dir():
+        raise PromoteError(f"round {rid} of the run does not exist under baseline/rounds/")
+    rd = state.run_path(run_id)
+    slug = st["target"]["slug"]
+    reg = {e["slug"]: e for e in entries(load_registry(root))}
+    target = read_json(rd / "target.json")
+    if slug not in reg or target.get("pin") != reg[slug].get("pin"):
+        raise PromoteError(f"pin mismatch: the run's pin differs from the registry pin of {slug}", 4)
+    changelog = pathlib.Path(root) / "CHANGELOG.md"
+    if not changelog.exists() or run_id not in changelog.read_text(encoding="utf-8"):
+        raise PromoteError(f"CHANGELOG.md has no entry naming run {run_id}")
+    for f in ("l1.final.json", "lenses.final.json"):
+        if not (rd / f).exists():
+            raise PromoteError(f"run file {f} missing", EXIT_MISSING)
+    lenses = read_json(rd / "lenses.final.json")
+    write_json(d / "lenses" / f"{slug}.json", lenses)
+    l1 = read_json(d / "l1.json")
+    final = read_json(rd / "l1.final.json")
+    l1.setdefault(slug, {})["scores"] = final["vector"]
+    write_json(d / "l1.json", l1)
+    refresh_manifest(root, rid)
+    return rid
 
 
 def run(args):
-    if args.action != "verify":
-        print("baseline promote: not implemented", file=sys.stderr)
-        return EXIT_USAGE
+    if args.action == "promote":
+        from . import state
+        try:
+            rid = promote(args.run, args.root)
+        except (PromoteError, state.StateError) as e:
+            print(f"baseline promote: {e}", file=sys.stderr)
+            return e.code
+        print(f"baseline promote: {args.run} written into round {rid}")
+        return EXIT_OK
     ids = [args.round] if args.round else rounds(args.root)
     if not ids:
         print("baseline verify: no rounds found", file=sys.stderr)

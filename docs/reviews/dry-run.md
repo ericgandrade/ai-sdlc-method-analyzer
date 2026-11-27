@@ -8,6 +8,7 @@
 ## Result
 
 - Every stage from S00 to S14 is `done`. S07r and S07b are `skipped`: the target is implemented, and the red team left no contest open.
+- **The orchestrator loop is exercised.** `state next` runs before every `state start` and after the last stage. It never resets a done stage: no engine step rewrites an output that an earlier stage recorded. A mutation check confirms the assertion has teeth: dropping S02's `--outputs` makes `state next` reset S01 and S02.
 - `state close` succeeds, and it removes the run from the guard marker.
 - Every JSON the run produced validates against its schema with `engine validate`'s checker. These are `target`, `calibration`, `reconciled`, `alpha`, `audit_scope`, `redteam`, `lenses`, `lens-audit`, `tokens`, `results` and `state`. `ranking.json`, `sensitivity.json` and `superiority.json` are present; they have no schema file.
 - **Guard replay: zero denials.** Each call goes through `hooks/guard.py` before it runs, with the run's marker live. That covers more than 40 Bash calls, all in the single `python3 -m engine …` form, plus every agent Write and Read.
@@ -41,4 +42,4 @@
   - that the hook variables expand.
 - The guard was exercised as a function, fed the same JSON a host sends, not as a hook registered in a live session.
 - Lineage, calibration and consolidation ran without the reference cache. Calibration and consolidation use the shipped baseline; lineage found nothing to compare.
-- Finding: `isolate` rewrites `off_limits.txt`, which S01 recorded, so S02 must be closed with `--outputs off_limits.txt audit_seed`. Otherwise `state next` sees a changed S01 output and resets S01 and everything downstream. The orchestrator skill now says so.
+- Finding: when other runs exist, `isolate` rewrites `off_limits.txt`, which S01 recorded. S02 must therefore be closed with `--outputs off_limits.txt audit_seed`. Otherwise `state next` sees a changed S01 output and resets S01 and everything downstream. The orchestrator skill now says so, and the dry run creates a second run folder to exercise this.

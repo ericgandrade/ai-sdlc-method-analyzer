@@ -57,7 +57,15 @@ class Run:
         self._guard("Read", file_path=str(self.rd / rel))
         return (self.rd / rel).read_text(encoding="utf-8")
 
+    def next(self):
+        before = state.load(RID)["stages"]
+        self.eng("state", "next", "--run", RID)
+        after = state.load(RID)["stages"]
+        reset = [k for k in before if before[k]["status"] == "done" and after[k]["status"] != "done"]
+        assert not reset, f"state next reset {reset}: an engine step rewrote a recorded output"
+
     def stage(self, s, *outputs):
+        self.next()
         self.eng("state", "start", "--run", RID, "--stage", s, "--host", "dry-run", "--model", "simulated")
         return lambda: self.eng("state", "done", "--run", RID, "--stage", s, *(["--outputs", *outputs] if outputs else []))
 
@@ -97,6 +105,7 @@ def test_dry_run_tiny_method(run, tmp_path):
     r.write("off_limits.txt", "")
     done()
 
+    (r.home / "runs" / "20261126-000000-prior").mkdir()     # another run: isolate adds it to off_limits.txt
     done = r.stage("S02", "off_limits.txt", "audit_seed"); r.eng("isolate", "--run", RID); done()
 
     done = r.stage("S03")
@@ -182,6 +191,7 @@ def test_dry_run_tiny_method(run, tmp_path):
     r.write("requests/log/log-entry.json", {"type": "log-entry", "text": "dry run complete"})
     r.eng("log", "append", "--run", RID, "--text-request", "run:requests/log/log-entry.json")
 
+    r.next()
     st = state.load(RID)
     assert all(v["status"] in ("done", "skipped") for v in st["stages"].values())
     r.eng("state", "close", "--run", RID)

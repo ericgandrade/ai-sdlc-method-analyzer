@@ -30,3 +30,17 @@ def test_verify_freeze_print():
 
 def test_gitattributes_keeps_bytes():
     assert "methodology/*.md -text" in (ROOT / ".gitattributes").read_text()
+
+
+def test_pathmap_covers_frozen_paths():
+    import re
+    pathmap = (ROOT / "methodology/PATHMAP.md").read_text(encoding="utf-8")
+    table = "\n".join(l for l in pathmap.splitlines() if l.startswith("|"))
+    found = set()
+    for f in FROZEN:
+        text = (ROOT / f).read_text(encoding="utf-8")
+        found |= set(re.findall(r"docs/research/[\w/.*-]+|anexos/[\w.-]+", text))
+    assert found
+    for path in sorted(found):
+        assert f"`{path}`" in table, path
+    assert "I-inv unavailable" in pathmap
